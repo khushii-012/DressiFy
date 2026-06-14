@@ -1,0 +1,6 @@
+gender,age,style,weather,occasion,category,item,image
+0,20,0,0,0,casual,T-shirt,https://images.unsplash.com/photo-1520975922284-8d2c8a4b7b7f
+0,20,0,0,0,casual,Jeans,https://images.unsplash.com/photo-1542272604-787c3835535d
+0,20,2,2,2,formal,Shirt,https://images.unsplash.com/photo-1593030761757-71fae45fa0e7
+0,20,2,2,2,formal,Blazer,https://images.unsplash.com/photo-1520975661595-6453be3f7070
+0,20,1,0,1,party,Stylish Top,https://images.unsplash.com/photo-1520975682031-ae0b2f2b1b1a
