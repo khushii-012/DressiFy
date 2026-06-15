@@ -115,10 +115,16 @@ if st.button("👗 Generate Full AI Look"):
     # outfit
     st.subheader("🧥 Outfit Suggestion")
 
-    outfit = get_outfit(category)
+    st.subheader("🧥 Full Outfit Suggestion")
 
-    for _, row in outfit.iterrows():
-        st.write("✔️ " + row["item"])
+types = ["top", "bottom", "shoes", "accessory"]
+
+for t in types:
+    item = df[(df["category"] == category) & (df["type"] == t)]
+
+    if not item.empty:
+        row = item.sample(1).iloc[0]
+        st.write(f"✔️ {t.upper()}: {row['item']}")
         st.image(row["image"], width=220)
 
     # accessories

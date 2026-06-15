@@ -1,6 +1,15 @@
-gender,age,style,weather,occasion,category,item,image
-0,20,0,0,0,casual,T-shirt,https://images.unsplash.com/photo-1520975922284-8d2c8a4b7b7f
-0,20,0,0,0,casual,Jeans,https://images.unsplash.com/photo-1542272604-787c3835535d
-0,20,2,2,2,formal,Shirt,https://images.unsplash.com/photo-1593030761757-71fae45fa0e7
-0,20,2,2,2,formal,Blazer,https://images.unsplash.com/photo-1520975661595-6453be3f7070
-0,20,1,0,1,party,Stylish Top,https://images.unsplash.com/photo-1520975682031-ae0b2f2b1b1a
+gender,age,style,weather,occasion,category,type,item,image
+0,20,0,0,0,casual,top,T-shirt,https://images.unsplash.com/photo-1520975922284-8d2c8a4b7b7f
+0,20,0,0,0,casual,bottom,Jeans,https://images.unsplash.com/photo-1542272604-787c3835535d
+0,20,0,0,0,casual,shoes,Sneakers,https://images.unsplash.com/photo-1600185365483-26d7a4cc7519
+0,20,0,0,0,casual,accessory,Sunglasses,https://images.unsplash.com/photo-1511499767150-a48a237f4a6b
+
+0,20,2,2,2,formal,top,Shirt,https://images.unsplash.com/photo-1593030761757-71fae45fa0e7
+0,20,2,2,2,formal,bottom,Formal Pants,https://images.unsplash.com/photo-1624378439575-d8705ad7ae80
+0,20,2,2,2,formal,shoes,Formal Shoes,https://images.unsplash.com/photo-1520975918315-3f5a3c8b4c32
+0,20,2,2,2,formal,accessory,Watch,https://images.unsplash.com/photo-1523275335684-37898b6baf30
+
+0,20,1,0,1,party,top,Stylish Top,https://images.unsplash.com/photo-1520975682031-ae0b2f2b1b1a
+0,20,1,0,1,party,bottom,Skirt/Jeans,https://images.unsplash.com/photo-1503342217505-b0a15ec3261c
+0,20,1,0,1,party,shoes,Heels,https://images.unsplash.com/photo-1528701800489-20be0e8b9f8f
+0,20,1,0,1,party,accessory,Clutch Bag,https://images.unsplash.com/photo-1548036328-c9fa89d128fa
