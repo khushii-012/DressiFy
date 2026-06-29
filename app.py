@@ -112,27 +112,27 @@ if st.button("👗 Generate Full AI Look"):
 
     st.success(f"Recommended Style: {category.upper()}")
 
-    # outfit
-    st.subheader("🧥 Outfit Suggestion")
-
     st.subheader("🧥 Full Outfit Suggestion")
 
-types = ["top", "bottom", "shoes", "accessory"]
+    types = ["top", "bottom", "shoes", "accessory"]
 
-for t in types:
-    item = df[(df["category"] == category) & (df["type"] == t)]
+    for t in types:
 
-    if not item.empty:
-        row = item.sample(1).iloc[0]
-        st.write(f"✔️ {t.upper()}: {row['item']}")
-        st.image(row["image"], width=220)
+        item = df[
+            (df["category"] == category) &
+            (df["type"] == t)
+        ]
 
-    # accessories
+        if not item.empty:
+            row = item.sample(1).iloc[0]
+
+            st.write(f"✔️ {t.upper()}: {row['item']}")
+            st.image(row["image"], width=220)
+
     st.subheader("👜 Accessories & Full Look")
 
-    for item in accessories.get(category, []):
-        st.write("➕ " + item)
-
+    for acc in accessories.get(category, []):
+        st.write("➕ " + acc)
 # -------------------------
 # DATA STATUS
 # -------------------------
