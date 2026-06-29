@@ -1,0 +1,661 @@
+item_id,gender,age_group,category,sub_category,item_name,color,style,fit,occasion,season,weather,body_type,skin_tone,fabric,pattern,brand_level,rating,image_keyword
+1001,Female,50+,Topwear,Oversized T-Shirt,White Oversized T-Shirt,White,Minimalist,Slim,Date,Winter,Cloudy,Athletic,Fair,Cotton,Checked,Luxury,4.7,white oversized t-shirt female
+1002,Female,18-25,Topwear,Oversized T-Shirt,Black Oversized T-Shirt,Black,Ethnic,Regular,Date,Summer,Rainy,Rectangle,Olive,Denim,Printed,Premium,4.9,black oversized t-shirt female
+1003,Female,36-50,Topwear,Oversized T-Shirt,Blue Oversized T-Shirt,Blue,Korean,Oversized,Office,Winter,Sunny,Rectangle,Fair,Denim,Solid,Premium,3.9,blue oversized t-shirt female
+1004,Female,50+,Topwear,Oversized T-Shirt,Beige Oversized T-Shirt,Beige,Minimalist,Regular,Wedding,Winter,Rainy,Apple,Wheatish,Cotton,Checked,Premium,4.4,beige oversized t-shirt female
+1005,Female,18-25,Topwear,Oversized T-Shirt,Grey Oversized T-Shirt,Grey,Streetwear,Oversized,Party,All Season,Cold,Hourglass,Fair,Polyester,Printed,Budget,4.1,grey oversized t-shirt female
+1006,Female,18-25,Topwear,Oversized T-Shirt,Brown Oversized T-Shirt,Brown,Korean,Slim,Office,Summer,Sunny,Apple,Fair,Cotton,Solid,Budget,4.4,brown oversized t-shirt female
+1007,Female,50+,Topwear,Oversized T-Shirt,Pink Oversized T-Shirt,Pink,Y2K,Slim,Interview,Summer,Cold,All,Fair,Polyester,Solid,Budget,4.2,pink oversized t-shirt female
+1008,Female,50+,Topwear,Oversized T-Shirt,Green Oversized T-Shirt,Green,Corporate,Slim,Interview,Monsoon,Sunny,Pear,Fair,Denim,Printed,Luxury,4.1,green oversized t-shirt female
+1009,Female,18-25,Topwear,Oversized T-Shirt,Navy Oversized T-Shirt,Navy,Ethnic,Oversized,College,All Season,Cold,Rectangle,Olive,Linen,Printed,Premium,4.4,navy oversized t-shirt female
+1010,Female,50+,Topwear,Oversized T-Shirt,Cream Oversized T-Shirt,Cream,Minimalist,Slim,Date,Monsoon,Cloudy,Athletic,Fair,Linen,Printed,Luxury,4.1,cream oversized t-shirt female
+1011,Female,18-25,Topwear,Graphic Tee,White Graphic Tee,White,Ethnic,Regular,Wedding,Monsoon,Rainy,Hourglass,Olive,Cotton,Printed,Premium,4.5,white graphic tee female
+1012,Female,18-25,Topwear,Graphic Tee,Black Graphic Tee,Black,Old Money,Oversized,Party,Summer,Cold,Hourglass,Dark,Linen,Printed,Budget,4.8,black graphic tee female
+1013,Female,Teen,Topwear,Graphic Tee,Blue Graphic Tee,Blue,Korean,Slim,Gym,Summer,Rainy,Hourglass,Dark,Linen,Printed,Luxury,4.0,blue graphic tee female
+1014,Female,50+,Topwear,Graphic Tee,Beige Graphic Tee,Beige,Ethnic,Regular,Festival,All Season,Cloudy,Athletic,Wheatish,Cotton,Solid,Budget,3.8,beige graphic tee female
+1015,Female,18-25,Topwear,Graphic Tee,Grey Graphic Tee,Grey,Casual,Regular,Party,Winter,Cold,Hourglass,Olive,Cotton,Checked,Budget,4.4,grey graphic tee female
+1016,Female,36-50,Topwear,Graphic Tee,Brown Graphic Tee,Brown,Corporate,Slim,Airport,Summer,Cold,All,Fair,Cotton,Printed,Premium,3.9,brown graphic tee female
+1017,Female,26-35,Topwear,Graphic Tee,Pink Graphic Tee,Pink,Streetwear,Oversized,Wedding,Monsoon,Cloudy,Athletic,Fair,Cotton,Solid,Premium,4.5,pink graphic tee female
+1018,Female,18-25,Topwear,Graphic Tee,Green Graphic Tee,Green,Y2K,Slim,Wedding,Monsoon,Cloudy,Hourglass,Wheatish,Denim,Checked,Premium,3.9,green graphic tee female
+1019,Female,36-50,Topwear,Graphic Tee,Navy Graphic Tee,Navy,Old Money,Slim,Office,Summer,Rainy,Pear,Fair,Linen,Solid,Premium,4.1,navy graphic tee female
+1020,Female,26-35,Topwear,Graphic Tee,Cream Graphic Tee,Cream,Casual,Slim,Vacation,Monsoon,Cloudy,Athletic,Dark,Cotton,Printed,Budget,4.7,cream graphic tee female
+1021,Female,36-50,Topwear,Hoodie,White Hoodie,White,Y2K,Regular,Vacation,Monsoon,Cloudy,Athletic,Fair,Linen,Solid,Luxury,4.5,white hoodie female
+1022,Female,50+,Topwear,Hoodie,Black Hoodie,Black,Streetwear,Slim,Date,Winter,Sunny,All,Fair,Denim,Checked,Premium,4.8,black hoodie female
+1023,Female,36-50,Topwear,Hoodie,Blue Hoodie,Blue,Ethnic,Slim,Wedding,Winter,Cold,Pear,Fair,Cotton,Checked,Premium,4.3,blue hoodie female
+1024,Female,Teen,Topwear,Hoodie,Beige Hoodie,Beige,Corporate,Slim,Vacation,All Season,Sunny,Apple,Wheatish,Polyester,Checked,Luxury,4.8,beige hoodie female
+1025,Female,36-50,Topwear,Hoodie,Grey Hoodie,Grey,Casual,Slim,Party,Monsoon,Rainy,All,Dark,Cotton,Checked,Budget,4.8,grey hoodie female
+1026,Female,50+,Topwear,Hoodie,Brown Hoodie,Brown,Y2K,Oversized,Airport,Winter,Cloudy,Apple,Fair,Denim,Solid,Budget,4.0,brown hoodie female
+1027,Female,50+,Topwear,Hoodie,Pink Hoodie,Pink,Ethnic,Slim,Festival,Summer,Rainy,All,Fair,Polyester,Solid,Budget,4.6,pink hoodie female
+1028,Female,18-25,Topwear,Hoodie,Green Hoodie,Green,Corporate,Slim,Interview,Summer,Sunny,All,Fair,Polyester,Printed,Premium,4.0,green hoodie female
+1029,Female,Teen,Topwear,Hoodie,Navy Hoodie,Navy,Minimalist,Oversized,Gym,All Season,Rainy,Apple,Fair,Cotton,Checked,Premium,4.2,navy hoodie female
+1030,Female,36-50,Topwear,Hoodie,Cream Hoodie,Cream,Old Money,Regular,Gym,Summer,Sunny,Rectangle,Olive,Cotton,Solid,Budget,4.6,cream hoodie female
+1031,Female,Teen,Topwear,Linen Shirt,White Linen Shirt,White,Ethnic,Slim,Vacation,Summer,Cold,Apple,Wheatish,Linen,Checked,Luxury,3.8,white linen shirt female
+1032,Female,Teen,Topwear,Linen Shirt,Black Linen Shirt,Black,Casual,Regular,Airport,Winter,Cold,Pear,Olive,Polyester,Solid,Budget,4.3,black linen shirt female
+1033,Female,18-25,Topwear,Linen Shirt,Blue Linen Shirt,Blue,Ethnic,Regular,Date,Winter,Sunny,Pear,Fair,Polyester,Solid,Premium,4.4,blue linen shirt female
+1034,Female,50+,Topwear,Linen Shirt,Beige Linen Shirt,Beige,Corporate,Slim,College,Summer,Cloudy,Rectangle,Olive,Polyester,Printed,Luxury,4.9,beige linen shirt female
+1035,Female,18-25,Topwear,Linen Shirt,Grey Linen Shirt,Grey,Y2K,Oversized,Date,Winter,Cloudy,Hourglass,Wheatish,Denim,Solid,Budget,4.0,grey linen shirt female
+1036,Female,18-25,Topwear,Linen Shirt,Brown Linen Shirt,Brown,Korean,Slim,Date,All Season,Cloudy,Hourglass,Olive,Polyester,Checked,Premium,4.9,brown linen shirt female
+1037,Female,26-35,Topwear,Linen Shirt,Pink Linen Shirt,Pink,Corporate,Oversized,Party,All Season,Cold,Rectangle,Wheatish,Polyester,Solid,Luxury,4.7,pink linen shirt female
+1038,Female,Teen,Topwear,Linen Shirt,Green Linen Shirt,Green,Streetwear,Regular,College,All Season,Rainy,Hourglass,Olive,Denim,Solid,Premium,4.7,green linen shirt female
+1039,Female,18-25,Topwear,Linen Shirt,Navy Linen Shirt,Navy,Old Money,Slim,Festival,Winter,Cold,Pear,Wheatish,Denim,Checked,Premium,4.5,navy linen shirt female
+1040,Female,18-25,Topwear,Linen Shirt,Cream Linen Shirt,Cream,Korean,Slim,Date,All Season,Cloudy,All,Olive,Polyester,Solid,Premium,4.4,cream linen shirt female
+1041,Female,Teen,Topwear,Polo Shirt,White Polo Shirt,White,Corporate,Slim,Party,All Season,Sunny,Athletic,Wheatish,Denim,Solid,Budget,4.6,white polo shirt female
+1042,Female,36-50,Topwear,Polo Shirt,Black Polo Shirt,Black,Corporate,Oversized,Date,All Season,Cold,Hourglass,Fair,Linen,Checked,Premium,4.1,black polo shirt female
+1043,Female,26-35,Topwear,Polo Shirt,Blue Polo Shirt,Blue,Old Money,Slim,Interview,Monsoon,Rainy,Pear,Olive,Cotton,Printed,Budget,4.9,blue polo shirt female
+1044,Female,26-35,Topwear,Polo Shirt,Beige Polo Shirt,Beige,Minimalist,Slim,Vacation,All Season,Sunny,Athletic,Fair,Linen,Checked,Luxury,4.6,beige polo shirt female
+1045,Female,18-25,Topwear,Polo Shirt,Grey Polo Shirt,Grey,Korean,Regular,College,Monsoon,Cold,Pear,Wheatish,Cotton,Checked,Budget,3.9,grey polo shirt female
+1046,Female,26-35,Topwear,Polo Shirt,Brown Polo Shirt,Brown,Casual,Slim,Wedding,Winter,Cloudy,Apple,Wheatish,Polyester,Checked,Budget,4.6,brown polo shirt female
+1047,Female,36-50,Topwear,Polo Shirt,Pink Polo Shirt,Pink,Casual,Slim,Party,All Season,Sunny,Pear,Olive,Denim,Solid,Premium,4.3,pink polo shirt female
+1048,Female,Teen,Topwear,Polo Shirt,Green Polo Shirt,Green,Korean,Oversized,Office,Winter,Cold,Rectangle,Olive,Linen,Solid,Luxury,4.7,green polo shirt female
+1049,Female,26-35,Topwear,Polo Shirt,Navy Polo Shirt,Navy,Corporate,Regular,Office,All Season,Cold,Pear,Fair,Cotton,Solid,Premium,3.9,navy polo shirt female
+1050,Female,50+,Topwear,Polo Shirt,Cream Polo Shirt,Cream,Ethnic,Slim,Party,Winter,Rainy,Apple,Wheatish,Cotton,Checked,Premium,5.0,cream polo shirt female
+1051,Female,26-35,Topwear,Crop Top,White Crop Top,White,Casual,Regular,Festival,All Season,Sunny,Rectangle,Wheatish,Denim,Checked,Luxury,4.2,white crop top female
+1052,Female,18-25,Topwear,Crop Top,Black Crop Top,Black,Streetwear,Oversized,College,Winter,Cloudy,Rectangle,Fair,Polyester,Checked,Budget,4.1,black crop top female
+1053,Female,Teen,Topwear,Crop Top,Blue Crop Top,Blue,Old Money,Slim,Vacation,Summer,Cold,Pear,Wheatish,Cotton,Solid,Luxury,4.1,blue crop top female
+1054,Female,36-50,Topwear,Crop Top,Beige Crop Top,Beige,Corporate,Oversized,Date,Winter,Cold,Athletic,Olive,Denim,Printed,Premium,4.9,beige crop top female
+1055,Female,18-25,Topwear,Crop Top,Grey Crop Top,Grey,Minimalist,Slim,College,Summer,Sunny,Athletic,Olive,Polyester,Printed,Premium,4.5,grey crop top female
+1056,Female,36-50,Topwear,Crop Top,Brown Crop Top,Brown,Casual,Slim,Festival,Monsoon,Sunny,Hourglass,Fair,Linen,Solid,Luxury,4.1,brown crop top female
+1057,Female,50+,Topwear,Crop Top,Pink Crop Top,Pink,Old Money,Oversized,Gym,Monsoon,Rainy,Apple,Olive,Polyester,Checked,Premium,4.1,pink crop top female
+1058,Female,18-25,Topwear,Crop Top,Green Crop Top,Green,Ethnic,Regular,Festival,Winter,Sunny,Athletic,Fair,Cotton,Printed,Luxury,4.7,green crop top female
+1059,Female,50+,Topwear,Crop Top,Navy Crop Top,Navy,Corporate,Oversized,Office,All Season,Cloudy,Athletic,Fair,Polyester,Solid,Budget,4.5,navy crop top female
+1060,Female,Teen,Topwear,Crop Top,Cream Crop Top,Cream,Streetwear,Oversized,Festival,Monsoon,Sunny,Athletic,Fair,Polyester,Checked,Premium,3.9,cream crop top female
+1061,Female,Teen,Topwear,Kurti,White Kurti,White,Ethnic,Slim,Festival,Summer,Rainy,Apple,Olive,Linen,Solid,Budget,3.9,white kurti female
+1062,Female,18-25,Topwear,Kurti,Black Kurti,Black,Minimalist,Oversized,Date,All Season,Sunny,Pear,Fair,Cotton,Checked,Budget,4.7,black kurti female
+1063,Female,Teen,Topwear,Kurti,Blue Kurti,Blue,Corporate,Slim,Date,Summer,Cloudy,All,Fair,Linen,Printed,Luxury,3.9,blue kurti female
+1064,Female,18-25,Topwear,Kurti,Beige Kurti,Beige,Streetwear,Regular,Wedding,All Season,Cold,Hourglass,Wheatish,Polyester,Solid,Premium,4.1,beige kurti female
+1065,Female,Teen,Topwear,Kurti,Grey Kurti,Grey,Korean,Regular,Wedding,Monsoon,Cloudy,Apple,Dark,Denim,Checked,Budget,4.7,grey kurti female
+1066,Female,36-50,Topwear,Kurti,Brown Kurti,Brown,Minimalist,Oversized,Interview,Monsoon,Sunny,Pear,Olive,Polyester,Printed,Premium,4.0,brown kurti female
+1067,Female,36-50,Topwear,Kurti,Pink Kurti,Pink,Ethnic,Oversized,Wedding,Winter,Cold,Pear,Wheatish,Cotton,Printed,Premium,4.4,pink kurti female
+1068,Female,50+,Topwear,Kurti,Green Kurti,Green,Old Money,Oversized,Airport,All Season,Cold,Pear,Wheatish,Cotton,Solid,Budget,3.9,green kurti female
+1069,Female,18-25,Topwear,Kurti,Navy Kurti,Navy,Old Money,Regular,Wedding,All Season,Rainy,Hourglass,Dark,Linen,Solid,Premium,4.3,navy kurti female
+1070,Female,18-25,Topwear,Kurti,Cream Kurti,Cream,Old Money,Regular,College,Winter,Sunny,All,Olive,Polyester,Checked,Premium,4.5,cream kurti female
+1071,Female,26-35,Topwear,Blazer,White Blazer,White,Y2K,Oversized,Date,Monsoon,Sunny,Athletic,Dark,Cotton,Checked,Premium,4.8,white blazer female
+1072,Female,26-35,Topwear,Blazer,Black Blazer,Black,Minimalist,Regular,Interview,All Season,Rainy,Pear,Dark,Denim,Solid,Premium,4.7,black blazer female
+1073,Female,Teen,Topwear,Blazer,Blue Blazer,Blue,Casual,Oversized,Party,All Season,Cold,Athletic,Olive,Linen,Printed,Budget,4.6,blue blazer female
+1074,Female,18-25,Topwear,Blazer,Beige Blazer,Beige,Old Money,Oversized,Gym,Summer,Sunny,All,Olive,Denim,Printed,Premium,4.7,beige blazer female
+1075,Female,36-50,Topwear,Blazer,Grey Blazer,Grey,Corporate,Oversized,Gym,Monsoon,Sunny,Pear,Dark,Cotton,Printed,Premium,4.7,grey blazer female
+1076,Female,18-25,Topwear,Blazer,Brown Blazer,Brown,Ethnic,Regular,Date,All Season,Sunny,Hourglass,Wheatish,Cotton,Checked,Budget,3.9,brown blazer female
+1077,Female,36-50,Topwear,Blazer,Pink Blazer,Pink,Korean,Oversized,Vacation,Monsoon,Cloudy,Apple,Olive,Polyester,Solid,Premium,4.0,pink blazer female
+1078,Female,18-25,Topwear,Blazer,Green Blazer,Green,Ethnic,Oversized,Office,All Season,Rainy,Apple,Wheatish,Denim,Checked,Premium,4.7,green blazer female
+1079,Female,18-25,Topwear,Blazer,Navy Blazer,Navy,Casual,Slim,Date,All Season,Cloudy,Athletic,Wheatish,Denim,Checked,Budget,4.8,navy blazer female
+1080,Female,36-50,Topwear,Blazer,Cream Blazer,Cream,Casual,Slim,College,Monsoon,Sunny,Apple,Fair,Denim,Printed,Budget,4.8,cream blazer female
+1081,Male,36-50,Topwear,Oversized T-Shirt,White Oversized T-Shirt,White,Ethnic,Regular,Vacation,All Season,Rainy,Rectangle,Fair,Cotton,Checked,Luxury,4.0,white oversized t-shirt male
+1082,Male,18-25,Topwear,Oversized T-Shirt,Black Oversized T-Shirt,Black,Ethnic,Slim,Office,Monsoon,Rainy,Apple,Fair,Cotton,Printed,Luxury,4.0,black oversized t-shirt male
+1083,Male,50+,Topwear,Oversized T-Shirt,Blue Oversized T-Shirt,Blue,Minimalist,Slim,Interview,All Season,Sunny,Apple,Fair,Polyester,Printed,Premium,3.9,blue oversized t-shirt male
+1084,Male,18-25,Topwear,Oversized T-Shirt,Beige Oversized T-Shirt,Beige,Minimalist,Oversized,Party,All Season,Rainy,All,Olive,Denim,Checked,Budget,4.0,beige oversized t-shirt male
+1085,Male,18-25,Topwear,Oversized T-Shirt,Grey Oversized T-Shirt,Grey,Streetwear,Regular,Date,All Season,Sunny,Athletic,Dark,Linen,Printed,Premium,4.7,grey oversized t-shirt male
+1086,Male,Teen,Topwear,Oversized T-Shirt,Brown Oversized T-Shirt,Brown,Streetwear,Regular,Festival,Monsoon,Cold,Athletic,Dark,Cotton,Printed,Budget,4.7,brown oversized t-shirt male
+1087,Male,Teen,Topwear,Oversized T-Shirt,Pink Oversized T-Shirt,Pink,Corporate,Slim,Interview,Winter,Cloudy,Pear,Olive,Linen,Solid,Luxury,4.1,pink oversized t-shirt male
+1088,Male,18-25,Topwear,Oversized T-Shirt,Green Oversized T-Shirt,Green,Y2K,Regular,Gym,Winter,Cloudy,Pear,Fair,Cotton,Checked,Luxury,4.1,green oversized t-shirt male
+1089,Male,50+,Topwear,Oversized T-Shirt,Navy Oversized T-Shirt,Navy,Ethnic,Regular,Gym,Winter,Sunny,Apple,Dark,Polyester,Checked,Budget,4.6,navy oversized t-shirt male
+1090,Male,18-25,Topwear,Oversized T-Shirt,Cream Oversized T-Shirt,Cream,Corporate,Slim,Airport,Summer,Sunny,Rectangle,Dark,Denim,Checked,Premium,4.8,cream oversized t-shirt male
+1091,Male,Teen,Topwear,Graphic Tee,White Graphic Tee,White,Corporate,Slim,Festival,Monsoon,Cold,Pear,Dark,Cotton,Checked,Budget,3.9,white graphic tee male
+1092,Male,26-35,Topwear,Graphic Tee,Black Graphic Tee,Black,Corporate,Regular,Gym,Summer,Rainy,Pear,Dark,Polyester,Checked,Premium,4.0,black graphic tee male
+1093,Male,26-35,Topwear,Graphic Tee,Blue Graphic Tee,Blue,Minimalist,Oversized,Office,Monsoon,Rainy,Athletic,Olive,Denim,Solid,Premium,4.6,blue graphic tee male
+1094,Male,18-25,Topwear,Graphic Tee,Beige Graphic Tee,Beige,Old Money,Regular,Party,All Season,Cold,All,Fair,Denim,Checked,Premium,4.9,beige graphic tee male
+1095,Male,36-50,Topwear,Graphic Tee,Grey Graphic Tee,Grey,Y2K,Regular,Wedding,All Season,Rainy,Athletic,Fair,Polyester,Printed,Luxury,4.2,grey graphic tee male
+1096,Male,50+,Topwear,Graphic Tee,Brown Graphic Tee,Brown,Korean,Oversized,Festival,Summer,Cold,Rectangle,Wheatish,Linen,Solid,Premium,4.6,brown graphic tee male
+1097,Male,36-50,Topwear,Graphic Tee,Pink Graphic Tee,Pink,Corporate,Oversized,College,Monsoon,Rainy,Hourglass,Olive,Denim,Solid,Budget,4.2,pink graphic tee male
+1098,Male,26-35,Topwear,Graphic Tee,Green Graphic Tee,Green,Old Money,Oversized,Gym,All Season,Sunny,Apple,Olive,Denim,Printed,Premium,4.0,green graphic tee male
+1099,Male,Teen,Topwear,Graphic Tee,Navy Graphic Tee,Navy,Streetwear,Oversized,Festival,Monsoon,Rainy,All,Olive,Linen,Checked,Luxury,5.0,navy graphic tee male
+1100,Male,18-25,Topwear,Graphic Tee,Cream Graphic Tee,Cream,Korean,Regular,Party,All Season,Sunny,Hourglass,Wheatish,Polyester,Printed,Budget,4.5,cream graphic tee male
+1101,Male,18-25,Topwear,Hoodie,White Hoodie,White,Casual,Slim,Wedding,Monsoon,Cloudy,Rectangle,Fair,Polyester,Checked,Luxury,4.2,white hoodie male
+1102,Male,18-25,Topwear,Hoodie,Black Hoodie,Black,Old Money,Oversized,Vacation,All Season,Cloudy,Hourglass,Fair,Denim,Printed,Budget,4.0,black hoodie male
+1103,Male,Teen,Topwear,Hoodie,Blue Hoodie,Blue,Korean,Regular,Party,All Season,Cloudy,Rectangle,Fair,Polyester,Printed,Budget,5.0,blue hoodie male
+1104,Male,18-25,Topwear,Hoodie,Beige Hoodie,Beige,Old Money,Slim,Airport,Monsoon,Rainy,Hourglass,Olive,Polyester,Solid,Luxury,3.9,beige hoodie male
+1105,Male,Teen,Topwear,Hoodie,Grey Hoodie,Grey,Corporate,Slim,Vacation,All Season,Cloudy,Rectangle,Fair,Linen,Solid,Premium,4.5,grey hoodie male
+1106,Male,Teen,Topwear,Hoodie,Brown Hoodie,Brown,Corporate,Oversized,Office,Summer,Cold,Athletic,Dark,Linen,Checked,Luxury,4.4,brown hoodie male
+1107,Male,18-25,Topwear,Hoodie,Pink Hoodie,Pink,Streetwear,Slim,Vacation,Winter,Cold,Athletic,Olive,Denim,Checked,Luxury,4.1,pink hoodie male
+1108,Male,Teen,Topwear,Hoodie,Green Hoodie,Green,Korean,Slim,Gym,Monsoon,Cloudy,Hourglass,Olive,Denim,Solid,Budget,4.5,green hoodie male
+1109,Male,Teen,Topwear,Hoodie,Navy Hoodie,Navy,Minimalist,Regular,Interview,Summer,Cold,All,Dark,Polyester,Printed,Luxury,4.1,navy hoodie male
+1110,Male,26-35,Topwear,Hoodie,Cream Hoodie,Cream,Casual,Slim,College,All Season,Cold,Apple,Fair,Denim,Solid,Luxury,4.0,cream hoodie male
+1111,Male,26-35,Topwear,Linen Shirt,White Linen Shirt,White,Corporate,Oversized,Airport,Monsoon,Sunny,Hourglass,Dark,Denim,Printed,Luxury,4.8,white linen shirt male
+1112,Male,Teen,Topwear,Linen Shirt,Black Linen Shirt,Black,Old Money,Slim,Wedding,Winter,Cold,Rectangle,Dark,Linen,Printed,Budget,4.7,black linen shirt male
+1113,Male,Teen,Topwear,Linen Shirt,Blue Linen Shirt,Blue,Ethnic,Oversized,Wedding,Monsoon,Cold,Rectangle,Olive,Cotton,Printed,Premium,4.2,blue linen shirt male
+1114,Male,50+,Topwear,Linen Shirt,Beige Linen Shirt,Beige,Ethnic,Oversized,Festival,All Season,Sunny,Athletic,Fair,Linen,Checked,Premium,3.9,beige linen shirt male
+1115,Male,50+,Topwear,Linen Shirt,Grey Linen Shirt,Grey,Y2K,Slim,Vacation,All Season,Cloudy,Apple,Wheatish,Linen,Solid,Budget,4.4,grey linen shirt male
+1116,Male,50+,Topwear,Linen Shirt,Brown Linen Shirt,Brown,Old Money,Slim,Office,All Season,Rainy,Athletic,Wheatish,Cotton,Printed,Budget,4.9,brown linen shirt male
+1117,Male,36-50,Topwear,Linen Shirt,Pink Linen Shirt,Pink,Old Money,Oversized,Wedding,Summer,Sunny,Athletic,Fair,Polyester,Checked,Luxury,4.0,pink linen shirt male
+1118,Male,26-35,Topwear,Linen Shirt,Green Linen Shirt,Green,Ethnic,Oversized,Party,All Season,Cloudy,Apple,Olive,Polyester,Solid,Budget,4.0,green linen shirt male
+1119,Male,18-25,Topwear,Linen Shirt,Navy Linen Shirt,Navy,Corporate,Slim,Gym,Monsoon,Sunny,Hourglass,Wheatish,Linen,Checked,Luxury,3.8,navy linen shirt male
+1120,Male,50+,Topwear,Linen Shirt,Cream Linen Shirt,Cream,Corporate,Regular,Festival,Summer,Rainy,Hourglass,Fair,Denim,Solid,Premium,4.0,cream linen shirt male
+1121,Male,18-25,Topwear,Polo Shirt,White Polo Shirt,White,Streetwear,Oversized,Office,Summer,Rainy,Hourglass,Wheatish,Denim,Printed,Budget,4.6,white polo shirt male
+1122,Male,18-25,Topwear,Polo Shirt,Black Polo Shirt,Black,Ethnic,Regular,Party,Monsoon,Rainy,Apple,Wheatish,Cotton,Solid,Luxury,4.6,black polo shirt male
+1123,Male,26-35,Topwear,Polo Shirt,Blue Polo Shirt,Blue,Y2K,Oversized,Wedding,Monsoon,Rainy,Hourglass,Olive,Polyester,Solid,Budget,4.8,blue polo shirt male
+1124,Male,Teen,Topwear,Polo Shirt,Beige Polo Shirt,Beige,Minimalist,Regular,Interview,Monsoon,Rainy,Athletic,Wheatish,Cotton,Checked,Budget,3.8,beige polo shirt male
+1125,Male,36-50,Topwear,Polo Shirt,Grey Polo Shirt,Grey,Minimalist,Oversized,Vacation,Monsoon,Cloudy,Apple,Dark,Denim,Printed,Budget,4.8,grey polo shirt male
+1126,Male,Teen,Topwear,Polo Shirt,Brown Polo Shirt,Brown,Corporate,Regular,College,Summer,Rainy,Athletic,Wheatish,Linen,Printed,Budget,4.1,brown polo shirt male
+1127,Male,36-50,Topwear,Polo Shirt,Pink Polo Shirt,Pink,Minimalist,Slim,Date,Summer,Cloudy,Athletic,Olive,Denim,Solid,Budget,4.2,pink polo shirt male
+1128,Male,50+,Topwear,Polo Shirt,Green Polo Shirt,Green,Corporate,Regular,Office,Monsoon,Rainy,Hourglass,Wheatish,Denim,Solid,Premium,4.0,green polo shirt male
+1129,Male,50+,Topwear,Polo Shirt,Navy Polo Shirt,Navy,Casual,Regular,College,Winter,Rainy,Athletic,Wheatish,Linen,Checked,Luxury,4.0,navy polo shirt male
+1130,Male,26-35,Topwear,Polo Shirt,Cream Polo Shirt,Cream,Y2K,Slim,Festival,All Season,Sunny,All,Fair,Cotton,Solid,Premium,4.0,cream polo shirt male
+1131,Male,36-50,Topwear,Crop Top,White Crop Top,White,Corporate,Regular,Airport,Winter,Cold,Apple,Wheatish,Denim,Checked,Luxury,4.2,white crop top male
+1132,Male,Teen,Topwear,Crop Top,Black Crop Top,Black,Ethnic,Slim,Airport,Winter,Rainy,Pear,Dark,Polyester,Solid,Premium,4.6,black crop top male
+1133,Male,18-25,Topwear,Crop Top,Blue Crop Top,Blue,Korean,Regular,Vacation,Winter,Cloudy,Athletic,Fair,Linen,Solid,Luxury,4.5,blue crop top male
+1134,Male,18-25,Topwear,Crop Top,Beige Crop Top,Beige,Ethnic,Regular,Interview,All Season,Rainy,All,Wheatish,Linen,Solid,Luxury,4.5,beige crop top male
+1135,Male,26-35,Topwear,Crop Top,Grey Crop Top,Grey,Streetwear,Regular,Vacation,Summer,Sunny,Pear,Fair,Denim,Checked,Budget,4.5,grey crop top male
+1136,Male,50+,Topwear,Crop Top,Brown Crop Top,Brown,Y2K,Oversized,Interview,Winter,Cold,Apple,Wheatish,Cotton,Solid,Budget,4.7,brown crop top male
+1137,Male,26-35,Topwear,Crop Top,Pink Crop Top,Pink,Ethnic,Slim,Vacation,Monsoon,Cloudy,Rectangle,Olive,Linen,Solid,Premium,4.9,pink crop top male
+1138,Male,18-25,Topwear,Crop Top,Green Crop Top,Green,Minimalist,Oversized,Wedding,Winter,Rainy,Rectangle,Olive,Denim,Printed,Budget,5.0,green crop top male
+1139,Male,36-50,Topwear,Crop Top,Navy Crop Top,Navy,Streetwear,Slim,College,Summer,Sunny,Rectangle,Olive,Polyester,Printed,Budget,4.4,navy crop top male
+1140,Male,36-50,Topwear,Crop Top,Cream Crop Top,Cream,Casual,Regular,College,Monsoon,Cloudy,Rectangle,Olive,Linen,Solid,Luxury,4.9,cream crop top male
+1141,Male,Teen,Topwear,Kurti,White Kurti,White,Minimalist,Slim,Wedding,Monsoon,Cloudy,Apple,Wheatish,Linen,Printed,Premium,4.0,white kurti male
+1142,Male,36-50,Topwear,Kurti,Black Kurti,Black,Y2K,Regular,Date,Summer,Cloudy,Athletic,Fair,Denim,Printed,Luxury,3.8,black kurti male
+1143,Male,36-50,Topwear,Kurti,Blue Kurti,Blue,Ethnic,Oversized,Airport,Winter,Cloudy,Athletic,Dark,Polyester,Solid,Luxury,4.1,blue kurti male
+1144,Male,50+,Topwear,Kurti,Beige Kurti,Beige,Ethnic,Regular,Gym,Monsoon,Cloudy,Rectangle,Fair,Polyester,Solid,Premium,4.7,beige kurti male
+1145,Male,18-25,Topwear,Kurti,Grey Kurti,Grey,Streetwear,Slim,Vacation,All Season,Cloudy,Apple,Wheatish,Denim,Printed,Luxury,4.8,grey kurti male
+1146,Male,36-50,Topwear,Kurti,Brown Kurti,Brown,Korean,Oversized,Party,Monsoon,Rainy,Hourglass,Olive,Cotton,Checked,Budget,4.0,brown kurti male
+1147,Male,36-50,Topwear,Kurti,Pink Kurti,Pink,Corporate,Regular,Festival,Monsoon,Rainy,All,Dark,Polyester,Printed,Premium,4.6,pink kurti male
+1148,Male,18-25,Topwear,Kurti,Green Kurti,Green,Korean,Slim,Wedding,Monsoon,Cloudy,Pear,Fair,Polyester,Printed,Premium,3.9,green kurti male
+1149,Male,36-50,Topwear,Kurti,Navy Kurti,Navy,Korean,Regular,Party,Winter,Sunny,All,Dark,Polyester,Checked,Luxury,3.9,navy kurti male
+1150,Male,26-35,Topwear,Kurti,Cream Kurti,Cream,Old Money,Slim,Date,Winter,Cold,Rectangle,Wheatish,Denim,Checked,Budget,4.5,cream kurti male
+1151,Male,Teen,Topwear,Blazer,White Blazer,White,Corporate,Oversized,Gym,All Season,Sunny,Pear,Dark,Cotton,Solid,Premium,4.6,white blazer male
+1152,Male,Teen,Topwear,Blazer,Black Blazer,Black,Streetwear,Slim,Wedding,Monsoon,Cold,Apple,Dark,Polyester,Checked,Premium,4.0,black blazer male
+1153,Male,36-50,Topwear,Blazer,Blue Blazer,Blue,Old Money,Slim,Airport,All Season,Rainy,All,Fair,Denim,Printed,Luxury,4.2,blue blazer male
+1154,Male,26-35,Topwear,Blazer,Beige Blazer,Beige,Streetwear,Slim,Date,Monsoon,Cloudy,Apple,Dark,Denim,Printed,Luxury,4.0,beige blazer male
+1155,Male,36-50,Topwear,Blazer,Grey Blazer,Grey,Corporate,Oversized,Airport,Monsoon,Rainy,All,Olive,Polyester,Printed,Luxury,4.1,grey blazer male
+1156,Male,36-50,Topwear,Blazer,Brown Blazer,Brown,Y2K,Regular,Interview,Winter,Cloudy,Pear,Olive,Linen,Printed,Luxury,3.9,brown blazer male
+1157,Male,Teen,Topwear,Blazer,Pink Blazer,Pink,Old Money,Regular,Party,Summer,Sunny,Athletic,Wheatish,Polyester,Solid,Premium,4.3,pink blazer male
+1158,Male,Teen,Topwear,Blazer,Green Blazer,Green,Old Money,Slim,Office,All Season,Cold,All,Wheatish,Linen,Printed,Premium,4.4,green blazer male
+1159,Male,50+,Topwear,Blazer,Navy Blazer,Navy,Ethnic,Regular,Airport,Summer,Rainy,Rectangle,Wheatish,Cotton,Solid,Premium,4.9,navy blazer male
+1160,Male,50+,Topwear,Blazer,Cream Blazer,Cream,Y2K,Regular,Festival,All Season,Rainy,Apple,Wheatish,Polyester,Checked,Budget,4.9,cream blazer male
+1161,Unisex,36-50,Topwear,Oversized T-Shirt,White Oversized T-Shirt,White,Old Money,Slim,Vacation,Summer,Sunny,Apple,Wheatish,Linen,Printed,Premium,4.8,white oversized t-shirt unisex
+1162,Unisex,50+,Topwear,Oversized T-Shirt,Black Oversized T-Shirt,Black,Old Money,Regular,Festival,Monsoon,Sunny,Rectangle,Fair,Linen,Printed,Luxury,5.0,black oversized t-shirt unisex
+1163,Unisex,18-25,Topwear,Oversized T-Shirt,Blue Oversized T-Shirt,Blue,Streetwear,Oversized,Vacation,Monsoon,Rainy,Hourglass,Wheatish,Polyester,Printed,Luxury,4.9,blue oversized t-shirt unisex
+1164,Unisex,50+,Topwear,Oversized T-Shirt,Beige Oversized T-Shirt,Beige,Y2K,Regular,College,All Season,Cloudy,All,Fair,Denim,Printed,Premium,4.3,beige oversized t-shirt unisex
+1165,Unisex,18-25,Topwear,Oversized T-Shirt,Grey Oversized T-Shirt,Grey,Ethnic,Slim,Interview,Winter,Cloudy,All,Wheatish,Polyester,Solid,Premium,4.6,grey oversized t-shirt unisex
+1166,Unisex,18-25,Topwear,Oversized T-Shirt,Brown Oversized T-Shirt,Brown,Corporate,Regular,Interview,All Season,Sunny,Athletic,Fair,Polyester,Checked,Premium,4.4,brown oversized t-shirt unisex
+1167,Unisex,36-50,Topwear,Oversized T-Shirt,Pink Oversized T-Shirt,Pink,Corporate,Slim,Vacation,Monsoon,Cold,Apple,Olive,Linen,Printed,Premium,4.5,pink oversized t-shirt unisex
+1168,Unisex,Teen,Topwear,Oversized T-Shirt,Green Oversized T-Shirt,Green,Streetwear,Regular,Festival,All Season,Rainy,Athletic,Wheatish,Denim,Checked,Budget,5.0,green oversized t-shirt unisex
+1169,Unisex,36-50,Topwear,Oversized T-Shirt,Navy Oversized T-Shirt,Navy,Minimalist,Oversized,Party,Monsoon,Rainy,Athletic,Olive,Polyester,Checked,Budget,4.2,navy oversized t-shirt unisex
+1170,Unisex,Teen,Topwear,Oversized T-Shirt,Cream Oversized T-Shirt,Cream,Casual,Oversized,Vacation,All Season,Cold,All,Fair,Polyester,Printed,Budget,4.9,cream oversized t-shirt unisex
+1171,Unisex,36-50,Topwear,Graphic Tee,White Graphic Tee,White,Minimalist,Slim,Airport,Summer,Cold,Hourglass,Dark,Linen,Checked,Budget,3.8,white graphic tee unisex
+1172,Unisex,Teen,Topwear,Graphic Tee,Black Graphic Tee,Black,Casual,Oversized,Date,Winter,Rainy,Athletic,Dark,Denim,Solid,Budget,4.7,black graphic tee unisex
+1173,Unisex,Teen,Topwear,Graphic Tee,Blue Graphic Tee,Blue,Corporate,Regular,Vacation,Monsoon,Cold,Athletic,Dark,Cotton,Printed,Budget,4.8,blue graphic tee unisex
+1174,Unisex,Teen,Topwear,Graphic Tee,Beige Graphic Tee,Beige,Minimalist,Oversized,Office,Monsoon,Sunny,Athletic,Olive,Denim,Printed,Premium,4.9,beige graphic tee unisex
+1175,Unisex,Teen,Topwear,Graphic Tee,Grey Graphic Tee,Grey,Corporate,Oversized,Gym,Winter,Cold,Rectangle,Fair,Denim,Solid,Budget,5.0,grey graphic tee unisex
+1176,Unisex,26-35,Topwear,Graphic Tee,Brown Graphic Tee,Brown,Old Money,Slim,Festival,Summer,Sunny,Apple,Wheatish,Cotton,Solid,Budget,4.8,brown graphic tee unisex
+1177,Unisex,50+,Topwear,Graphic Tee,Pink Graphic Tee,Pink,Corporate,Regular,College,All Season,Cold,Apple,Olive,Linen,Checked,Budget,4.4,pink graphic tee unisex
+1178,Unisex,36-50,Topwear,Graphic Tee,Green Graphic Tee,Green,Ethnic,Regular,Office,Winter,Cloudy,Rectangle,Wheatish,Cotton,Solid,Premium,4.3,green graphic tee unisex
+1179,Unisex,36-50,Topwear,Graphic Tee,Navy Graphic Tee,Navy,Minimalist,Slim,Festival,All Season,Cold,Athletic,Fair,Polyester,Checked,Budget,3.8,navy graphic tee unisex
+1180,Unisex,36-50,Topwear,Graphic Tee,Cream Graphic Tee,Cream,Casual,Regular,Office,Winter,Cloudy,Rectangle,Dark,Linen,Solid,Premium,4.3,cream graphic tee unisex
+1181,Unisex,Teen,Topwear,Hoodie,White Hoodie,White,Minimalist,Oversized,Wedding,Summer,Rainy,Athletic,Fair,Denim,Solid,Premium,4.6,white hoodie unisex
+1182,Unisex,36-50,Topwear,Hoodie,Black Hoodie,Black,Minimalist,Regular,Festival,All Season,Sunny,All,Dark,Polyester,Solid,Premium,4.2,black hoodie unisex
+1183,Unisex,Teen,Topwear,Hoodie,Blue Hoodie,Blue,Ethnic,Slim,Vacation,Summer,Cold,Apple,Olive,Denim,Printed,Premium,4.5,blue hoodie unisex
+1184,Unisex,18-25,Topwear,Hoodie,Beige Hoodie,Beige,Korean,Slim,Airport,Summer,Rainy,Athletic,Fair,Cotton,Printed,Luxury,4.8,beige hoodie unisex
+1185,Unisex,26-35,Topwear,Hoodie,Grey Hoodie,Grey,Y2K,Regular,Wedding,Monsoon,Cold,Rectangle,Wheatish,Linen,Solid,Budget,3.9,grey hoodie unisex
+1186,Unisex,18-25,Topwear,Hoodie,Brown Hoodie,Brown,Streetwear,Slim,Office,Monsoon,Cloudy,Apple,Dark,Polyester,Solid,Budget,4.4,brown hoodie unisex
+1187,Unisex,50+,Topwear,Hoodie,Pink Hoodie,Pink,Old Money,Regular,Gym,Monsoon,Sunny,Athletic,Olive,Polyester,Checked,Premium,4.1,pink hoodie unisex
+1188,Unisex,Teen,Topwear,Hoodie,Green Hoodie,Green,Corporate,Regular,Vacation,Summer,Cloudy,Hourglass,Fair,Denim,Printed,Luxury,4.6,green hoodie unisex
+1189,Unisex,36-50,Topwear,Hoodie,Navy Hoodie,Navy,Minimalist,Slim,Wedding,Winter,Cold,All,Wheatish,Polyester,Printed,Budget,4.9,navy hoodie unisex
+1190,Unisex,50+,Topwear,Hoodie,Cream Hoodie,Cream,Ethnic,Regular,Festival,Winter,Rainy,Athletic,Wheatish,Polyester,Solid,Premium,4.4,cream hoodie unisex
+1191,Unisex,36-50,Topwear,Linen Shirt,White Linen Shirt,White,Corporate,Slim,Interview,All Season,Sunny,Hourglass,Wheatish,Linen,Solid,Budget,4.7,white linen shirt unisex
+1192,Unisex,Teen,Topwear,Linen Shirt,Black Linen Shirt,Black,Casual,Slim,Party,Monsoon,Cold,Athletic,Dark,Polyester,Checked,Luxury,4.6,black linen shirt unisex
+1193,Unisex,36-50,Topwear,Linen Shirt,Blue Linen Shirt,Blue,Ethnic,Slim,Festival,Winter,Sunny,Hourglass,Dark,Denim,Checked,Luxury,4.2,blue linen shirt unisex
+1194,Unisex,36-50,Topwear,Linen Shirt,Beige Linen Shirt,Beige,Ethnic,Slim,Festival,Summer,Rainy,Apple,Fair,Polyester,Printed,Budget,4.2,beige linen shirt unisex
+1195,Unisex,36-50,Topwear,Linen Shirt,Grey Linen Shirt,Grey,Old Money,Regular,College,All Season,Cold,Apple,Dark,Denim,Printed,Luxury,3.8,grey linen shirt unisex
+1196,Unisex,50+,Topwear,Linen Shirt,Brown Linen Shirt,Brown,Old Money,Slim,Festival,All Season,Rainy,Hourglass,Wheatish,Denim,Printed,Luxury,4.2,brown linen shirt unisex
+1197,Unisex,36-50,Topwear,Linen Shirt,Pink Linen Shirt,Pink,Y2K,Oversized,Festival,Winter,Cloudy,Athletic,Dark,Polyester,Checked,Budget,4.1,pink linen shirt unisex
+1198,Unisex,Teen,Topwear,Linen Shirt,Green Linen Shirt,Green,Casual,Oversized,Party,Summer,Rainy,Pear,Wheatish,Polyester,Solid,Budget,4.0,green linen shirt unisex
+1199,Unisex,36-50,Topwear,Linen Shirt,Navy Linen Shirt,Navy,Y2K,Oversized,Airport,Summer,Sunny,Rectangle,Olive,Cotton,Checked,Budget,4.8,navy linen shirt unisex
+1200,Unisex,18-25,Topwear,Linen Shirt,Cream Linen Shirt,Cream,Corporate,Slim,Date,Winter,Rainy,Hourglass,Olive,Polyester,Checked,Luxury,4.6,cream linen shirt unisex
+1201,Unisex,26-35,Topwear,Polo Shirt,White Polo Shirt,White,Minimalist,Oversized,Gym,All Season,Cold,All,Dark,Denim,Checked,Budget,4.7,white polo shirt unisex
+1202,Unisex,Teen,Topwear,Polo Shirt,Black Polo Shirt,Black,Korean,Oversized,Office,All Season,Sunny,Hourglass,Dark,Linen,Checked,Budget,4.6,black polo shirt unisex
+1203,Unisex,18-25,Topwear,Polo Shirt,Blue Polo Shirt,Blue,Casual,Slim,Interview,Summer,Cloudy,Apple,Olive,Denim,Checked,Premium,4.7,blue polo shirt unisex
+1204,Unisex,Teen,Topwear,Polo Shirt,Beige Polo Shirt,Beige,Korean,Oversized,Gym,Summer,Cold,Rectangle,Wheatish,Linen,Solid,Luxury,4.6,beige polo shirt unisex
+1205,Unisex,Teen,Topwear,Polo Shirt,Grey Polo Shirt,Grey,Casual,Oversized,Festival,Summer,Sunny,Apple,Olive,Polyester,Solid,Luxury,4.2,grey polo shirt unisex
+1206,Unisex,26-35,Topwear,Polo Shirt,Brown Polo Shirt,Brown,Ethnic,Oversized,Festival,Summer,Cloudy,Athletic,Dark,Polyester,Solid,Premium,3.9,brown polo shirt unisex
+1207,Unisex,Teen,Topwear,Polo Shirt,Pink Polo Shirt,Pink,Minimalist,Regular,Party,Monsoon,Sunny,Pear,Fair,Linen,Checked,Budget,3.9,pink polo shirt unisex
+1208,Unisex,18-25,Topwear,Polo Shirt,Green Polo Shirt,Green,Corporate,Oversized,Airport,Winter,Sunny,Apple,Olive,Denim,Printed,Premium,4.3,green polo shirt unisex
+1209,Unisex,Teen,Topwear,Polo Shirt,Navy Polo Shirt,Navy,Corporate,Oversized,Vacation,All Season,Sunny,All,Fair,Cotton,Solid,Luxury,3.9,navy polo shirt unisex
+1210,Unisex,26-35,Topwear,Polo Shirt,Cream Polo Shirt,Cream,Old Money,Regular,Office,Monsoon,Cold,Rectangle,Dark,Denim,Solid,Budget,4.5,cream polo shirt unisex
+1211,Unisex,Teen,Topwear,Crop Top,White Crop Top,White,Ethnic,Oversized,Party,Monsoon,Sunny,Pear,Fair,Linen,Solid,Luxury,4.3,white crop top unisex
+1212,Unisex,Teen,Topwear,Crop Top,Black Crop Top,Black,Old Money,Oversized,Festival,Monsoon,Sunny,Athletic,Dark,Linen,Printed,Luxury,3.8,black crop top unisex
+1213,Unisex,36-50,Topwear,Crop Top,Blue Crop Top,Blue,Y2K,Slim,College,Winter,Sunny,Apple,Olive,Cotton,Checked,Premium,4.9,blue crop top unisex
+1214,Unisex,18-25,Topwear,Crop Top,Beige Crop Top,Beige,Corporate,Oversized,Festival,Monsoon,Rainy,Athletic,Olive,Linen,Solid,Luxury,4.8,beige crop top unisex
+1215,Unisex,36-50,Topwear,Crop Top,Grey Crop Top,Grey,Streetwear,Oversized,Interview,Summer,Cold,Rectangle,Wheatish,Denim,Printed,Budget,4.7,grey crop top unisex
+1216,Unisex,26-35,Topwear,Crop Top,Brown Crop Top,Brown,Corporate,Oversized,Date,Summer,Cloudy,Hourglass,Fair,Cotton,Printed,Luxury,4.7,brown crop top unisex
+1217,Unisex,18-25,Topwear,Crop Top,Pink Crop Top,Pink,Streetwear,Slim,Vacation,Winter,Cold,Rectangle,Dark,Polyester,Checked,Premium,4.1,pink crop top unisex
+1218,Unisex,18-25,Topwear,Crop Top,Green Crop Top,Green,Korean,Oversized,Vacation,Summer,Sunny,Pear,Olive,Denim,Solid,Budget,4.3,green crop top unisex
+1219,Unisex,50+,Topwear,Crop Top,Navy Crop Top,Navy,Y2K,Regular,Office,All Season,Cloudy,All,Dark,Cotton,Solid,Budget,4.4,navy crop top unisex
+1220,Unisex,Teen,Topwear,Crop Top,Cream Crop Top,Cream,Old Money,Slim,Airport,Summer,Sunny,Apple,Wheatish,Polyester,Solid,Luxury,5.0,cream crop top unisex
+1221,Unisex,50+,Topwear,Kurti,White Kurti,White,Streetwear,Slim,Wedding,Winter,Rainy,Hourglass,Olive,Linen,Printed,Premium,4.2,white kurti unisex
+1222,Unisex,18-25,Topwear,Kurti,Black Kurti,Black,Minimalist,Slim,Gym,Winter,Sunny,Hourglass,Olive,Linen,Solid,Luxury,4.3,black kurti unisex
+1223,Unisex,26-35,Topwear,Kurti,Blue Kurti,Blue,Y2K,Regular,Vacation,Winter,Cloudy,Rectangle,Wheatish,Linen,Solid,Luxury,4.8,blue kurti unisex
+1224,Unisex,18-25,Topwear,Kurti,Beige Kurti,Beige,Corporate,Regular,Date,Monsoon,Sunny,Hourglass,Dark,Linen,Solid,Budget,3.9,beige kurti unisex
+1225,Unisex,26-35,Topwear,Kurti,Grey Kurti,Grey,Y2K,Oversized,Airport,Winter,Cold,Rectangle,Fair,Linen,Printed,Budget,4.2,grey kurti unisex
+1226,Unisex,18-25,Topwear,Kurti,Brown Kurti,Brown,Minimalist,Oversized,Party,Monsoon,Sunny,Pear,Olive,Cotton,Solid,Budget,4.9,brown kurti unisex
+1227,Unisex,Teen,Topwear,Kurti,Pink Kurti,Pink,Y2K,Oversized,Office,Winter,Cloudy,Apple,Dark,Cotton,Printed,Premium,4.2,pink kurti unisex
+1228,Unisex,36-50,Topwear,Kurti,Green Kurti,Green,Old Money,Regular,Office,Winter,Cloudy,Rectangle,Olive,Denim,Solid,Luxury,4.6,green kurti unisex
+1229,Unisex,18-25,Topwear,Kurti,Navy Kurti,Navy,Korean,Oversized,Date,Summer,Cloudy,Apple,Wheatish,Cotton,Solid,Luxury,3.9,navy kurti unisex
+1230,Unisex,50+,Topwear,Kurti,Cream Kurti,Cream,Old Money,Slim,Party,Summer,Cloudy,Pear,Olive,Polyester,Printed,Premium,4.2,cream kurti unisex
+1231,Unisex,50+,Topwear,Blazer,White Blazer,White,Streetwear,Regular,Date,All Season,Rainy,All,Wheatish,Cotton,Printed,Budget,4.3,white blazer unisex
+1232,Unisex,Teen,Topwear,Blazer,Black Blazer,Black,Casual,Oversized,Party,Monsoon,Cloudy,All,Olive,Cotton,Checked,Budget,4.3,black blazer unisex
+1233,Unisex,50+,Topwear,Blazer,Blue Blazer,Blue,Ethnic,Slim,Interview,All Season,Cold,Pear,Dark,Polyester,Printed,Budget,4.5,blue blazer unisex
+1234,Unisex,26-35,Topwear,Blazer,Beige Blazer,Beige,Corporate,Regular,Gym,Summer,Cold,Rectangle,Dark,Linen,Printed,Luxury,4.9,beige blazer unisex
+1235,Unisex,18-25,Topwear,Blazer,Grey Blazer,Grey,Old Money,Regular,Date,Monsoon,Rainy,Pear,Olive,Denim,Solid,Premium,3.9,grey blazer unisex
+1236,Unisex,50+,Topwear,Blazer,Brown Blazer,Brown,Streetwear,Slim,Gym,Monsoon,Sunny,Pear,Fair,Cotton,Printed,Luxury,4.8,brown blazer unisex
+1237,Unisex,18-25,Topwear,Blazer,Pink Blazer,Pink,Ethnic,Slim,Date,Winter,Cloudy,Apple,Olive,Linen,Solid,Premium,4.3,pink blazer unisex
+1238,Unisex,Teen,Topwear,Blazer,Green Blazer,Green,Korean,Regular,Wedding,Monsoon,Sunny,Pear,Dark,Linen,Printed,Budget,4.1,green blazer unisex
+1239,Unisex,18-25,Topwear,Blazer,Navy Blazer,Navy,Ethnic,Slim,Festival,Summer,Cloudy,Pear,Wheatish,Linen,Checked,Budget,4.9,navy blazer unisex
+1240,Unisex,18-25,Topwear,Blazer,Cream Blazer,Cream,Minimalist,Oversized,Vacation,Monsoon,Rainy,Pear,Olive,Cotton,Solid,Premium,3.8,cream blazer unisex
+1241,Female,26-35,Bottomwear,Baggy Jeans,White Baggy Jeans,White,Corporate,Oversized,Gym,Monsoon,Sunny,Apple,Dark,Linen,Printed,Budget,4.4,white baggy jeans female
+1242,Female,Teen,Bottomwear,Baggy Jeans,Black Baggy Jeans,Black,Corporate,Regular,Festival,All Season,Rainy,Apple,Olive,Linen,Checked,Luxury,4.4,black baggy jeans female
+1243,Female,Teen,Bottomwear,Baggy Jeans,Blue Baggy Jeans,Blue,Streetwear,Slim,Interview,Summer,Cold,Hourglass,Fair,Polyester,Printed,Budget,4.5,blue baggy jeans female
+1244,Female,26-35,Bottomwear,Baggy Jeans,Beige Baggy Jeans,Beige,Old Money,Slim,Festival,All Season,Rainy,Rectangle,Wheatish,Linen,Printed,Luxury,4.9,beige baggy jeans female
+1245,Female,26-35,Bottomwear,Baggy Jeans,Grey Baggy Jeans,Grey,Minimalist,Oversized,Date,Winter,Cold,Rectangle,Wheatish,Denim,Printed,Budget,4.9,grey baggy jeans female
+1246,Female,50+,Bottomwear,Baggy Jeans,Brown Baggy Jeans,Brown,Minimalist,Regular,Vacation,All Season,Rainy,All,Olive,Cotton,Solid,Luxury,3.9,brown baggy jeans female
+1247,Female,36-50,Bottomwear,Baggy Jeans,Pink Baggy Jeans,Pink,Old Money,Slim,Date,All Season,Cold,Rectangle,Wheatish,Cotton,Solid,Budget,4.6,pink baggy jeans female
+1248,Female,Teen,Bottomwear,Baggy Jeans,Green Baggy Jeans,Green,Casual,Slim,Date,Monsoon,Cloudy,All,Fair,Denim,Checked,Luxury,4.4,green baggy jeans female
+1249,Female,50+,Bottomwear,Baggy Jeans,Navy Baggy Jeans,Navy,Casual,Slim,Interview,Summer,Cold,Rectangle,Fair,Polyester,Checked,Luxury,3.9,navy baggy jeans female
+1250,Female,36-50,Bottomwear,Baggy Jeans,Cream Baggy Jeans,Cream,Streetwear,Oversized,Wedding,Monsoon,Cold,Hourglass,Dark,Polyester,Solid,Luxury,4.3,cream baggy jeans female
+1251,Female,Teen,Bottomwear,Wide Leg Jeans,White Wide Leg Jeans,White,Casual,Slim,Date,Monsoon,Sunny,Pear,Fair,Polyester,Solid,Budget,4.4,white wide leg jeans female
+1252,Female,Teen,Bottomwear,Wide Leg Jeans,Black Wide Leg Jeans,Black,Y2K,Regular,Date,Winter,Sunny,Athletic,Dark,Linen,Printed,Premium,4.8,black wide leg jeans female
+1253,Female,50+,Bottomwear,Wide Leg Jeans,Blue Wide Leg Jeans,Blue,Korean,Oversized,Airport,Summer,Cold,Rectangle,Fair,Polyester,Printed,Budget,4.7,blue wide leg jeans female
+1254,Female,26-35,Bottomwear,Wide Leg Jeans,Beige Wide Leg Jeans,Beige,Minimalist,Slim,Wedding,Monsoon,Rainy,All,Dark,Linen,Solid,Budget,4.2,beige wide leg jeans female
+1255,Female,26-35,Bottomwear,Wide Leg Jeans,Grey Wide Leg Jeans,Grey,Minimalist,Regular,Date,Winter,Sunny,Hourglass,Wheatish,Denim,Checked,Premium,3.8,grey wide leg jeans female
+1256,Female,18-25,Bottomwear,Wide Leg Jeans,Brown Wide Leg Jeans,Brown,Corporate,Slim,Wedding,Winter,Sunny,All,Fair,Linen,Solid,Luxury,4.2,brown wide leg jeans female
+1257,Female,Teen,Bottomwear,Wide Leg Jeans,Pink Wide Leg Jeans,Pink,Old Money,Regular,Airport,Summer,Sunny,Rectangle,Olive,Denim,Solid,Luxury,4.6,pink wide leg jeans female
+1258,Female,18-25,Bottomwear,Wide Leg Jeans,Green Wide Leg Jeans,Green,Casual,Oversized,Party,All Season,Rainy,Rectangle,Olive,Cotton,Printed,Luxury,3.9,green wide leg jeans female
+1259,Female,50+,Bottomwear,Wide Leg Jeans,Navy Wide Leg Jeans,Navy,Ethnic,Regular,Airport,Summer,Cloudy,Apple,Dark,Linen,Solid,Premium,4.8,navy wide leg jeans female
+1260,Female,Teen,Bottomwear,Wide Leg Jeans,Cream Wide Leg Jeans,Cream,Y2K,Oversized,Festival,Summer,Rainy,All,Wheatish,Denim,Checked,Budget,4.3,cream wide leg jeans female
+1261,Female,18-25,Bottomwear,Cargo Pants,White Cargo Pants,White,Corporate,Oversized,Airport,Summer,Cold,Apple,Fair,Cotton,Solid,Premium,3.8,white cargo pants female
+1262,Female,Teen,Bottomwear,Cargo Pants,Black Cargo Pants,Black,Minimalist,Regular,Festival,All Season,Sunny,Rectangle,Fair,Denim,Printed,Premium,4.8,black cargo pants female
+1263,Female,26-35,Bottomwear,Cargo Pants,Blue Cargo Pants,Blue,Ethnic,Oversized,Date,Winter,Cloudy,Athletic,Wheatish,Denim,Solid,Luxury,3.9,blue cargo pants female
+1264,Female,36-50,Bottomwear,Cargo Pants,Beige Cargo Pants,Beige,Ethnic,Oversized,Airport,Monsoon,Sunny,Pear,Dark,Linen,Printed,Luxury,4.7,beige cargo pants female
+1265,Female,18-25,Bottomwear,Cargo Pants,Grey Cargo Pants,Grey,Ethnic,Oversized,Date,All Season,Sunny,Pear,Wheatish,Linen,Solid,Premium,4.8,grey cargo pants female
+1266,Female,18-25,Bottomwear,Cargo Pants,Brown Cargo Pants,Brown,Casual,Oversized,Date,Winter,Sunny,Rectangle,Olive,Denim,Solid,Budget,4.7,brown cargo pants female
+1267,Female,Teen,Bottomwear,Cargo Pants,Pink Cargo Pants,Pink,Corporate,Oversized,Wedding,Winter,Sunny,Apple,Fair,Polyester,Checked,Budget,4.7,pink cargo pants female
+1268,Female,26-35,Bottomwear,Cargo Pants,Green Cargo Pants,Green,Casual,Regular,Office,Summer,Rainy,Rectangle,Wheatish,Denim,Solid,Budget,4.8,green cargo pants female
+1269,Female,50+,Bottomwear,Cargo Pants,Navy Cargo Pants,Navy,Corporate,Regular,Gym,Monsoon,Cold,Hourglass,Dark,Linen,Printed,Budget,4.5,navy cargo pants female
+1270,Female,50+,Bottomwear,Cargo Pants,Cream Cargo Pants,Cream,Y2K,Slim,Festival,All Season,Rainy,Pear,Fair,Cotton,Solid,Luxury,4.9,cream cargo pants female
+1271,Female,50+,Bottomwear,Formal Trousers,White Formal Trousers,White,Casual,Oversized,Gym,Summer,Rainy,All,Olive,Cotton,Checked,Premium,4.7,white formal trousers female
+1272,Female,26-35,Bottomwear,Formal Trousers,Black Formal Trousers,Black,Casual,Oversized,Office,Winter,Cloudy,Pear,Olive,Cotton,Printed,Budget,4.6,black formal trousers female
+1273,Female,50+,Bottomwear,Formal Trousers,Blue Formal Trousers,Blue,Old Money,Oversized,Vacation,Winter,Rainy,Rectangle,Olive,Polyester,Solid,Budget,4.5,blue formal trousers female
+1274,Female,26-35,Bottomwear,Formal Trousers,Beige Formal Trousers,Beige,Corporate,Oversized,Vacation,All Season,Sunny,Pear,Fair,Linen,Checked,Luxury,4.8,beige formal trousers female
+1275,Female,Teen,Bottomwear,Formal Trousers,Grey Formal Trousers,Grey,Casual,Regular,Interview,All Season,Cloudy,Hourglass,Fair,Linen,Solid,Luxury,4.1,grey formal trousers female
+1276,Female,36-50,Bottomwear,Formal Trousers,Brown Formal Trousers,Brown,Casual,Oversized,Party,Summer,Rainy,All,Fair,Linen,Printed,Premium,4.5,brown formal trousers female
+1277,Female,26-35,Bottomwear,Formal Trousers,Pink Formal Trousers,Pink,Y2K,Regular,Gym,Winter,Sunny,Athletic,Dark,Cotton,Printed,Luxury,4.2,pink formal trousers female
+1278,Female,Teen,Bottomwear,Formal Trousers,Green Formal Trousers,Green,Casual,Regular,College,Winter,Cold,Pear,Fair,Polyester,Checked,Luxury,4.2,green formal trousers female
+1279,Female,36-50,Bottomwear,Formal Trousers,Navy Formal Trousers,Navy,Corporate,Regular,Festival,Winter,Rainy,Pear,Fair,Linen,Checked,Budget,4.3,navy formal trousers female
+1280,Female,Teen,Bottomwear,Formal Trousers,Cream Formal Trousers,Cream,Korean,Slim,Festival,Winter,Cold,Hourglass,Dark,Polyester,Checked,Budget,4.4,cream formal trousers female
+1281,Female,26-35,Bottomwear,Shorts,White Shorts,White,Ethnic,Regular,Wedding,Monsoon,Sunny,All,Wheatish,Cotton,Checked,Premium,3.9,white shorts female
+1282,Female,50+,Bottomwear,Shorts,Black Shorts,Black,Korean,Regular,Vacation,Monsoon,Cold,Pear,Olive,Cotton,Checked,Budget,4.4,black shorts female
+1283,Female,Teen,Bottomwear,Shorts,Blue Shorts,Blue,Streetwear,Regular,College,Winter,Rainy,Pear,Fair,Cotton,Printed,Budget,4.4,blue shorts female
+1284,Female,18-25,Bottomwear,Shorts,Beige Shorts,Beige,Casual,Slim,Airport,All Season,Cloudy,Athletic,Wheatish,Cotton,Printed,Luxury,4.0,beige shorts female
+1285,Female,18-25,Bottomwear,Shorts,Grey Shorts,Grey,Minimalist,Regular,Gym,All Season,Sunny,All,Wheatish,Polyester,Printed,Premium,4.3,grey shorts female
+1286,Female,50+,Bottomwear,Shorts,Brown Shorts,Brown,Old Money,Oversized,Airport,Summer,Rainy,Rectangle,Wheatish,Linen,Checked,Budget,4.7,brown shorts female
+1287,Female,50+,Bottomwear,Shorts,Pink Shorts,Pink,Y2K,Regular,Office,Winter,Rainy,Apple,Dark,Denim,Printed,Budget,4.7,pink shorts female
+1288,Female,18-25,Bottomwear,Shorts,Green Shorts,Green,Y2K,Slim,Vacation,All Season,Sunny,Apple,Fair,Linen,Checked,Premium,4.8,green shorts female
+1289,Female,Teen,Bottomwear,Shorts,Navy Shorts,Navy,Ethnic,Oversized,Gym,Monsoon,Cold,Hourglass,Wheatish,Polyester,Solid,Premium,4.9,navy shorts female
+1290,Female,50+,Bottomwear,Shorts,Cream Shorts,Cream,Minimalist,Slim,Wedding,Winter,Cloudy,All,Fair,Cotton,Solid,Luxury,3.9,cream shorts female
+1291,Female,50+,Bottomwear,Skirt,White Skirt,White,Y2K,Slim,College,Winter,Cold,Athletic,Wheatish,Linen,Solid,Premium,4.9,white skirt female
+1292,Female,26-35,Bottomwear,Skirt,Black Skirt,Black,Casual,Slim,Office,Monsoon,Sunny,Hourglass,Olive,Denim,Checked,Premium,4.9,black skirt female
+1293,Female,50+,Bottomwear,Skirt,Blue Skirt,Blue,Corporate,Oversized,Interview,Monsoon,Cloudy,Hourglass,Fair,Polyester,Printed,Premium,4.6,blue skirt female
+1294,Female,18-25,Bottomwear,Skirt,Beige Skirt,Beige,Minimalist,Slim,Wedding,Monsoon,Rainy,Apple,Fair,Polyester,Checked,Budget,3.9,beige skirt female
+1295,Female,18-25,Bottomwear,Skirt,Grey Skirt,Grey,Y2K,Oversized,Vacation,Monsoon,Cold,Apple,Fair,Polyester,Printed,Premium,4.9,grey skirt female
+1296,Female,50+,Bottomwear,Skirt,Brown Skirt,Brown,Y2K,Slim,Wedding,Winter,Cold,All,Olive,Cotton,Solid,Budget,4.2,brown skirt female
+1297,Female,18-25,Bottomwear,Skirt,Pink Skirt,Pink,Korean,Slim,Party,Monsoon,Cloudy,Athletic,Wheatish,Linen,Checked,Luxury,4.6,pink skirt female
+1298,Female,50+,Bottomwear,Skirt,Green Skirt,Green,Old Money,Oversized,Airport,Monsoon,Cloudy,Athletic,Wheatish,Cotton,Checked,Budget,4.3,green skirt female
+1299,Female,36-50,Bottomwear,Skirt,Navy Skirt,Navy,Y2K,Regular,Festival,Summer,Rainy,All,Dark,Denim,Printed,Premium,3.9,navy skirt female
+1300,Female,36-50,Bottomwear,Skirt,Cream Skirt,Cream,Y2K,Oversized,Date,Monsoon,Rainy,All,Wheatish,Linen,Checked,Premium,4.2,cream skirt female
+1301,Female,Teen,Bottomwear,Palazzo,White Palazzo,White,Minimalist,Slim,Wedding,Monsoon,Cold,All,Fair,Denim,Printed,Premium,4.6,white palazzo female
+1302,Female,50+,Bottomwear,Palazzo,Black Palazzo,Black,Korean,Regular,College,Summer,Sunny,Athletic,Wheatish,Cotton,Solid,Premium,3.9,black palazzo female
+1303,Female,26-35,Bottomwear,Palazzo,Blue Palazzo,Blue,Corporate,Slim,Office,All Season,Cloudy,Rectangle,Wheatish,Linen,Checked,Luxury,4.0,blue palazzo female
+1304,Female,36-50,Bottomwear,Palazzo,Beige Palazzo,Beige,Old Money,Regular,Gym,Monsoon,Cloudy,All,Dark,Cotton,Printed,Luxury,4.8,beige palazzo female
+1305,Female,50+,Bottomwear,Palazzo,Grey Palazzo,Grey,Old Money,Regular,Date,Monsoon,Sunny,Rectangle,Olive,Cotton,Printed,Budget,4.9,grey palazzo female
+1306,Female,36-50,Bottomwear,Palazzo,Brown Palazzo,Brown,Old Money,Slim,Gym,Winter,Cold,Rectangle,Dark,Denim,Checked,Budget,3.9,brown palazzo female
+1307,Female,36-50,Bottomwear,Palazzo,Pink Palazzo,Pink,Minimalist,Slim,Office,Monsoon,Sunny,Athletic,Fair,Polyester,Solid,Premium,4.5,pink palazzo female
+1308,Female,36-50,Bottomwear,Palazzo,Green Palazzo,Green,Corporate,Oversized,Festival,All Season,Rainy,Rectangle,Wheatish,Linen,Solid,Luxury,4.1,green palazzo female
+1309,Female,Teen,Bottomwear,Palazzo,Navy Palazzo,Navy,Minimalist,Slim,Airport,Monsoon,Cold,Hourglass,Dark,Polyester,Solid,Premium,3.8,navy palazzo female
+1310,Female,26-35,Bottomwear,Palazzo,Cream Palazzo,Cream,Streetwear,Regular,Interview,Summer,Cloudy,Athletic,Dark,Cotton,Solid,Premium,3.8,cream palazzo female
+1311,Female,50+,Bottomwear,Leggings,White Leggings,White,Ethnic,Regular,Wedding,Summer,Rainy,Pear,Olive,Denim,Printed,Budget,4.2,white leggings female
+1312,Female,36-50,Bottomwear,Leggings,Black Leggings,Black,Streetwear,Slim,Festival,Summer,Cloudy,Apple,Wheatish,Denim,Printed,Budget,4.3,black leggings female
+1313,Female,26-35,Bottomwear,Leggings,Blue Leggings,Blue,Streetwear,Regular,Airport,Summer,Rainy,Rectangle,Olive,Linen,Solid,Luxury,3.9,blue leggings female
+1314,Female,26-35,Bottomwear,Leggings,Beige Leggings,Beige,Minimalist,Slim,Office,All Season,Cold,Apple,Olive,Polyester,Solid,Premium,3.9,beige leggings female
+1315,Female,18-25,Bottomwear,Leggings,Grey Leggings,Grey,Ethnic,Slim,Festival,Summer,Cold,All,Wheatish,Linen,Printed,Luxury,4.3,grey leggings female
+1316,Female,18-25,Bottomwear,Leggings,Brown Leggings,Brown,Minimalist,Slim,Interview,Summer,Cold,Pear,Wheatish,Linen,Solid,Premium,4.3,brown leggings female
+1317,Female,36-50,Bottomwear,Leggings,Pink Leggings,Pink,Korean,Regular,Wedding,Monsoon,Rainy,Pear,Fair,Linen,Solid,Premium,4.2,pink leggings female
+1318,Female,26-35,Bottomwear,Leggings,Green Leggings,Green,Y2K,Oversized,College,Monsoon,Cold,Athletic,Fair,Polyester,Checked,Premium,4.6,green leggings female
+1319,Female,50+,Bottomwear,Leggings,Navy Leggings,Navy,Korean,Slim,Interview,Winter,Cloudy,Athletic,Fair,Cotton,Printed,Premium,4.8,navy leggings female
+1320,Female,50+,Bottomwear,Leggings,Cream Leggings,Cream,Korean,Regular,Office,Monsoon,Rainy,Pear,Fair,Denim,Checked,Luxury,4.3,cream leggings female
+1321,Male,18-25,Bottomwear,Baggy Jeans,White Baggy Jeans,White,Y2K,Slim,Office,All Season,Cloudy,All,Olive,Polyester,Checked,Budget,4.8,white baggy jeans male
+1322,Male,Teen,Bottomwear,Baggy Jeans,Black Baggy Jeans,Black,Ethnic,Regular,Festival,All Season,Cold,Pear,Dark,Polyester,Solid,Luxury,4.3,black baggy jeans male
+1323,Male,Teen,Bottomwear,Baggy Jeans,Blue Baggy Jeans,Blue,Corporate,Slim,Gym,Winter,Rainy,Athletic,Fair,Cotton,Solid,Premium,4.6,blue baggy jeans male
+1324,Male,50+,Bottomwear,Baggy Jeans,Beige Baggy Jeans,Beige,Old Money,Slim,Interview,Summer,Sunny,Apple,Fair,Cotton,Checked,Premium,3.8,beige baggy jeans male
+1325,Male,26-35,Bottomwear,Baggy Jeans,Grey Baggy Jeans,Grey,Streetwear,Slim,Wedding,Winter,Sunny,Hourglass,Fair,Cotton,Solid,Luxury,4.7,grey baggy jeans male
+1326,Male,36-50,Bottomwear,Baggy Jeans,Brown Baggy Jeans,Brown,Streetwear,Regular,Party,Monsoon,Cold,Rectangle,Olive,Denim,Solid,Budget,4.6,brown baggy jeans male
+1327,Male,50+,Bottomwear,Baggy Jeans,Pink Baggy Jeans,Pink,Corporate,Oversized,Office,Winter,Rainy,Athletic,Dark,Polyester,Printed,Luxury,4.6,pink baggy jeans male
+1328,Male,50+,Bottomwear,Baggy Jeans,Green Baggy Jeans,Green,Casual,Regular,Interview,Summer,Cloudy,Rectangle,Dark,Linen,Printed,Premium,4.8,green baggy jeans male
+1329,Male,26-35,Bottomwear,Baggy Jeans,Navy Baggy Jeans,Navy,Old Money,Slim,Office,Summer,Cloudy,All,Olive,Polyester,Printed,Luxury,4.4,navy baggy jeans male
+1330,Male,50+,Bottomwear,Baggy Jeans,Cream Baggy Jeans,Cream,Y2K,Slim,Party,Winter,Cold,All,Wheatish,Linen,Solid,Premium,4.0,cream baggy jeans male
+1331,Male,36-50,Bottomwear,Wide Leg Jeans,White Wide Leg Jeans,White,Streetwear,Regular,College,Winter,Sunny,Pear,Olive,Linen,Checked,Luxury,4.2,white wide leg jeans male
+1332,Male,18-25,Bottomwear,Wide Leg Jeans,Black Wide Leg Jeans,Black,Streetwear,Slim,Office,Summer,Rainy,Apple,Olive,Polyester,Printed,Premium,4.4,black wide leg jeans male
+1333,Male,18-25,Bottomwear,Wide Leg Jeans,Blue Wide Leg Jeans,Blue,Casual,Regular,Office,Monsoon,Rainy,Pear,Fair,Polyester,Checked,Luxury,3.9,blue wide leg jeans male
+1334,Male,18-25,Bottomwear,Wide Leg Jeans,Beige Wide Leg Jeans,Beige,Y2K,Oversized,Interview,Monsoon,Cloudy,Rectangle,Wheatish,Linen,Solid,Budget,4.3,beige wide leg jeans male
+1335,Male,18-25,Bottomwear,Wide Leg Jeans,Grey Wide Leg Jeans,Grey,Corporate,Slim,Party,Monsoon,Rainy,Hourglass,Dark,Polyester,Printed,Budget,4.5,grey wide leg jeans male
+1336,Male,Teen,Bottomwear,Wide Leg Jeans,Brown Wide Leg Jeans,Brown,Y2K,Oversized,Office,Winter,Sunny,Hourglass,Dark,Polyester,Checked,Budget,4.7,brown wide leg jeans male
+1337,Male,50+,Bottomwear,Wide Leg Jeans,Pink Wide Leg Jeans,Pink,Corporate,Regular,Gym,Monsoon,Cloudy,All,Olive,Linen,Printed,Budget,4.0,pink wide leg jeans male
+1338,Male,50+,Bottomwear,Wide Leg Jeans,Green Wide Leg Jeans,Green,Old Money,Slim,Gym,Monsoon,Rainy,Pear,Dark,Denim,Checked,Premium,4.2,green wide leg jeans male
+1339,Male,Teen,Bottomwear,Wide Leg Jeans,Navy Wide Leg Jeans,Navy,Y2K,Regular,Office,Summer,Sunny,Apple,Dark,Polyester,Checked,Luxury,4.9,navy wide leg jeans male
+1340,Male,50+,Bottomwear,Wide Leg Jeans,Cream Wide Leg Jeans,Cream,Y2K,Oversized,Vacation,Winter,Cold,Athletic,Fair,Cotton,Solid,Luxury,4.7,cream wide leg jeans male
+1341,Male,Teen,Bottomwear,Cargo Pants,White Cargo Pants,White,Streetwear,Oversized,Party,Winter,Cloudy,Hourglass,Olive,Cotton,Checked,Budget,4.2,white cargo pants male
+1342,Male,50+,Bottomwear,Cargo Pants,Black Cargo Pants,Black,Y2K,Oversized,Office,Winter,Cold,Apple,Olive,Linen,Printed,Premium,5.0,black cargo pants male
+1343,Male,26-35,Bottomwear,Cargo Pants,Blue Cargo Pants,Blue,Old Money,Oversized,Date,Summer,Sunny,Pear,Wheatish,Linen,Printed,Budget,4.9,blue cargo pants male
+1344,Male,26-35,Bottomwear,Cargo Pants,Beige Cargo Pants,Beige,Minimalist,Regular,Interview,All Season,Rainy,Pear,Wheatish,Linen,Printed,Budget,4.7,beige cargo pants male
+1345,Male,18-25,Bottomwear,Cargo Pants,Grey Cargo Pants,Grey,Old Money,Slim,Festival,All Season,Cloudy,Pear,Fair,Cotton,Solid,Budget,5.0,grey cargo pants male
+1346,Male,Teen,Bottomwear,Cargo Pants,Brown Cargo Pants,Brown,Old Money,Regular,Party,Monsoon,Sunny,Apple,Dark,Linen,Printed,Premium,4.6,brown cargo pants male
+1347,Male,36-50,Bottomwear,Cargo Pants,Pink Cargo Pants,Pink,Minimalist,Oversized,Airport,Summer,Sunny,Rectangle,Fair,Denim,Printed,Budget,4.3,pink cargo pants male
+1348,Male,18-25,Bottomwear,Cargo Pants,Green Cargo Pants,Green,Y2K,Regular,Vacation,All Season,Cold,Apple,Fair,Linen,Solid,Luxury,4.6,green cargo pants male
+1349,Male,Teen,Bottomwear,Cargo Pants,Navy Cargo Pants,Navy,Corporate,Oversized,College,Summer,Cold,Pear,Dark,Linen,Checked,Budget,5.0,navy cargo pants male
+1350,Male,50+,Bottomwear,Cargo Pants,Cream Cargo Pants,Cream,Streetwear,Oversized,Office,Winter,Cloudy,Apple,Olive,Denim,Solid,Premium,4.8,cream cargo pants male
+1351,Male,50+,Bottomwear,Formal Trousers,White Formal Trousers,White,Y2K,Slim,Vacation,Summer,Sunny,Apple,Dark,Polyester,Checked,Premium,4.8,white formal trousers male
+1352,Male,26-35,Bottomwear,Formal Trousers,Black Formal Trousers,Black,Streetwear,Slim,Interview,All Season,Cloudy,Rectangle,Dark,Denim,Solid,Budget,4.6,black formal trousers male
+1353,Male,18-25,Bottomwear,Formal Trousers,Blue Formal Trousers,Blue,Y2K,Regular,College,All Season,Sunny,Pear,Wheatish,Denim,Checked,Premium,4.5,blue formal trousers male
+1354,Male,36-50,Bottomwear,Formal Trousers,Beige Formal Trousers,Beige,Y2K,Regular,College,Summer,Cold,All,Olive,Cotton,Checked,Budget,4.4,beige formal trousers male
+1355,Male,18-25,Bottomwear,Formal Trousers,Grey Formal Trousers,Grey,Ethnic,Slim,Office,Summer,Rainy,Pear,Fair,Cotton,Checked,Premium,4.0,grey formal trousers male
+1356,Male,50+,Bottomwear,Formal Trousers,Brown Formal Trousers,Brown,Minimalist,Slim,Vacation,All Season,Cloudy,Apple,Fair,Polyester,Solid,Luxury,4.5,brown formal trousers male
+1357,Male,50+,Bottomwear,Formal Trousers,Pink Formal Trousers,Pink,Casual,Regular,Airport,Summer,Rainy,Athletic,Wheatish,Denim,Solid,Premium,3.9,pink formal trousers male
+1358,Male,36-50,Bottomwear,Formal Trousers,Green Formal Trousers,Green,Korean,Regular,Interview,All Season,Rainy,All,Dark,Cotton,Checked,Budget,4.9,green formal trousers male
+1359,Male,18-25,Bottomwear,Formal Trousers,Navy Formal Trousers,Navy,Korean,Oversized,Party,Summer,Cold,Athletic,Wheatish,Linen,Printed,Budget,4.2,navy formal trousers male
+1360,Male,36-50,Bottomwear,Formal Trousers,Cream Formal Trousers,Cream,Korean,Regular,Party,Summer,Cloudy,Hourglass,Wheatish,Cotton,Checked,Premium,4.9,cream formal trousers male
+1361,Male,36-50,Bottomwear,Shorts,White Shorts,White,Korean,Slim,Wedding,Monsoon,Rainy,Pear,Fair,Polyester,Checked,Budget,4.5,white shorts male
+1362,Male,26-35,Bottomwear,Shorts,Black Shorts,Black,Korean,Regular,Airport,Winter,Rainy,Athletic,Olive,Polyester,Checked,Budget,4.1,black shorts male
+1363,Male,18-25,Bottomwear,Shorts,Blue Shorts,Blue,Old Money,Oversized,Interview,Monsoon,Cloudy,Rectangle,Wheatish,Polyester,Solid,Budget,4.1,blue shorts male
+1364,Male,26-35,Bottomwear,Shorts,Beige Shorts,Beige,Corporate,Slim,Airport,All Season,Cloudy,Athletic,Fair,Denim,Checked,Premium,4.6,beige shorts male
+1365,Male,18-25,Bottomwear,Shorts,Grey Shorts,Grey,Ethnic,Slim,Party,Winter,Cloudy,Apple,Olive,Linen,Checked,Luxury,4.1,grey shorts male
+1366,Male,36-50,Bottomwear,Shorts,Brown Shorts,Brown,Old Money,Oversized,Wedding,Monsoon,Sunny,Apple,Olive,Polyester,Solid,Luxury,4.7,brown shorts male
+1367,Male,18-25,Bottomwear,Shorts,Pink Shorts,Pink,Ethnic,Regular,Date,Winter,Cold,Hourglass,Dark,Cotton,Checked,Budget,4.4,pink shorts male
+1368,Male,Teen,Bottomwear,Shorts,Green Shorts,Green,Corporate,Oversized,Gym,Winter,Sunny,Rectangle,Dark,Linen,Checked,Premium,4.2,green shorts male
+1369,Male,50+,Bottomwear,Shorts,Navy Shorts,Navy,Corporate,Oversized,Date,Summer,Cloudy,Rectangle,Olive,Cotton,Printed,Budget,4.5,navy shorts male
+1370,Male,36-50,Bottomwear,Shorts,Cream Shorts,Cream,Korean,Slim,Gym,Monsoon,Cloudy,Rectangle,Wheatish,Polyester,Checked,Budget,4.0,cream shorts male
+1371,Male,36-50,Bottomwear,Skirt,White Skirt,White,Streetwear,Oversized,Office,Summer,Cloudy,Hourglass,Olive,Polyester,Printed,Budget,4.1,white skirt male
+1372,Male,50+,Bottomwear,Skirt,Black Skirt,Black,Casual,Oversized,Gym,Summer,Rainy,Rectangle,Fair,Cotton,Solid,Budget,4.1,black skirt male
+1373,Male,Teen,Bottomwear,Skirt,Blue Skirt,Blue,Minimalist,Regular,Festival,Winter,Sunny,Rectangle,Wheatish,Linen,Checked,Budget,4.3,blue skirt male
+1374,Male,26-35,Bottomwear,Skirt,Beige Skirt,Beige,Ethnic,Oversized,Festival,Summer,Sunny,Athletic,Dark,Cotton,Solid,Budget,3.9,beige skirt male
+1375,Male,36-50,Bottomwear,Skirt,Grey Skirt,Grey,Streetwear,Slim,Office,Winter,Cold,Athletic,Olive,Denim,Checked,Luxury,4.5,grey skirt male
+1376,Male,18-25,Bottomwear,Skirt,Brown Skirt,Brown,Korean,Regular,College,Summer,Rainy,Rectangle,Dark,Linen,Printed,Luxury,4.5,brown skirt male
+1377,Male,36-50,Bottomwear,Skirt,Pink Skirt,Pink,Korean,Slim,Gym,Winter,Cloudy,All,Dark,Linen,Printed,Premium,4.6,pink skirt male
+1378,Male,Teen,Bottomwear,Skirt,Green Skirt,Green,Korean,Slim,Airport,Winter,Rainy,All,Dark,Polyester,Printed,Luxury,4.6,green skirt male
+1379,Male,18-25,Bottomwear,Skirt,Navy Skirt,Navy,Streetwear,Oversized,Interview,Monsoon,Cloudy,Pear,Fair,Cotton,Printed,Luxury,3.9,navy skirt male
+1380,Male,18-25,Bottomwear,Skirt,Cream Skirt,Cream,Old Money,Slim,Gym,Summer,Rainy,Pear,Dark,Polyester,Printed,Premium,4.8,cream skirt male
+1381,Male,18-25,Bottomwear,Palazzo,White Palazzo,White,Old Money,Oversized,Gym,Summer,Cloudy,Rectangle,Olive,Cotton,Solid,Luxury,4.5,white palazzo male
+1382,Male,Teen,Bottomwear,Palazzo,Black Palazzo,Black,Ethnic,Slim,Date,All Season,Cloudy,All,Olive,Linen,Solid,Premium,4.2,black palazzo male
+1383,Male,18-25,Bottomwear,Palazzo,Blue Palazzo,Blue,Corporate,Slim,Wedding,Winter,Rainy,Pear,Wheatish,Cotton,Printed,Luxury,4.6,blue palazzo male
+1384,Male,Teen,Bottomwear,Palazzo,Beige Palazzo,Beige,Old Money,Oversized,Date,Summer,Rainy,Hourglass,Wheatish,Denim,Printed,Budget,3.8,beige palazzo male
+1385,Male,50+,Bottomwear,Palazzo,Grey Palazzo,Grey,Ethnic,Oversized,Office,All Season,Cold,Athletic,Fair,Denim,Solid,Budget,4.6,grey palazzo male
+1386,Male,36-50,Bottomwear,Palazzo,Brown Palazzo,Brown,Y2K,Regular,Vacation,Monsoon,Sunny,Apple,Dark,Denim,Checked,Luxury,4.9,brown palazzo male
+1387,Male,26-35,Bottomwear,Palazzo,Pink Palazzo,Pink,Old Money,Oversized,Gym,Summer,Cloudy,Rectangle,Dark,Linen,Checked,Budget,4.8,pink palazzo male
+1388,Male,26-35,Bottomwear,Palazzo,Green Palazzo,Green,Casual,Oversized,Festival,Summer,Sunny,All,Wheatish,Cotton,Printed,Budget,4.6,green palazzo male
+1389,Male,36-50,Bottomwear,Palazzo,Navy Palazzo,Navy,Y2K,Slim,College,Summer,Cold,All,Fair,Cotton,Solid,Budget,4.1,navy palazzo male
+1390,Male,Teen,Bottomwear,Palazzo,Cream Palazzo,Cream,Y2K,Slim,Festival,Monsoon,Cloudy,Rectangle,Wheatish,Linen,Solid,Luxury,4.6,cream palazzo male
+1391,Male,Teen,Bottomwear,Leggings,White Leggings,White,Casual,Slim,Festival,Monsoon,Rainy,Pear,Wheatish,Polyester,Solid,Luxury,4.8,white leggings male
+1392,Male,Teen,Bottomwear,Leggings,Black Leggings,Black,Old Money,Slim,Gym,Winter,Sunny,Athletic,Dark,Cotton,Checked,Premium,4.4,black leggings male
+1393,Male,Teen,Bottomwear,Leggings,Blue Leggings,Blue,Old Money,Oversized,Office,Summer,Cold,All,Fair,Denim,Solid,Budget,3.8,blue leggings male
+1394,Male,50+,Bottomwear,Leggings,Beige Leggings,Beige,Casual,Regular,Wedding,Summer,Sunny,All,Wheatish,Denim,Solid,Luxury,4.4,beige leggings male
+1395,Male,36-50,Bottomwear,Leggings,Grey Leggings,Grey,Minimalist,Oversized,Gym,Winter,Cloudy,Pear,Wheatish,Cotton,Checked,Premium,4.2,grey leggings male
+1396,Male,26-35,Bottomwear,Leggings,Brown Leggings,Brown,Casual,Slim,Office,Monsoon,Cloudy,Athletic,Olive,Denim,Printed,Premium,4.7,brown leggings male
+1397,Male,50+,Bottomwear,Leggings,Pink Leggings,Pink,Streetwear,Regular,Festival,Summer,Cloudy,All,Dark,Linen,Solid,Premium,4.7,pink leggings male
+1398,Male,26-35,Bottomwear,Leggings,Green Leggings,Green,Minimalist,Oversized,Vacation,Monsoon,Rainy,Apple,Olive,Linen,Solid,Luxury,4.2,green leggings male
+1399,Male,36-50,Bottomwear,Leggings,Navy Leggings,Navy,Old Money,Regular,Party,Summer,Rainy,Pear,Wheatish,Polyester,Solid,Budget,4.3,navy leggings male
+1400,Male,Teen,Bottomwear,Leggings,Cream Leggings,Cream,Korean,Oversized,Wedding,Monsoon,Rainy,Athletic,Fair,Cotton,Checked,Luxury,3.9,cream leggings male
+1401,Unisex,18-25,Bottomwear,Baggy Jeans,White Baggy Jeans,White,Ethnic,Oversized,Date,Monsoon,Sunny,Hourglass,Dark,Denim,Solid,Budget,5.0,white baggy jeans unisex
+1402,Unisex,18-25,Bottomwear,Baggy Jeans,Black Baggy Jeans,Black,Korean,Oversized,Festival,Winter,Sunny,Rectangle,Olive,Cotton,Checked,Luxury,4.9,black baggy jeans unisex
+1403,Unisex,50+,Bottomwear,Baggy Jeans,Blue Baggy Jeans,Blue,Corporate,Slim,Party,Winter,Rainy,All,Olive,Cotton,Printed,Luxury,4.6,blue baggy jeans unisex
+1404,Unisex,36-50,Bottomwear,Baggy Jeans,Beige Baggy Jeans,Beige,Ethnic,Oversized,College,Winter,Rainy,All,Wheatish,Denim,Solid,Premium,4.8,beige baggy jeans unisex
+1405,Unisex,Teen,Bottomwear,Baggy Jeans,Grey Baggy Jeans,Grey,Streetwear,Regular,Office,Monsoon,Cold,Hourglass,Olive,Denim,Printed,Budget,4.6,grey baggy jeans unisex
+1406,Unisex,26-35,Bottomwear,Baggy Jeans,Brown Baggy Jeans,Brown,Corporate,Regular,Festival,Summer,Cloudy,Pear,Dark,Linen,Solid,Luxury,4.3,brown baggy jeans unisex
+1407,Unisex,26-35,Bottomwear,Baggy Jeans,Pink Baggy Jeans,Pink,Old Money,Regular,Date,Summer,Cold,Hourglass,Wheatish,Cotton,Printed,Budget,4.6,pink baggy jeans unisex
+1408,Unisex,18-25,Bottomwear,Baggy Jeans,Green Baggy Jeans,Green,Y2K,Regular,Date,Monsoon,Cold,All,Fair,Polyester,Checked,Premium,4.5,green baggy jeans unisex
+1409,Unisex,Teen,Bottomwear,Baggy Jeans,Navy Baggy Jeans,Navy,Ethnic,Slim,Gym,Winter,Rainy,Rectangle,Fair,Polyester,Solid,Premium,4.5,navy baggy jeans unisex
+1410,Unisex,Teen,Bottomwear,Baggy Jeans,Cream Baggy Jeans,Cream,Ethnic,Slim,Vacation,Monsoon,Rainy,Pear,Wheatish,Cotton,Checked,Premium,4.8,cream baggy jeans unisex
+1411,Unisex,Teen,Bottomwear,Wide Leg Jeans,White Wide Leg Jeans,White,Casual,Regular,Party,All Season,Sunny,Pear,Fair,Denim,Solid,Budget,4.6,white wide leg jeans unisex
+1412,Unisex,Teen,Bottomwear,Wide Leg Jeans,Black Wide Leg Jeans,Black,Y2K,Slim,Gym,Summer,Cold,Apple,Fair,Linen,Printed,Luxury,4.1,black wide leg jeans unisex
+1413,Unisex,50+,Bottomwear,Wide Leg Jeans,Blue Wide Leg Jeans,Blue,Korean,Regular,Interview,Summer,Cloudy,Apple,Dark,Polyester,Printed,Budget,4.4,blue wide leg jeans unisex
+1414,Unisex,26-35,Bottomwear,Wide Leg Jeans,Beige Wide Leg Jeans,Beige,Streetwear,Regular,College,Winter,Rainy,Athletic,Wheatish,Denim,Printed,Luxury,4.8,beige wide leg jeans unisex
+1415,Unisex,36-50,Bottomwear,Wide Leg Jeans,Grey Wide Leg Jeans,Grey,Old Money,Oversized,Wedding,Winter,Cold,Apple,Dark,Polyester,Printed,Budget,4.9,grey wide leg jeans unisex
+1416,Unisex,18-25,Bottomwear,Wide Leg Jeans,Brown Wide Leg Jeans,Brown,Minimalist,Regular,Interview,Monsoon,Rainy,All,Dark,Polyester,Printed,Budget,5.0,brown wide leg jeans unisex
+1417,Unisex,18-25,Bottomwear,Wide Leg Jeans,Pink Wide Leg Jeans,Pink,Minimalist,Slim,Interview,All Season,Cold,Pear,Fair,Polyester,Printed,Premium,4.9,pink wide leg jeans unisex
+1418,Unisex,50+,Bottomwear,Wide Leg Jeans,Green Wide Leg Jeans,Green,Corporate,Slim,Airport,Monsoon,Cold,All,Wheatish,Cotton,Checked,Budget,4.4,green wide leg jeans unisex
+1419,Unisex,18-25,Bottomwear,Wide Leg Jeans,Navy Wide Leg Jeans,Navy,Streetwear,Oversized,Interview,Summer,Cloudy,Apple,Olive,Denim,Solid,Budget,4.3,navy wide leg jeans unisex
+1420,Unisex,26-35,Bottomwear,Wide Leg Jeans,Cream Wide Leg Jeans,Cream,Ethnic,Oversized,Date,Winter,Cold,Rectangle,Wheatish,Denim,Checked,Premium,5.0,cream wide leg jeans unisex
+1421,Unisex,18-25,Bottomwear,Cargo Pants,White Cargo Pants,White,Y2K,Slim,Party,Summer,Cold,All,Olive,Polyester,Printed,Luxury,4.3,white cargo pants unisex
+1422,Unisex,Teen,Bottomwear,Cargo Pants,Black Cargo Pants,Black,Ethnic,Slim,Date,All Season,Sunny,All,Fair,Polyester,Solid,Premium,4.2,black cargo pants unisex
+1423,Unisex,18-25,Bottomwear,Cargo Pants,Blue Cargo Pants,Blue,Streetwear,Oversized,College,Winter,Cold,Hourglass,Dark,Denim,Solid,Luxury,3.9,blue cargo pants unisex
+1424,Unisex,Teen,Bottomwear,Cargo Pants,Beige Cargo Pants,Beige,Corporate,Regular,Office,Monsoon,Sunny,Pear,Olive,Cotton,Checked,Premium,4.0,beige cargo pants unisex
+1425,Unisex,36-50,Bottomwear,Cargo Pants,Grey Cargo Pants,Grey,Streetwear,Oversized,Gym,Summer,Cloudy,Rectangle,Olive,Linen,Checked,Luxury,3.8,grey cargo pants unisex
+1426,Unisex,Teen,Bottomwear,Cargo Pants,Brown Cargo Pants,Brown,Y2K,Slim,Airport,All Season,Rainy,Apple,Olive,Polyester,Checked,Premium,3.9,brown cargo pants unisex
+1427,Unisex,36-50,Bottomwear,Cargo Pants,Pink Cargo Pants,Pink,Old Money,Slim,Office,Summer,Rainy,Rectangle,Olive,Linen,Checked,Luxury,4.5,pink cargo pants unisex
+1428,Unisex,18-25,Bottomwear,Cargo Pants,Green Cargo Pants,Green,Y2K,Regular,Festival,Winter,Cloudy,Hourglass,Wheatish,Denim,Solid,Budget,4.0,green cargo pants unisex
+1429,Unisex,Teen,Bottomwear,Cargo Pants,Navy Cargo Pants,Navy,Casual,Slim,Gym,Summer,Sunny,Athletic,Olive,Linen,Checked,Luxury,4.8,navy cargo pants unisex
+1430,Unisex,26-35,Bottomwear,Cargo Pants,Cream Cargo Pants,Cream,Korean,Regular,Wedding,Winter,Cloudy,Rectangle,Fair,Polyester,Solid,Budget,4.1,cream cargo pants unisex
+1431,Unisex,50+,Bottomwear,Formal Trousers,White Formal Trousers,White,Minimalist,Regular,College,All Season,Cold,Apple,Wheatish,Polyester,Checked,Budget,3.8,white formal trousers unisex
+1432,Unisex,Teen,Bottomwear,Formal Trousers,Black Formal Trousers,Black,Streetwear,Regular,Interview,Monsoon,Cold,Athletic,Olive,Linen,Solid,Premium,4.8,black formal trousers unisex
+1433,Unisex,Teen,Bottomwear,Formal Trousers,Blue Formal Trousers,Blue,Old Money,Oversized,Office,All Season,Rainy,Athletic,Fair,Cotton,Printed,Luxury,3.9,blue formal trousers unisex
+1434,Unisex,26-35,Bottomwear,Formal Trousers,Beige Formal Trousers,Beige,Streetwear,Slim,Interview,Monsoon,Sunny,Athletic,Wheatish,Denim,Printed,Premium,4.5,beige formal trousers unisex
+1435,Unisex,Teen,Bottomwear,Formal Trousers,Grey Formal Trousers,Grey,Y2K,Regular,Date,Summer,Sunny,Apple,Dark,Denim,Checked,Premium,4.2,grey formal trousers unisex
+1436,Unisex,Teen,Bottomwear,Formal Trousers,Brown Formal Trousers,Brown,Casual,Oversized,Date,Monsoon,Cold,Rectangle,Wheatish,Polyester,Solid,Luxury,3.8,brown formal trousers unisex
+1437,Unisex,26-35,Bottomwear,Formal Trousers,Pink Formal Trousers,Pink,Y2K,Regular,Office,Winter,Cold,Athletic,Olive,Denim,Checked,Budget,4.6,pink formal trousers unisex
+1438,Unisex,36-50,Bottomwear,Formal Trousers,Green Formal Trousers,Green,Minimalist,Regular,Office,All Season,Rainy,Hourglass,Fair,Cotton,Solid,Premium,4.9,green formal trousers unisex
+1439,Unisex,18-25,Bottomwear,Formal Trousers,Navy Formal Trousers,Navy,Ethnic,Regular,Party,Winter,Cloudy,Rectangle,Wheatish,Linen,Printed,Budget,4.5,navy formal trousers unisex
+1440,Unisex,50+,Bottomwear,Formal Trousers,Cream Formal Trousers,Cream,Minimalist,Slim,Festival,All Season,Sunny,Hourglass,Olive,Polyester,Checked,Premium,3.9,cream formal trousers unisex
+1441,Unisex,50+,Bottomwear,Shorts,White Shorts,White,Streetwear,Oversized,Airport,All Season,Cloudy,Hourglass,Wheatish,Cotton,Checked,Luxury,4.6,white shorts unisex
+1442,Unisex,18-25,Bottomwear,Shorts,Black Shorts,Black,Korean,Oversized,Airport,Summer,Rainy,Athletic,Wheatish,Denim,Printed,Premium,4.7,black shorts unisex
+1443,Unisex,36-50,Bottomwear,Shorts,Blue Shorts,Blue,Casual,Oversized,Date,Summer,Cloudy,Rectangle,Olive,Cotton,Checked,Premium,4.4,blue shorts unisex
+1444,Unisex,18-25,Bottomwear,Shorts,Beige Shorts,Beige,Minimalist,Slim,Festival,Summer,Cold,Apple,Fair,Linen,Checked,Premium,4.2,beige shorts unisex
+1445,Unisex,26-35,Bottomwear,Shorts,Grey Shorts,Grey,Old Money,Slim,Office,All Season,Cloudy,Rectangle,Dark,Polyester,Solid,Premium,4.6,grey shorts unisex
+1446,Unisex,50+,Bottomwear,Shorts,Brown Shorts,Brown,Korean,Oversized,Party,Summer,Rainy,Hourglass,Fair,Polyester,Solid,Luxury,4.7,brown shorts unisex
+1447,Unisex,36-50,Bottomwear,Shorts,Pink Shorts,Pink,Ethnic,Slim,College,Winter,Rainy,Apple,Wheatish,Denim,Checked,Budget,3.9,pink shorts unisex
+1448,Unisex,18-25,Bottomwear,Shorts,Green Shorts,Green,Casual,Regular,Gym,All Season,Rainy,Apple,Olive,Cotton,Printed,Luxury,4.2,green shorts unisex
+1449,Unisex,50+,Bottomwear,Shorts,Navy Shorts,Navy,Old Money,Regular,Airport,All Season,Cloudy,Rectangle,Olive,Cotton,Solid,Premium,3.9,navy shorts unisex
+1450,Unisex,Teen,Bottomwear,Shorts,Cream Shorts,Cream,Korean,Oversized,Gym,All Season,Rainy,Pear,Dark,Polyester,Checked,Premium,4.4,cream shorts unisex
+1451,Unisex,Teen,Bottomwear,Skirt,White Skirt,White,Minimalist,Oversized,Office,Summer,Cloudy,Pear,Fair,Cotton,Checked,Premium,4.8,white skirt unisex
+1452,Unisex,26-35,Bottomwear,Skirt,Black Skirt,Black,Streetwear,Slim,Gym,Winter,Cloudy,Apple,Fair,Cotton,Printed,Luxury,5.0,black skirt unisex
+1453,Unisex,36-50,Bottomwear,Skirt,Blue Skirt,Blue,Corporate,Regular,Interview,All Season,Sunny,All,Wheatish,Linen,Solid,Budget,4.0,blue skirt unisex
+1454,Unisex,26-35,Bottomwear,Skirt,Beige Skirt,Beige,Streetwear,Regular,Office,Monsoon,Cloudy,Athletic,Fair,Polyester,Printed,Premium,4.3,beige skirt unisex
+1455,Unisex,26-35,Bottomwear,Skirt,Grey Skirt,Grey,Streetwear,Slim,Vacation,Summer,Cold,Apple,Dark,Denim,Solid,Premium,4.1,grey skirt unisex
+1456,Unisex,36-50,Bottomwear,Skirt,Brown Skirt,Brown,Corporate,Regular,Airport,Winter,Cloudy,Hourglass,Fair,Denim,Checked,Premium,4.8,brown skirt unisex
+1457,Unisex,18-25,Bottomwear,Skirt,Pink Skirt,Pink,Y2K,Oversized,Airport,Monsoon,Cloudy,Rectangle,Olive,Denim,Solid,Premium,4.3,pink skirt unisex
+1458,Unisex,18-25,Bottomwear,Skirt,Green Skirt,Green,Korean,Regular,Date,All Season,Sunny,Rectangle,Fair,Denim,Printed,Budget,4.9,green skirt unisex
+1459,Unisex,50+,Bottomwear,Skirt,Navy Skirt,Navy,Old Money,Oversized,Date,Summer,Rainy,All,Fair,Linen,Solid,Luxury,4.4,navy skirt unisex
+1460,Unisex,26-35,Bottomwear,Skirt,Cream Skirt,Cream,Corporate,Regular,Date,Summer,Rainy,Pear,Fair,Linen,Solid,Luxury,3.8,cream skirt unisex
+1461,Unisex,18-25,Bottomwear,Palazzo,White Palazzo,White,Streetwear,Regular,Interview,Winter,Sunny,Apple,Olive,Cotton,Solid,Luxury,4.4,white palazzo unisex
+1462,Unisex,26-35,Bottomwear,Palazzo,Black Palazzo,Black,Old Money,Oversized,Party,Summer,Cloudy,Athletic,Fair,Linen,Printed,Budget,4.5,black palazzo unisex
+1463,Unisex,50+,Bottomwear,Palazzo,Blue Palazzo,Blue,Casual,Slim,Office,Monsoon,Cloudy,Hourglass,Wheatish,Cotton,Checked,Luxury,4.5,blue palazzo unisex
+1464,Unisex,36-50,Bottomwear,Palazzo,Beige Palazzo,Beige,Korean,Regular,Gym,Summer,Cloudy,Pear,Dark,Polyester,Printed,Budget,4.1,beige palazzo unisex
+1465,Unisex,18-25,Bottomwear,Palazzo,Grey Palazzo,Grey,Y2K,Regular,Festival,Winter,Cold,All,Wheatish,Cotton,Printed,Luxury,4.4,grey palazzo unisex
+1466,Unisex,18-25,Bottomwear,Palazzo,Brown Palazzo,Brown,Korean,Oversized,Gym,Summer,Sunny,Rectangle,Fair,Cotton,Checked,Luxury,4.4,brown palazzo unisex
+1467,Unisex,50+,Bottomwear,Palazzo,Pink Palazzo,Pink,Minimalist,Regular,College,Monsoon,Cold,Rectangle,Wheatish,Linen,Solid,Budget,4.2,pink palazzo unisex
+1468,Unisex,Teen,Bottomwear,Palazzo,Green Palazzo,Green,Old Money,Regular,Airport,Summer,Cloudy,Pear,Fair,Denim,Checked,Budget,3.9,green palazzo unisex
+1469,Unisex,36-50,Bottomwear,Palazzo,Navy Palazzo,Navy,Old Money,Slim,Gym,All Season,Cloudy,Pear,Dark,Linen,Checked,Premium,4.8,navy palazzo unisex
+1470,Unisex,26-35,Bottomwear,Palazzo,Cream Palazzo,Cream,Streetwear,Regular,Office,Summer,Cloudy,Athletic,Fair,Cotton,Solid,Budget,3.8,cream palazzo unisex
+1471,Unisex,18-25,Bottomwear,Leggings,White Leggings,White,Minimalist,Oversized,Festival,Summer,Cold,Apple,Wheatish,Denim,Printed,Budget,4.7,white leggings unisex
+1472,Unisex,50+,Bottomwear,Leggings,Black Leggings,Black,Streetwear,Slim,Office,All Season,Rainy,All,Olive,Linen,Printed,Premium,4.7,black leggings unisex
+1473,Unisex,36-50,Bottomwear,Leggings,Blue Leggings,Blue,Old Money,Regular,Festival,Monsoon,Sunny,Pear,Wheatish,Linen,Solid,Budget,4.5,blue leggings unisex
+1474,Unisex,50+,Bottomwear,Leggings,Beige Leggings,Beige,Streetwear,Slim,Office,All Season,Sunny,Athletic,Dark,Polyester,Solid,Luxury,4.7,beige leggings unisex
+1475,Unisex,36-50,Bottomwear,Leggings,Grey Leggings,Grey,Casual,Oversized,Interview,Monsoon,Cold,Hourglass,Dark,Linen,Printed,Luxury,4.6,grey leggings unisex
+1476,Unisex,Teen,Bottomwear,Leggings,Brown Leggings,Brown,Y2K,Oversized,Airport,Summer,Cloudy,Rectangle,Fair,Linen,Printed,Premium,3.9,brown leggings unisex
+1477,Unisex,Teen,Bottomwear,Leggings,Pink Leggings,Pink,Corporate,Oversized,Office,Winter,Cold,Rectangle,Dark,Cotton,Printed,Premium,4.0,pink leggings unisex
+1478,Unisex,Teen,Bottomwear,Leggings,Green Leggings,Green,Casual,Regular,Interview,Summer,Sunny,Apple,Wheatish,Linen,Solid,Budget,4.3,green leggings unisex
+1479,Unisex,26-35,Bottomwear,Leggings,Navy Leggings,Navy,Minimalist,Regular,Vacation,All Season,Sunny,All,Olive,Cotton,Checked,Budget,3.9,navy leggings unisex
+1480,Unisex,50+,Bottomwear,Leggings,Cream Leggings,Cream,Old Money,Slim,Airport,Summer,Sunny,Hourglass,Wheatish,Denim,Checked,Premium,4.5,cream leggings unisex
+1481,Female,18-25,Footwear,Sneakers,White Sneakers,White,Minimalist,Oversized,Office,Summer,Cold,Pear,Olive,Denim,Checked,Premium,4.7,white sneakers female
+1482,Female,18-25,Footwear,Sneakers,Black Sneakers,Black,Old Money,Slim,Wedding,All Season,Cloudy,Pear,Fair,Polyester,Printed,Budget,4.3,black sneakers female
+1483,Female,26-35,Footwear,Sneakers,Blue Sneakers,Blue,Ethnic,Regular,Gym,Summer,Rainy,Pear,Dark,Denim,Checked,Premium,4.4,blue sneakers female
+1484,Female,26-35,Footwear,Sneakers,Beige Sneakers,Beige,Minimalist,Regular,Date,All Season,Cold,Pear,Fair,Cotton,Solid,Budget,4.6,beige sneakers female
+1485,Female,18-25,Footwear,Sneakers,Grey Sneakers,Grey,Korean,Regular,Wedding,Winter,Cloudy,Hourglass,Fair,Linen,Checked,Budget,4.3,grey sneakers female
+1486,Female,36-50,Footwear,Sneakers,Brown Sneakers,Brown,Minimalist,Oversized,Interview,Monsoon,Sunny,Rectangle,Dark,Linen,Checked,Luxury,4.4,brown sneakers female
+1487,Female,18-25,Footwear,Sneakers,Pink Sneakers,Pink,Y2K,Oversized,Airport,Summer,Rainy,Hourglass,Fair,Cotton,Checked,Budget,4.4,pink sneakers female
+1488,Female,36-50,Footwear,Sneakers,Green Sneakers,Green,Old Money,Slim,Gym,Winter,Sunny,All,Dark,Linen,Solid,Luxury,4.3,green sneakers female
+1489,Female,Teen,Footwear,Sneakers,Navy Sneakers,Navy,Old Money,Slim,Gym,All Season,Rainy,Athletic,Fair,Cotton,Solid,Budget,4.5,navy sneakers female
+1490,Female,50+,Footwear,Sneakers,Cream Sneakers,Cream,Y2K,Regular,Festival,Summer,Cloudy,All,Wheatish,Cotton,Solid,Budget,3.8,cream sneakers female
+1491,Female,18-25,Footwear,Loafers,White Loafers,White,Streetwear,Regular,Interview,Summer,Rainy,Pear,Olive,Denim,Solid,Luxury,4.7,white loafers female
+1492,Female,26-35,Footwear,Loafers,Black Loafers,Black,Casual,Slim,College,Summer,Rainy,All,Dark,Linen,Solid,Premium,4.4,black loafers female
+1493,Female,18-25,Footwear,Loafers,Blue Loafers,Blue,Minimalist,Slim,Vacation,Monsoon,Sunny,Rectangle,Fair,Denim,Solid,Premium,4.0,blue loafers female
+1494,Female,Teen,Footwear,Loafers,Beige Loafers,Beige,Casual,Oversized,Interview,All Season,Cloudy,Pear,Fair,Polyester,Solid,Luxury,4.1,beige loafers female
+1495,Female,36-50,Footwear,Loafers,Grey Loafers,Grey,Minimalist,Regular,Vacation,Monsoon,Cloudy,Hourglass,Fair,Polyester,Solid,Budget,4.5,grey loafers female
+1496,Female,26-35,Footwear,Loafers,Brown Loafers,Brown,Minimalist,Oversized,College,Winter,Cold,Rectangle,Olive,Linen,Printed,Luxury,4.5,brown loafers female
+1497,Female,36-50,Footwear,Loafers,Pink Loafers,Pink,Y2K,Slim,Vacation,Summer,Sunny,Rectangle,Wheatish,Polyester,Printed,Premium,3.9,pink loafers female
+1498,Female,50+,Footwear,Loafers,Green Loafers,Green,Streetwear,Slim,Party,All Season,Cloudy,Pear,Olive,Cotton,Solid,Premium,4.8,green loafers female
+1499,Female,26-35,Footwear,Loafers,Navy Loafers,Navy,Corporate,Oversized,College,All Season,Cold,Athletic,Dark,Denim,Printed,Luxury,4.2,navy loafers female
+1500,Female,26-35,Footwear,Loafers,Cream Loafers,Cream,Minimalist,Oversized,Office,Monsoon,Rainy,Athletic,Fair,Linen,Solid,Budget,4.1,cream loafers female
+1501,Female,18-25,Footwear,Boots,White Boots,White,Minimalist,Slim,Airport,Summer,Sunny,Pear,Fair,Polyester,Checked,Premium,5.0,white boots female
+1502,Female,26-35,Footwear,Boots,Black Boots,Black,Old Money,Slim,Interview,All Season,Cold,Hourglass,Olive,Denim,Printed,Premium,4.3,black boots female
+1503,Female,18-25,Footwear,Boots,Blue Boots,Blue,Corporate,Oversized,Office,Summer,Cloudy,Hourglass,Dark,Linen,Solid,Premium,4.9,blue boots female
+1504,Female,18-25,Footwear,Boots,Beige Boots,Beige,Casual,Oversized,Office,All Season,Sunny,Hourglass,Wheatish,Cotton,Printed,Luxury,4.0,beige boots female
+1505,Female,36-50,Footwear,Boots,Grey Boots,Grey,Casual,Regular,Interview,Winter,Rainy,Apple,Olive,Denim,Printed,Premium,4.2,grey boots female
+1506,Female,26-35,Footwear,Boots,Brown Boots,Brown,Corporate,Slim,College,All Season,Cold,Hourglass,Fair,Cotton,Solid,Luxury,4.3,brown boots female
+1507,Female,26-35,Footwear,Boots,Pink Boots,Pink,Old Money,Regular,College,Monsoon,Cold,Athletic,Wheatish,Polyester,Checked,Budget,5.0,pink boots female
+1508,Female,18-25,Footwear,Boots,Green Boots,Green,Korean,Regular,Office,Winter,Cold,Apple,Dark,Denim,Solid,Luxury,4.7,green boots female
+1509,Female,Teen,Footwear,Boots,Navy Boots,Navy,Casual,Oversized,Party,Winter,Sunny,Hourglass,Fair,Linen,Solid,Premium,4.8,navy boots female
+1510,Female,18-25,Footwear,Boots,Cream Boots,Cream,Casual,Regular,Wedding,All Season,Rainy,Pear,Dark,Linen,Printed,Premium,4.8,cream boots female
+1511,Female,50+,Footwear,Heels,White Heels,White,Old Money,Slim,Office,Monsoon,Rainy,All,Wheatish,Linen,Printed,Luxury,4.1,white heels female
+1512,Female,Teen,Footwear,Heels,Black Heels,Black,Old Money,Slim,Festival,Winter,Sunny,Hourglass,Fair,Linen,Printed,Luxury,3.9,black heels female
+1513,Female,Teen,Footwear,Heels,Blue Heels,Blue,Y2K,Oversized,Interview,Summer,Rainy,All,Fair,Cotton,Printed,Budget,4.9,blue heels female
+1514,Female,18-25,Footwear,Heels,Beige Heels,Beige,Minimalist,Regular,Festival,Summer,Sunny,All,Fair,Polyester,Checked,Premium,4.7,beige heels female
+1515,Female,26-35,Footwear,Heels,Grey Heels,Grey,Corporate,Slim,Interview,Monsoon,Sunny,Athletic,Olive,Denim,Solid,Budget,3.9,grey heels female
+1516,Female,50+,Footwear,Heels,Brown Heels,Brown,Y2K,Slim,Gym,Winter,Cloudy,Hourglass,Olive,Polyester,Solid,Premium,4.1,brown heels female
+1517,Female,Teen,Footwear,Heels,Pink Heels,Pink,Minimalist,Oversized,Gym,Monsoon,Rainy,Apple,Wheatish,Cotton,Solid,Budget,4.5,pink heels female
+1518,Female,18-25,Footwear,Heels,Green Heels,Green,Ethnic,Oversized,Office,Summer,Rainy,Pear,Dark,Linen,Checked,Budget,4.0,green heels female
+1519,Female,Teen,Footwear,Heels,Navy Heels,Navy,Korean,Regular,Wedding,All Season,Cold,Rectangle,Olive,Denim,Printed,Premium,4.9,navy heels female
+1520,Female,50+,Footwear,Heels,Cream Heels,Cream,Casual,Oversized,Party,All Season,Cloudy,Athletic,Dark,Polyester,Solid,Premium,4.0,cream heels female
+1521,Female,Teen,Footwear,Sandals,White Sandals,White,Streetwear,Regular,Gym,Winter,Cold,Rectangle,Fair,Cotton,Printed,Budget,4.5,white sandals female
+1522,Female,36-50,Footwear,Sandals,Black Sandals,Black,Corporate,Slim,College,All Season,Sunny,All,Dark,Linen,Solid,Premium,3.9,black sandals female
+1523,Female,50+,Footwear,Sandals,Blue Sandals,Blue,Minimalist,Oversized,Office,Summer,Rainy,Rectangle,Dark,Denim,Printed,Budget,4.4,blue sandals female
+1524,Female,26-35,Footwear,Sandals,Beige Sandals,Beige,Old Money,Slim,Vacation,All Season,Cold,Rectangle,Dark,Linen,Checked,Premium,4.0,beige sandals female
+1525,Female,36-50,Footwear,Sandals,Grey Sandals,Grey,Korean,Regular,Airport,All Season,Sunny,Pear,Dark,Cotton,Printed,Luxury,4.6,grey sandals female
+1526,Female,Teen,Footwear,Sandals,Brown Sandals,Brown,Ethnic,Oversized,College,Summer,Cloudy,Athletic,Dark,Cotton,Checked,Luxury,4.2,brown sandals female
+1527,Female,36-50,Footwear,Sandals,Pink Sandals,Pink,Korean,Slim,Office,Winter,Sunny,Athletic,Fair,Linen,Solid,Budget,4.1,pink sandals female
+1528,Female,50+,Footwear,Sandals,Green Sandals,Green,Casual,Oversized,College,Monsoon,Cold,Athletic,Wheatish,Cotton,Solid,Luxury,4.2,green sandals female
+1529,Female,36-50,Footwear,Sandals,Navy Sandals,Navy,Casual,Oversized,College,Summer,Sunny,Apple,Fair,Cotton,Solid,Luxury,4.6,navy sandals female
+1530,Female,Teen,Footwear,Sandals,Cream Sandals,Cream,Streetwear,Oversized,Airport,Winter,Rainy,Athletic,Fair,Cotton,Checked,Luxury,4.9,cream sandals female
+1531,Female,18-25,Footwear,Running Shoes,White Running Shoes,White,Minimalist,Regular,Gym,Monsoon,Cold,Athletic,Dark,Denim,Checked,Premium,4.5,white running shoes female
+1532,Female,Teen,Footwear,Running Shoes,Black Running Shoes,Black,Corporate,Oversized,Wedding,Monsoon,Cloudy,Hourglass,Dark,Denim,Checked,Luxury,4.6,black running shoes female
+1533,Female,18-25,Footwear,Running Shoes,Blue Running Shoes,Blue,Streetwear,Slim,Wedding,All Season,Rainy,Rectangle,Olive,Cotton,Printed,Budget,4.1,blue running shoes female
+1534,Female,18-25,Footwear,Running Shoes,Beige Running Shoes,Beige,Streetwear,Regular,Vacation,All Season,Rainy,All,Fair,Linen,Checked,Premium,4.8,beige running shoes female
+1535,Female,18-25,Footwear,Running Shoes,Grey Running Shoes,Grey,Streetwear,Regular,Vacation,All Season,Rainy,Athletic,Fair,Denim,Solid,Budget,4.4,grey running shoes female
+1536,Female,50+,Footwear,Running Shoes,Brown Running Shoes,Brown,Minimalist,Regular,Date,Summer,Cold,Rectangle,Fair,Cotton,Printed,Luxury,3.8,brown running shoes female
+1537,Female,36-50,Footwear,Running Shoes,Pink Running Shoes,Pink,Ethnic,Oversized,Interview,All Season,Sunny,Rectangle,Dark,Cotton,Checked,Premium,4.5,pink running shoes female
+1538,Female,50+,Footwear,Running Shoes,Green Running Shoes,Green,Korean,Regular,Interview,All Season,Cold,Rectangle,Fair,Cotton,Checked,Budget,4.8,green running shoes female
+1539,Female,36-50,Footwear,Running Shoes,Navy Running Shoes,Navy,Y2K,Slim,Interview,All Season,Sunny,Pear,Olive,Cotton,Solid,Budget,4.2,navy running shoes female
+1540,Female,36-50,Footwear,Running Shoes,Cream Running Shoes,Cream,Y2K,Regular,College,Monsoon,Cloudy,Athletic,Olive,Linen,Printed,Budget,4.7,cream running shoes female
+1541,Male,Teen,Footwear,Sneakers,White Sneakers,White,Old Money,Slim,Gym,Winter,Cloudy,Athletic,Fair,Linen,Checked,Budget,4.4,white sneakers male
+1542,Male,36-50,Footwear,Sneakers,Black Sneakers,Black,Korean,Regular,Festival,Summer,Cold,All,Olive,Polyester,Checked,Premium,4.9,black sneakers male
+1543,Male,50+,Footwear,Sneakers,Blue Sneakers,Blue,Old Money,Oversized,Interview,Monsoon,Cloudy,All,Fair,Cotton,Printed,Luxury,3.9,blue sneakers male
+1544,Male,50+,Footwear,Sneakers,Beige Sneakers,Beige,Ethnic,Regular,Vacation,Winter,Cold,Rectangle,Fair,Polyester,Solid,Budget,4.7,beige sneakers male
+1545,Male,26-35,Footwear,Sneakers,Grey Sneakers,Grey,Corporate,Slim,Wedding,Winter,Cold,Hourglass,Dark,Denim,Solid,Luxury,4.6,grey sneakers male
+1546,Male,26-35,Footwear,Sneakers,Brown Sneakers,Brown,Minimalist,Slim,Date,All Season,Rainy,Pear,Wheatish,Denim,Solid,Luxury,4.6,brown sneakers male
+1547,Male,Teen,Footwear,Sneakers,Pink Sneakers,Pink,Casual,Slim,Airport,Winter,Rainy,Apple,Olive,Cotton,Solid,Luxury,4.8,pink sneakers male
+1548,Male,50+,Footwear,Sneakers,Green Sneakers,Green,Ethnic,Regular,Airport,Winter,Cold,Apple,Olive,Linen,Checked,Premium,4.2,green sneakers male
+1549,Male,26-35,Footwear,Sneakers,Navy Sneakers,Navy,Minimalist,Regular,Airport,Summer,Sunny,All,Fair,Polyester,Printed,Luxury,4.6,navy sneakers male
+1550,Male,36-50,Footwear,Sneakers,Cream Sneakers,Cream,Corporate,Oversized,Festival,All Season,Cloudy,Apple,Dark,Cotton,Solid,Luxury,4.0,cream sneakers male
+1551,Male,50+,Footwear,Loafers,White Loafers,White,Corporate,Regular,Gym,Winter,Cold,Apple,Olive,Denim,Checked,Budget,4.6,white loafers male
+1552,Male,36-50,Footwear,Loafers,Black Loafers,Black,Y2K,Slim,Gym,Summer,Cold,Pear,Olive,Denim,Printed,Premium,4.7,black loafers male
+1553,Male,36-50,Footwear,Loafers,Blue Loafers,Blue,Corporate,Regular,College,Winter,Rainy,Rectangle,Fair,Cotton,Solid,Premium,4.3,blue loafers male
+1554,Male,50+,Footwear,Loafers,Beige Loafers,Beige,Ethnic,Regular,Airport,Winter,Sunny,Apple,Olive,Cotton,Solid,Luxury,4.3,beige loafers male
+1555,Male,Teen,Footwear,Loafers,Grey Loafers,Grey,Minimalist,Slim,Office,All Season,Rainy,Pear,Dark,Linen,Printed,Budget,4.8,grey loafers male
+1556,Male,50+,Footwear,Loafers,Brown Loafers,Brown,Streetwear,Oversized,College,All Season,Rainy,All,Olive,Linen,Checked,Budget,4.8,brown loafers male
+1557,Male,26-35,Footwear,Loafers,Pink Loafers,Pink,Ethnic,Oversized,Wedding,Monsoon,Cloudy,All,Dark,Cotton,Solid,Budget,4.9,pink loafers male
+1558,Male,36-50,Footwear,Loafers,Green Loafers,Green,Y2K,Regular,Interview,Monsoon,Rainy,Hourglass,Wheatish,Polyester,Printed,Budget,4.4,green loafers male
+1559,Male,36-50,Footwear,Loafers,Navy Loafers,Navy,Korean,Slim,Airport,All Season,Sunny,Athletic,Dark,Cotton,Checked,Premium,4.2,navy loafers male
+1560,Male,36-50,Footwear,Loafers,Cream Loafers,Cream,Old Money,Oversized,Party,Summer,Sunny,Hourglass,Olive,Cotton,Solid,Luxury,4.5,cream loafers male
+1561,Male,36-50,Footwear,Boots,White Boots,White,Y2K,Regular,Airport,All Season,Cloudy,Rectangle,Wheatish,Cotton,Printed,Premium,4.0,white boots male
+1562,Male,36-50,Footwear,Boots,Black Boots,Black,Casual,Slim,Interview,Summer,Cold,All,Fair,Cotton,Checked,Premium,4.1,black boots male
+1563,Male,50+,Footwear,Boots,Blue Boots,Blue,Y2K,Slim,Wedding,Monsoon,Rainy,Rectangle,Fair,Denim,Checked,Premium,4.6,blue boots male
+1564,Male,50+,Footwear,Boots,Beige Boots,Beige,Streetwear,Regular,Gym,Winter,Cloudy,Athletic,Fair,Linen,Printed,Premium,4.2,beige boots male
+1565,Male,26-35,Footwear,Boots,Grey Boots,Grey,Y2K,Slim,Festival,Summer,Rainy,Hourglass,Wheatish,Denim,Printed,Luxury,4.4,grey boots male
+1566,Male,50+,Footwear,Boots,Brown Boots,Brown,Minimalist,Slim,Wedding,Winter,Rainy,Athletic,Wheatish,Cotton,Solid,Luxury,4.6,brown boots male
+1567,Male,Teen,Footwear,Boots,Pink Boots,Pink,Korean,Oversized,Festival,Winter,Cold,Rectangle,Fair,Cotton,Checked,Luxury,4.5,pink boots male
+1568,Male,26-35,Footwear,Boots,Green Boots,Green,Streetwear,Oversized,Gym,Monsoon,Sunny,Pear,Fair,Cotton,Printed,Budget,4.9,green boots male
+1569,Male,18-25,Footwear,Boots,Navy Boots,Navy,Minimalist,Oversized,Interview,Summer,Cloudy,Hourglass,Fair,Denim,Checked,Budget,4.2,navy boots male
+1570,Male,50+,Footwear,Boots,Cream Boots,Cream,Streetwear,Slim,Festival,Winter,Cloudy,Athletic,Olive,Linen,Solid,Budget,4.8,cream boots male
+1571,Male,50+,Footwear,Heels,White Heels,White,Old Money,Regular,College,Winter,Sunny,Pear,Wheatish,Cotton,Checked,Budget,4.9,white heels male
+1572,Male,26-35,Footwear,Heels,Black Heels,Black,Ethnic,Slim,Date,Winter,Cloudy,Pear,Wheatish,Denim,Checked,Budget,4.5,black heels male
+1573,Male,Teen,Footwear,Heels,Blue Heels,Blue,Old Money,Slim,Wedding,Winter,Sunny,Hourglass,Fair,Denim,Checked,Premium,4.5,blue heels male
+1574,Male,26-35,Footwear,Heels,Beige Heels,Beige,Streetwear,Regular,Party,Summer,Cloudy,Pear,Olive,Denim,Solid,Premium,4.8,beige heels male
+1575,Male,50+,Footwear,Heels,Grey Heels,Grey,Korean,Regular,Festival,Summer,Sunny,Rectangle,Wheatish,Cotton,Checked,Budget,4.8,grey heels male
+1576,Male,36-50,Footwear,Heels,Brown Heels,Brown,Minimalist,Oversized,Office,Winter,Rainy,Apple,Fair,Denim,Checked,Luxury,4.0,brown heels male
+1577,Male,18-25,Footwear,Heels,Pink Heels,Pink,Korean,Regular,Vacation,Winter,Rainy,Rectangle,Olive,Linen,Checked,Budget,4.4,pink heels male
+1578,Male,36-50,Footwear,Heels,Green Heels,Green,Old Money,Regular,College,Winter,Rainy,Athletic,Olive,Cotton,Printed,Premium,4.5,green heels male
+1579,Male,Teen,Footwear,Heels,Navy Heels,Navy,Minimalist,Oversized,Airport,Winter,Rainy,Pear,Dark,Linen,Solid,Budget,4.0,navy heels male
+1580,Male,36-50,Footwear,Heels,Cream Heels,Cream,Y2K,Slim,College,Winter,Rainy,Pear,Olive,Linen,Checked,Luxury,4.6,cream heels male
+1581,Male,26-35,Footwear,Sandals,White Sandals,White,Y2K,Oversized,Interview,Winter,Cloudy,Pear,Wheatish,Polyester,Checked,Luxury,4.0,white sandals male
+1582,Male,18-25,Footwear,Sandals,Black Sandals,Black,Casual,Oversized,Interview,Summer,Rainy,Apple,Olive,Denim,Printed,Luxury,4.1,black sandals male
+1583,Male,36-50,Footwear,Sandals,Blue Sandals,Blue,Korean,Slim,Vacation,Summer,Cloudy,Rectangle,Dark,Cotton,Printed,Budget,4.0,blue sandals male
+1584,Male,36-50,Footwear,Sandals,Beige Sandals,Beige,Korean,Regular,College,Summer,Rainy,Hourglass,Fair,Polyester,Checked,Premium,3.8,beige sandals male
+1585,Male,18-25,Footwear,Sandals,Grey Sandals,Grey,Y2K,Slim,Airport,Winter,Sunny,Apple,Wheatish,Linen,Printed,Premium,4.8,grey sandals male
+1586,Male,50+,Footwear,Sandals,Brown Sandals,Brown,Y2K,Slim,Party,Winter,Rainy,Rectangle,Dark,Linen,Checked,Budget,3.9,brown sandals male
+1587,Male,18-25,Footwear,Sandals,Pink Sandals,Pink,Old Money,Slim,Gym,Winter,Rainy,Hourglass,Wheatish,Linen,Printed,Luxury,4.7,pink sandals male
+1588,Male,18-25,Footwear,Sandals,Green Sandals,Green,Streetwear,Regular,Vacation,All Season,Cold,All,Olive,Linen,Checked,Luxury,4.7,green sandals male
+1589,Male,36-50,Footwear,Sandals,Navy Sandals,Navy,Ethnic,Regular,College,Winter,Rainy,All,Fair,Cotton,Checked,Budget,4.5,navy sandals male
+1590,Male,Teen,Footwear,Sandals,Cream Sandals,Cream,Y2K,Oversized,Airport,Monsoon,Sunny,Apple,Wheatish,Cotton,Printed,Premium,4.5,cream sandals male
+1591,Male,26-35,Footwear,Running Shoes,White Running Shoes,White,Corporate,Oversized,College,Winter,Cloudy,All,Wheatish,Cotton,Printed,Budget,4.2,white running shoes male
+1592,Male,36-50,Footwear,Running Shoes,Black Running Shoes,Black,Ethnic,Oversized,Interview,Monsoon,Cold,Pear,Fair,Linen,Printed,Luxury,4.1,black running shoes male
+1593,Male,Teen,Footwear,Running Shoes,Blue Running Shoes,Blue,Streetwear,Oversized,Festival,All Season,Sunny,Hourglass,Fair,Denim,Solid,Premium,4.0,blue running shoes male
+1594,Male,18-25,Footwear,Running Shoes,Beige Running Shoes,Beige,Korean,Slim,Wedding,Monsoon,Rainy,Apple,Wheatish,Linen,Solid,Luxury,4.5,beige running shoes male
+1595,Male,Teen,Footwear,Running Shoes,Grey Running Shoes,Grey,Minimalist,Oversized,College,All Season,Cloudy,Pear,Wheatish,Cotton,Printed,Luxury,4.5,grey running shoes male
+1596,Male,18-25,Footwear,Running Shoes,Brown Running Shoes,Brown,Korean,Oversized,Date,Monsoon,Cloudy,Pear,Wheatish,Cotton,Printed,Luxury,4.2,brown running shoes male
+1597,Male,Teen,Footwear,Running Shoes,Pink Running Shoes,Pink,Old Money,Regular,Interview,Summer,Cloudy,Pear,Fair,Linen,Solid,Budget,3.9,pink running shoes male
+1598,Male,36-50,Footwear,Running Shoes,Green Running Shoes,Green,Korean,Regular,Office,All Season,Cloudy,All,Wheatish,Denim,Checked,Budget,3.8,green running shoes male
+1599,Male,36-50,Footwear,Running Shoes,Navy Running Shoes,Navy,Ethnic,Slim,Office,Monsoon,Rainy,Pear,Fair,Polyester,Checked,Budget,4.6,navy running shoes male
+1600,Male,18-25,Footwear,Running Shoes,Cream Running Shoes,Cream,Y2K,Oversized,Wedding,Monsoon,Sunny,Apple,Dark,Denim,Solid,Budget,4.6,cream running shoes male
+1601,Unisex,36-50,Footwear,Sneakers,White Sneakers,White,Old Money,Slim,College,All Season,Cold,Pear,Fair,Cotton,Checked,Luxury,3.8,white sneakers unisex
+1602,Unisex,26-35,Footwear,Sneakers,Black Sneakers,Black,Y2K,Regular,Office,Winter,Rainy,Apple,Olive,Cotton,Solid,Premium,4.6,black sneakers unisex
+1603,Unisex,50+,Footwear,Sneakers,Blue Sneakers,Blue,Minimalist,Slim,Festival,Winter,Cold,Hourglass,Wheatish,Cotton,Printed,Premium,4.5,blue sneakers unisex
+1604,Unisex,26-35,Footwear,Sneakers,Beige Sneakers,Beige,Streetwear,Slim,Office,Winter,Sunny,All,Dark,Polyester,Solid,Budget,4.3,beige sneakers unisex
+1605,Unisex,26-35,Footwear,Sneakers,Grey Sneakers,Grey,Korean,Regular,Wedding,All Season,Cloudy,Pear,Olive,Linen,Checked,Budget,5.0,grey sneakers unisex
+1606,Unisex,26-35,Footwear,Sneakers,Brown Sneakers,Brown,Y2K,Regular,Date,Winter,Cloudy,All,Olive,Denim,Checked,Budget,4.4,brown sneakers unisex
+1607,Unisex,26-35,Footwear,Sneakers,Pink Sneakers,Pink,Casual,Oversized,Wedding,All Season,Cloudy,All,Fair,Cotton,Checked,Premium,4.2,pink sneakers unisex
+1608,Unisex,18-25,Footwear,Sneakers,Green Sneakers,Green,Korean,Oversized,Vacation,Winter,Cold,Athletic,Fair,Denim,Solid,Premium,4.2,green sneakers unisex
+1609,Unisex,26-35,Footwear,Sneakers,Navy Sneakers,Navy,Streetwear,Regular,Office,Summer,Sunny,Apple,Olive,Cotton,Checked,Premium,4.0,navy sneakers unisex
+1610,Unisex,26-35,Footwear,Sneakers,Cream Sneakers,Cream,Y2K,Slim,Festival,All Season,Cloudy,All,Fair,Cotton,Solid,Budget,3.8,cream sneakers unisex
+1611,Unisex,26-35,Footwear,Loafers,White Loafers,White,Streetwear,Regular,Date,Summer,Cloudy,Apple,Fair,Polyester,Printed,Luxury,4.1,white loafers unisex
+1612,Unisex,36-50,Footwear,Loafers,Black Loafers,Black,Y2K,Slim,College,All Season,Cold,Hourglass,Olive,Cotton,Solid,Budget,4.4,black loafers unisex
+1613,Unisex,Teen,Footwear,Loafers,Blue Loafers,Blue,Ethnic,Slim,Date,Summer,Cloudy,Rectangle,Dark,Linen,Printed,Budget,3.9,blue loafers unisex
+1614,Unisex,36-50,Footwear,Loafers,Beige Loafers,Beige,Casual,Oversized,Wedding,Winter,Cold,Athletic,Dark,Polyester,Checked,Premium,3.9,beige loafers unisex
+1615,Unisex,18-25,Footwear,Loafers,Grey Loafers,Grey,Corporate,Regular,Festival,All Season,Cold,All,Wheatish,Cotton,Checked,Luxury,4.4,grey loafers unisex
+1616,Unisex,50+,Footwear,Loafers,Brown Loafers,Brown,Y2K,Oversized,Date,Monsoon,Cold,Hourglass,Olive,Denim,Printed,Budget,4.4,brown loafers unisex
+1617,Unisex,18-25,Footwear,Loafers,Pink Loafers,Pink,Korean,Regular,Date,Winter,Cold,Athletic,Wheatish,Linen,Checked,Premium,4.6,pink loafers unisex
+1618,Unisex,Teen,Footwear,Loafers,Green Loafers,Green,Ethnic,Regular,Airport,All Season,Cloudy,Apple,Olive,Polyester,Checked,Budget,4.7,green loafers unisex
+1619,Unisex,18-25,Footwear,Loafers,Navy Loafers,Navy,Streetwear,Regular,Office,Summer,Rainy,Apple,Wheatish,Polyester,Printed,Budget,4.1,navy loafers unisex
+1620,Unisex,Teen,Footwear,Loafers,Cream Loafers,Cream,Old Money,Oversized,Date,Winter,Cold,Pear,Dark,Cotton,Checked,Premium,4.8,cream loafers unisex
+1621,Unisex,26-35,Footwear,Boots,White Boots,White,Korean,Oversized,College,All Season,Cloudy,Pear,Wheatish,Linen,Checked,Luxury,4.3,white boots unisex
+1622,Unisex,50+,Footwear,Boots,Black Boots,Black,Corporate,Oversized,Airport,All Season,Rainy,Apple,Fair,Polyester,Solid,Luxury,4.8,black boots unisex
+1623,Unisex,36-50,Footwear,Boots,Blue Boots,Blue,Y2K,Slim,Vacation,Summer,Cold,Pear,Olive,Linen,Solid,Budget,4.1,blue boots unisex
+1624,Unisex,50+,Footwear,Boots,Beige Boots,Beige,Streetwear,Slim,Airport,Winter,Sunny,Rectangle,Fair,Polyester,Checked,Luxury,3.8,beige boots unisex
+1625,Unisex,18-25,Footwear,Boots,Grey Boots,Grey,Casual,Oversized,Party,All Season,Cloudy,Rectangle,Dark,Polyester,Solid,Budget,4.8,grey boots unisex
+1626,Unisex,26-35,Footwear,Boots,Brown Boots,Brown,Streetwear,Regular,Date,All Season,Cloudy,Apple,Wheatish,Denim,Solid,Budget,4.4,brown boots unisex
+1627,Unisex,50+,Footwear,Boots,Pink Boots,Pink,Corporate,Regular,Airport,Summer,Sunny,Hourglass,Dark,Polyester,Printed,Premium,4.9,pink boots unisex
+1628,Unisex,26-35,Footwear,Boots,Green Boots,Green,Y2K,Regular,Party,Monsoon,Rainy,Rectangle,Olive,Linen,Printed,Budget,4.9,green boots unisex
+1629,Unisex,36-50,Footwear,Boots,Navy Boots,Navy,Minimalist,Slim,Vacation,Winter,Cloudy,Apple,Fair,Cotton,Printed,Luxury,4.3,navy boots unisex
+1630,Unisex,Teen,Footwear,Boots,Cream Boots,Cream,Corporate,Oversized,Vacation,Winter,Cloudy,Rectangle,Fair,Polyester,Checked,Luxury,4.9,cream boots unisex
+1631,Unisex,26-35,Footwear,Heels,White Heels,White,Korean,Slim,Date,All Season,Sunny,Hourglass,Dark,Polyester,Solid,Budget,4.4,white heels unisex
+1632,Unisex,18-25,Footwear,Heels,Black Heels,Black,Casual,Slim,Wedding,Monsoon,Cloudy,Rectangle,Olive,Polyester,Solid,Luxury,4.4,black heels unisex
+1633,Unisex,Teen,Footwear,Heels,Blue Heels,Blue,Casual,Regular,Party,All Season,Cloudy,Rectangle,Olive,Linen,Printed,Premium,4.7,blue heels unisex
+1634,Unisex,18-25,Footwear,Heels,Beige Heels,Beige,Y2K,Regular,Date,All Season,Cloudy,Hourglass,Fair,Polyester,Checked,Premium,4.4,beige heels unisex
+1635,Unisex,18-25,Footwear,Heels,Grey Heels,Grey,Y2K,Slim,Gym,Summer,Sunny,Pear,Wheatish,Linen,Solid,Budget,4.1,grey heels unisex
+1636,Unisex,36-50,Footwear,Heels,Brown Heels,Brown,Old Money,Slim,Party,Monsoon,Cloudy,Pear,Fair,Linen,Printed,Premium,3.8,brown heels unisex
+1637,Unisex,50+,Footwear,Heels,Pink Heels,Pink,Ethnic,Slim,Date,Winter,Cold,All,Wheatish,Linen,Printed,Budget,4.9,pink heels unisex
+1638,Unisex,Teen,Footwear,Heels,Green Heels,Green,Korean,Regular,Wedding,Summer,Cloudy,Rectangle,Fair,Denim,Checked,Premium,5.0,green heels unisex
+1639,Unisex,Teen,Footwear,Heels,Navy Heels,Navy,Korean,Regular,Office,All Season,Sunny,Hourglass,Wheatish,Polyester,Printed,Premium,4.3,navy heels unisex
+1640,Unisex,Teen,Footwear,Heels,Cream Heels,Cream,Casual,Oversized,Vacation,Summer,Cold,Athletic,Dark,Denim,Printed,Luxury,3.8,cream heels unisex
+1641,Unisex,50+,Footwear,Sandals,White Sandals,White,Korean,Slim,Wedding,Winter,Cloudy,All,Olive,Cotton,Solid,Budget,4.8,white sandals unisex
+1642,Unisex,18-25,Footwear,Sandals,Black Sandals,Black,Streetwear,Slim,Vacation,Monsoon,Rainy,Pear,Dark,Polyester,Printed,Premium,3.9,black sandals unisex
+1643,Unisex,Teen,Footwear,Sandals,Blue Sandals,Blue,Minimalist,Oversized,Date,All Season,Cold,All,Dark,Cotton,Solid,Budget,4.9,blue sandals unisex
+1644,Unisex,26-35,Footwear,Sandals,Beige Sandals,Beige,Casual,Regular,Airport,Winter,Rainy,Rectangle,Fair,Denim,Checked,Budget,4.8,beige sandals unisex
+1645,Unisex,50+,Footwear,Sandals,Grey Sandals,Grey,Streetwear,Regular,Airport,Summer,Cloudy,Pear,Olive,Cotton,Printed,Budget,4.6,grey sandals unisex
+1646,Unisex,36-50,Footwear,Sandals,Brown Sandals,Brown,Ethnic,Oversized,Festival,Monsoon,Cold,Hourglass,Dark,Cotton,Printed,Luxury,4.3,brown sandals unisex
+1647,Unisex,18-25,Footwear,Sandals,Pink Sandals,Pink,Casual,Slim,Airport,Monsoon,Sunny,Pear,Wheatish,Denim,Printed,Budget,5.0,pink sandals unisex
+1648,Unisex,Teen,Footwear,Sandals,Green Sandals,Green,Korean,Slim,Party,Winter,Cold,Pear,Dark,Cotton,Checked,Luxury,4.1,green sandals unisex
+1649,Unisex,26-35,Footwear,Sandals,Navy Sandals,Navy,Streetwear,Slim,Wedding,Winter,Cold,Athletic,Dark,Denim,Printed,Premium,4.0,navy sandals unisex
+1650,Unisex,18-25,Footwear,Sandals,Cream Sandals,Cream,Y2K,Regular,College,Monsoon,Cloudy,Athletic,Dark,Linen,Solid,Premium,4.5,cream sandals unisex
+1651,Unisex,Teen,Footwear,Running Shoes,White Running Shoes,White,Casual,Regular,Party,Winter,Cloudy,All,Fair,Linen,Checked,Budget,4.1,white running shoes unisex
+1652,Unisex,50+,Footwear,Running Shoes,Black Running Shoes,Black,Y2K,Regular,Airport,Summer,Cold,Apple,Olive,Denim,Checked,Luxury,4.1,black running shoes unisex
+1653,Unisex,26-35,Footwear,Running Shoes,Blue Running Shoes,Blue,Streetwear,Regular,College,Winter,Cloudy,Pear,Dark,Polyester,Printed,Budget,4.6,blue running shoes unisex
+1654,Unisex,26-35,Footwear,Running Shoes,Beige Running Shoes,Beige,Streetwear,Slim,Gym,All Season,Rainy,All,Wheatish,Denim,Solid,Premium,4.5,beige running shoes unisex
+1655,Unisex,18-25,Footwear,Running Shoes,Grey Running Shoes,Grey,Ethnic,Oversized,Airport,All Season,Sunny,Pear,Olive,Polyester,Checked,Luxury,4.6,grey running shoes unisex
+1656,Unisex,18-25,Footwear,Running Shoes,Brown Running Shoes,Brown,Y2K,Oversized,Interview,All Season,Cold,All,Olive,Cotton,Printed,Luxury,4.3,brown running shoes unisex
+1657,Unisex,18-25,Footwear,Running Shoes,Pink Running Shoes,Pink,Streetwear,Oversized,Office,All Season,Cloudy,Rectangle,Wheatish,Cotton,Solid,Premium,4.2,pink running shoes unisex
+1658,Unisex,50+,Footwear,Running Shoes,Green Running Shoes,Green,Y2K,Oversized,Festival,Winter,Sunny,Apple,Fair,Cotton,Checked,Premium,4.8,green running shoes unisex
+1659,Unisex,26-35,Footwear,Running Shoes,Navy Running Shoes,Navy,Ethnic,Regular,Party,Winter,Rainy,Hourglass,Olive,Cotton,Solid,Budget,4.9,navy running shoes unisex
+1660,Unisex,26-35,Footwear,Running Shoes,Cream Running Shoes,Cream,Corporate,Oversized,Festival,Summer,Rainy,Rectangle,Wheatish,Cotton,Printed,Budget,4.7,cream running shoes unisex

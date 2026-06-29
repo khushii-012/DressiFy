@@ -1,141 +1,165 @@
 import streamlit as st
-import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
+from database import create_tables
+from pages.profile import show_profile
+from pages.wardrobe import show_wardrobe
+from utils.styles import load_css
+from components.hero import show_hero
+from components.stat_cards import show_stats
+from pages.ai_outfit_generator import show_ai_generator
+# ------------------------------
+# PAGE CONFIG
+# ------------------------------
+st.set_page_config(
+    page_title="Dressify AI",
+    page_icon="👗",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+initialize_database()
+load_css()
+st.markdown("""
+<div style="
+background:red;
+color:white;
+padding:20px;
+border-radius:20px;
+font-size:30px;
+text-align:center;
+">
+CSS is Working ❤️
+</div>
+""", unsafe_allow_html=True)
+# ------------------------------
+# SIDEBAR
+# ------------------------------
+st.sidebar.title("👗 Dressify")
 
-# -------------------------
-# PAGE SETUP
-# -------------------------
-st.set_page_config(page_title="DressiFy AI", layout="centered")
+page = st.sidebar.radio(
+    "Navigation",
+    [
+        "🏠 Home",
+        "👤 Profile",
+        "👚 My Wardrobe",
+        "✨ AI Outfit Generator",
+        "🎨 Color Studio",
+        "💇 Hair Studio",
+        "📊 Closet Analytics",
+        "❤️ Saved Looks",
+        "⚙ Settings"
+    ]
+)
 
-st.title("👗 DressiFy AI Fashion Assistant")
-st.subheader("Your Smart AI Stylist ✨")
-st.markdown("---")
+# ------------------------------
+# HOME
+# ------------------------------
+# HOME
+# ------------------------------
+if page == "🏠 Home":
 
-# -------------------------
-# LOAD DATASET
-# -------------------------
-DATA_FILE = "fashion_items.csv"
+    show_hero()
+    st.markdown("## ✨ Discover Your Fashion Universe")
 
-def load_data():
-    return pd.read_csv(DATA_FILE)
+   
+    st.markdown("---")
 
-df = load_data()
+    st.header("✨ Trending Styles")
 
-# -------------------------
-# CHECK DATA
-# -------------------------
-if df.empty:
-    st.error("Dataset missing or empty!")
-    st.stop()
+    c1, c2, c3, c4 = st.columns(4)
 
-# -------------------------
-# ENCODING MAPS
-# -------------------------
-gender_map = {"Female": 0, "Male": 1, "Other": 2}
-style_map = {"Casual": 0, "Trendy": 1, "Formal": 2}
-weather_map = {"Sunny": 0, "Rainy": 1, "Cold": 2}
-occasion_map = {"Casual": 0, "Party": 1, "Formal": 2}
+    with c1:
+        st.success("🇰🇷 Korean Minimal")
 
-# -------------------------
-# USER INPUT
-# -------------------------
-gender = st.selectbox("Gender", list(gender_map.keys()))
-age = st.slider("Age", 10, 60, 20)
-style = st.selectbox("Style", list(style_map.keys()))
-weather = st.selectbox("Weather", list(weather_map.keys()))
-occasion = st.selectbox("Occasion", list(occasion_map.keys()))
+    with c2:
+        st.success("💼 Corporate Chic")
 
-# convert to numbers
-gender_v = gender_map[gender]
-style_v = style_map[style]
-weather_v = weather_map[weather]
-occasion_v = occasion_map[occasion]
-age_v = age
+    with c3:
+        st.success("🤍 Old Money")
 
-# -------------------------
-# TRAIN MODEL
-# -------------------------
-def train_model():
-    if len(df) < 5:
-        return None
+    with c4:
+        st.success("🖤 Quiet Luxury")
 
-    X = df[["gender", "age", "style", "weather", "occasion"]]
-    y = df["category"]
+    st.markdown("---")
 
-    model = DecisionTreeClassifier()
-    model.fit(X, y)
-    return model
+    st.header("💡 AI Fashion Tip")
 
-model = train_model()
+    st.success(
+        "Neutral colors like White, Beige, Black and Grey create timeless outfits."
+    )
 
-if model is None:
-    st.warning("⚠️ Using fallback AI (not enough training data)")
+    st.markdown("---")
 
-# -------------------------
-# PREDICTION
-# -------------------------
-def predict_category():
-    if model is None:
-        # fallback logic
-        if occasion_v == 2:
-            return "formal"
-        if weather_v == 1:
-            return "casual"
-        return "casual"
+    st.header("🚀 Quick Actions")
 
-    return model.predict([[gender_v, age_v, style_v, weather_v, occasion_v]])[0]
+    c1, c2, c3 = st.columns(3)
 
-# -------------------------
-# ACCESSORIES SYSTEM
-# -------------------------
-accessories = {
-    "casual": ["🕶️ Sunglasses", "⌚ Watch", "🎒 Backpack"],
-    "formal": ["⌚ Classic Watch", "💼 Formal Bag", "👞 Shoes Polish Look"],
-    "party": ["💎 Jewelry", "🕶️ Stylish Shades", "👜 Clutch Bag"]
-}
+    with c1:
+        st.button("👚 Add Clothes", use_container_width=True)
 
-# -------------------------
-# GET OUTFIT
-# -------------------------
-def get_outfit(category):
-    items = df[df["category"] == category]
-    if len(items) == 0:
-        return items
-    return items.sample(min(3, len(items)))
+    with c2:
+        st.button("✨ Generate Outfit", use_container_width=True)
 
-# -------------------------
-# MAIN BUTTON
-# -------------------------
-if st.button("👗 Generate Full AI Look"):
+    with c3:
+        st.button("📊 View Analytics", use_container_width=True)
+# ------------------------------
+# PROFILE
+# ------------------------------
+elif page == "👤 Profile":
 
-    category = predict_category()
+    show_profile()
 
-    st.success(f"Recommended Style: {category.upper()}")
+# ------------------------------
+# WARDROBE
+# ------------------------------
+elif page == "👚 My Wardrobe":
 
-    # outfit
-    st.subheader("🧥 Outfit Suggestion")
+    show_wardrobe()
+# ------------------------------
+# AI
+# ------------------------------
+elif page == "✨ AI Outfit Generator":
+    show_ai_generator()
 
-    st.subheader("🧥 Full Outfit Suggestion")
+# ------------------------------
+# COLOR
+# ------------------------------
+elif page == "🎨 Color Studio":
 
-types = ["top", "bottom", "shoes", "accessory"]
+    st.title("🎨 Color Studio")
 
-for t in types:
-    item = df[(df["category"] == category) & (df["type"] == t)]
+    st.write("Coming Soon...")
 
-    if not item.empty:
-        row = item.sample(1).iloc[0]
-        st.write(f"✔️ {t.upper()}: {row['item']}")
-        st.image(row["image"], width=220)
+# ------------------------------
+# HAIR
+# ------------------------------
+elif page == "💇 Hair Studio":
 
-    # accessories
-    st.subheader("👜 Accessories & Full Look")
+    st.title("💇 Hair Studio")
 
-    for item in accessories.get(category, []):
-        st.write("➕ " + item)
+    st.write("Coming Soon...")
 
-# -------------------------
-# DATA STATUS
-# -------------------------
-st.markdown("---")
-st.subheader("📊 System Status")
-st.write("Total items in dataset:", len(df))
+# ------------------------------
+# ANALYTICS
+# ------------------------------
+elif page == "📊 Closet Analytics":
+
+    st.title("📊 Closet Analytics")
+
+    st.write("Coming Soon...")
+
+# ------------------------------
+# SAVED
+# ------------------------------
+elif page == "❤️ Saved Looks":
+
+    st.title("❤️ Saved Looks")
+
+    st.write("Coming Soon...")
+
+# ------------------------------
+# SETTINGS
+# ------------------------------
+elif page == "⚙ Settings":
+
+    st.title("⚙ Settings")
+
+    st.write("Coming Soon...")
