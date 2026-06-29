@@ -1,15 +1,160 @@
-gender,age,style,weather,occasion,category,type,item,image
-0,20,0,0,0,casual,top,T-shirt,https://images.unsplash.com/photo-1520975922284-8d2c8a4b7b7f
-0,20,0,0,0,casual,bottom,Jeans,https://images.unsplash.com/photo-1542272604-787c3835535d
-0,20,0,0,0,casual,shoes,Sneakers,https://images.unsplash.com/photo-1600185365483-26d7a4cc7519
-0,20,0,0,0,casual,accessory,Sunglasses,https://images.unsplash.com/photo-1511499767150-a48a237f4a6b
-
-0,20,2,2,2,formal,top,Shirt,https://images.unsplash.com/photo-1593030761757-71fae45fa0e7
-0,20,2,2,2,formal,bottom,Formal Pants,https://images.unsplash.com/photo-1624378439575-d8705ad7ae80
-0,20,2,2,2,formal,shoes,Formal Shoes,https://images.unsplash.com/photo-1520975918315-3f5a3c8b4c32
-0,20,2,2,2,formal,accessory,Watch,https://images.unsplash.com/photo-1523275335684-37898b6baf30
-
-0,20,1,0,1,party,top,Stylish Top,https://images.unsplash.com/photo-1520975682031-ae0b2f2b1b1a
-0,20,1,0,1,party,bottom,Skirt/Jeans,https://images.unsplash.com/photo-1503342217505-b0a15ec3261c
-0,20,1,0,1,party,shoes,Heels,https://images.unsplash.com/photo-1528701800489-20be0e8b9f8f
-0,20,1,0,1,party,accessory,Clutch Bag,https://images.unsplash.com/photo-1548036328-c9fa89d128fa
+category,type,item,gender,style,occasion,weather,body_type,skin_tone,fit,color_family,description
+Top,top,White Oversized Graphic Tee,Female,Casual,College,Sunny,All,All,Oversized,Neutral,Classic white oversized tee with subtle graphic print
+Top,top,Black Crop Top,Female,Trendy,Party,Sunny,Hourglass,All,Slim,Dark,Fitted crop top in matte black
+Top,top,Lavender Linen Shirt,Female,Casual,Casual Outing,Sunny,All,Fair,Regular,Pastel,Breathable linen shirt in soft lavender
+Top,top,Beige Ribbed Tank,Female,Casual,College,Sunny,Hourglass,Wheatish,Slim,Neutral,Fitted ribbed tank in warm beige
+Top,top,Sage Green Hoodie,Female,Casual,College,Winter,All,All,Oversized,Earthy,Cozy sage green pullover hoodie
+Top,top,White Polo Shirt,Female,Smart Casual,Office,Sunny,All,All,Regular,Neutral,Clean white polo with subtle collar
+Top,top,Striped Oversized Shirt,Female,Casual,College,Sunny,Pear,All,Oversized,Multi,Black and white horizontal stripe shirt
+Top,top,Rust Orange Crop Sweater,Female,Trendy,Date,Winter,Hourglass,Wheatish,Slim,Warm,Cropped knit sweater in rust orange
+Top,top,Denim Shirt,Female,Casual,Casual Outing,Sunny,All,All,Regular,Blue,Classic denim button-down shirt
+Top,top,Pink Floral Blouse,Female,Feminine,Date,Sunny,Pear,Fair,Regular,Pink,Flowy blouse with floral print
+Top,top,White Corset Top,Female,Trendy,Party,Sunny,Hourglass,All,Slim,Neutral,Structured corset-style top in white
+Top,top,Brown Knit Sweater,Female,Casual,College,Winter,All,Wheatish,Regular,Earthy,Warm brown knit pullover sweater
+Top,top,Black Blazer,Female,Smart Casual,Interview,Sunny,All,All,Regular,Dark,Tailored black blazer for polished looks
+Top,top,White Linen Shirt,Female,Minimal,Office,Sunny,All,All,Regular,Neutral,Breathable white linen button-up shirt
+Top,top,Electric Blue Tube Top,Female,Trendy,Party,Sunny,Hourglass,All,Slim,Cool,Strapless electric blue tube top
+Top,top,Cream Oversized Sweatshirt,Female,Casual,College,Winter,All,All,Oversized,Neutral,Cozy cream fleece sweatshirt
+Top,top,Yellow Crop Tee,Female,Casual,Vacation,Sunny,All,Dark,Slim,Warm,Bright yellow short crop tee
+Top,top,Olive Green Cargo Shirt,Female,Streetwear,College,Sunny,All,All,Oversized,Earthy,Utility cargo shirt in olive green
+Top,top,Pink Satin Cami,Female,Feminine,Date,Sunny,Hourglass,Fair,Slim,Pink,Silky pink camisole top
+Top,top,Grey Graphic Oversized Tee,Female,Casual,College,Sunny,All,All,Oversized,Neutral,Grey tee with vintage graphic print
+Top,top,Navy Blue Crop Hoodie,Female,Casual,Gym,Winter,All,All,Regular,Cool,Navy blue cropped zip hoodie
+Top,top,White Lace Top,Female,Feminine,Party,Sunny,Hourglass,Fair,Slim,Neutral,Delicate white lace overlay top
+Top,top,Black Turtleneck,Female,Minimal,Office,Winter,All,All,Slim,Dark,Classic black ribbed turtleneck
+Top,top,Red Wrap Top,Female,Feminine,Date,Sunny,Hourglass,Wheatish,Regular,Warm,Flattering red wrap-style blouse
+Top,top,White Button-Down Shirt,Male,Smart Casual,Interview,Sunny,All,All,Regular,Neutral,Classic white formal button-down
+Top,top,Black Graphic Tee,Male,Casual,College,Sunny,All,All,Regular,Dark,Black tee with minimalist graphic
+Top,top,Navy Blue Polo,Male,Smart Casual,Office,Sunny,All,All,Regular,Cool,Classic navy polo shirt
+Top,top,Grey Oversized Hoodie,Male,Casual,College,Winter,All,All,Oversized,Neutral,Comfortable grey pullover hoodie
+Top,top,White Linen Shirt,Male,Casual,Vacation,Sunny,All,All,Regular,Neutral,Relaxed white linen shirt
+Top,top,Olive Green Cargo Shirt,Male,Streetwear,College,Sunny,All,All,Regular,Earthy,Military-style olive cargo shirt
+Top,top,Black Turtleneck,Male,Minimal,Date,Winter,All,All,Slim,Dark,Sleek black ribbed turtleneck
+Top,top,Beige Knit Sweater,Male,Casual,Casual Outing,Winter,All,All,Regular,Neutral,Warm beige chunky knit sweater
+Top,top,Blue Denim Shirt,Male,Casual,College,Sunny,All,All,Regular,Blue,Classic blue denim shirt
+Top,top,White Graphic Tee,Male,Casual,College,Sunny,All,All,Oversized,Neutral,Oversized white tee with art print
+Top,top,Black Zip Hoodie,Male,Casual,College,Winter,All,All,Regular,Dark,Black zip-up hoodie
+Top,top,Rust Brown Flannel Shirt,Male,Casual,Casual Outing,Winter,All,All,Regular,Warm,Plaid flannel shirt in rust tones
+Top,top,Navy Blazer,Male,Smart Casual,Interview,Sunny,All,All,Regular,Cool,Sharp navy blazer for formal occasions
+Top,top,Sage Green Tee,Male,Casual,Casual Outing,Sunny,All,All,Regular,Earthy,Relaxed sage green cotton tee
+Top,top,Striped Full Sleeves,Male,Casual,College,Sunny,All,All,Regular,Multi,Classic blue-white stripe long sleeve
+Top,top,White Henley Shirt,Male,Casual,Date,Sunny,All,All,Regular,Neutral,Clean white henley with button placket
+Bottom,bottom,Blue Baggy Jeans,Female,Casual,College,Sunny,Pear,All,Oversized,Blue,Relaxed baggy fit blue denim
+Bottom,bottom,Black Cargo Pants,Female,Streetwear,College,Sunny,All,All,Regular,Dark,Multi-pocket black cargo trousers
+Bottom,bottom,White Wide-Leg Pants,Female,Minimal,Office,Sunny,Pear,All,Oversized,Neutral,Elegant wide-leg white trousers
+Bottom,bottom,Brown Corduroy Pants,Female,Casual,Casual Outing,Winter,Pear,Wheatish,Regular,Warm,Ribbed brown corduroy trousers
+Bottom,bottom,Black Mini Skirt,Female,Trendy,Party,Sunny,Hourglass,All,Slim,Dark,Sleek black mini skirt
+Bottom,bottom,Denim Midi Skirt,Female,Casual,Casual Outing,Sunny,Pear,All,Regular,Blue,Classic denim midi-length skirt
+Bottom,bottom,Beige Linen Trousers,Female,Minimal,Office,Sunny,All,All,Regular,Neutral,Breathable beige linen pants
+Bottom,bottom,Black Leggings,Female,Casual,Gym,All,All,All,Slim,Dark,High-waist black activewear leggings
+Bottom,bottom,Floral Midi Skirt,Female,Feminine,Date,Sunny,Pear,Fair,Regular,Multi,Flowy floral print midi skirt
+Bottom,bottom,Khaki Cargo Pants,Female,Streetwear,College,Sunny,All,All,Regular,Earthy,Utility khaki cargo trousers
+Bottom,bottom,Black Straight Jeans,Female,Casual,College,Sunny,All,All,Regular,Dark,Clean black straight-cut jeans
+Bottom,bottom,Rust Wide-Leg Pants,Female,Trendy,Date,Sunny,Pear,Wheatish,Oversized,Warm,Wide-leg rust orange trousers
+Bottom,bottom,White Shorts,Female,Casual,Vacation,Sunny,All,All,Regular,Neutral,Clean white casual shorts
+Bottom,bottom,Grey Track Pants,Female,Casual,Gym,All,All,All,Regular,Neutral,Comfortable grey jogger pants
+Bottom,bottom,Satin Slip Skirt,Female,Feminine,Party,Sunny,Hourglass,All,Slim,Pastel,Satin midi slip skirt in dusty rose
+Bottom,bottom,Blue Straight Jeans,Male,Casual,College,Sunny,All,All,Regular,Blue,Classic blue straight-fit denim
+Bottom,bottom,Black Slim Jeans,Male,Smart Casual,Date,Sunny,All,All,Slim,Dark,Slim-fit black denim jeans
+Bottom,bottom,Khaki Chinos,Male,Smart Casual,Office,Sunny,All,All,Regular,Earthy,Khaki chino trousers
+Bottom,bottom,Grey Joggers,Male,Casual,Gym,All,All,All,Regular,Neutral,Comfortable grey jogger pants
+Bottom,bottom,Black Cargo Pants,Male,Streetwear,College,Sunny,All,All,Regular,Dark,Multi-pocket black cargo trousers
+Bottom,bottom,Olive Green Cargo Pants,Male,Streetwear,College,Sunny,All,All,Regular,Earthy,Utility olive cargo trousers
+Bottom,bottom,Dark Blue Jeans,Male,Casual,College,Sunny,All,All,Regular,Blue,Classic dark wash straight jeans
+Bottom,bottom,Beige Chinos,Male,Smart Casual,Interview,Sunny,All,All,Regular,Neutral,Clean beige formal chinos
+Bottom,bottom,Black Track Pants,Male,Casual,Gym,All,All,All,Regular,Dark,Black athletic track pants
+Bottom,bottom,Navy Blue Trousers,Male,Formal,Interview,Sunny,All,All,Regular,Cool,Formal navy blue dress trousers
+Bottom,bottom,White Linen Shorts,Male,Casual,Vacation,Sunny,All,All,Regular,Neutral,Relaxed white linen shorts
+Bottom,bottom,Brown Corduroy Pants,Male,Casual,Casual Outing,Winter,All,All,Regular,Warm,Brown ribbed corduroy pants
+Bottom,bottom,Denim Shorts,Male,Casual,Vacation,Sunny,All,All,Regular,Blue,Classic blue denim cut-offs
+Shoes,shoes,White Sneakers,Female,Casual,College,Sunny,All,All,Regular,Neutral,Clean white canvas sneakers
+Shoes,shoes,Nike Air Force 1,Female,Streetwear,College,Sunny,All,All,Regular,Neutral,Iconic white leather Air Force 1
+Shoes,shoes,Black Chunky Boots,Female,Trendy,Party,Winter,All,All,Regular,Dark,Platform black chunky ankle boots
+Shoes,shoes,Nude Heels,Female,Formal,Interview,Sunny,All,All,Regular,Neutral,Classic nude block heels
+Shoes,shoes,White Platform Sneakers,Female,Trendy,Casual Outing,Sunny,All,All,Regular,Neutral,White platform sole sneakers
+Shoes,shoes,Brown Loafers,Female,Smart Casual,Office,Sunny,All,All,Regular,Warm,Classic brown leather loafers
+Shoes,shoes,Black Strappy Heels,Female,Feminine,Party,Sunny,All,All,Regular,Dark,Elegant black strappy heels
+Shoes,shoes,Tan Ankle Boots,Female,Casual,Casual Outing,Winter,All,All,Regular,Warm,Suede tan ankle boots
+Shoes,shoes,Pink Running Shoes,Female,Sporty,Gym,All,All,All,Regular,Pink,Lightweight pink athletic shoes
+Shoes,shoes,Gold Strappy Sandals,Female,Feminine,Party,Sunny,All,All,Regular,Warm,Metallic gold strappy flat sandals
+Shoes,shoes,Black Oxford Shoes,Female,Formal,Interview,Sunny,All,All,Regular,Dark,Classic black lace-up oxfords
+Shoes,shoes,White Slides,Female,Casual,Vacation,Sunny,All,All,Regular,Neutral,Simple white flat slides
+Shoes,shoes,Beige Mules,Female,Minimal,Office,Sunny,All,All,Regular,Neutral,Clean beige backless mules
+Shoes,shoes,Black Converse,Female,Casual,College,Sunny,All,All,Regular,Dark,Classic black high-top Converse
+Shoes,shoes,Camel Chelsea Boots,Female,Smart Casual,Date,Winter,All,All,Regular,Warm,Camel suede Chelsea boots
+Shoes,shoes,White Nike Air Force 1,Male,Streetwear,College,Sunny,All,All,Regular,Neutral,Classic white leather Air Force 1
+Shoes,shoes,Black Sneakers,Male,Casual,College,Sunny,All,All,Regular,Dark,Sleek black low-top sneakers
+Shoes,shoes,Brown Derby Shoes,Male,Formal,Interview,Sunny,All,All,Regular,Warm,Classic brown leather derby shoes
+Shoes,shoes,White Running Shoes,Male,Sporty,Gym,All,All,All,Regular,Neutral,Lightweight white athletic shoes
+Shoes,shoes,Black Chelsea Boots,Male,Smart Casual,Date,Winter,All,All,Regular,Dark,Classic black leather Chelsea boots
+Shoes,shoes,Tan Loafers,Male,Smart Casual,Office,Sunny,All,All,Regular,Warm,Tan suede penny loafers
+Shoes,shoes,Grey Converse,Male,Casual,College,Sunny,All,All,Regular,Neutral,Classic grey high-top Converse
+Shoes,shoes,White Slides,Male,Casual,Vacation,Sunny,All,All,Regular,Neutral,Clean white slip-on slides
+Shoes,shoes,Navy Canvas Sneakers,Male,Casual,College,Sunny,All,All,Regular,Cool,Navy blue canvas low-top sneakers
+Shoes,shoes,Black Formal Shoes,Male,Formal,Interview,Sunny,All,All,Regular,Dark,Classic black leather formal shoes
+Shoes,shoes,Olive Hiking Boots,Male,Casual,Casual Outing,Winter,All,All,Regular,Earthy,Rugged olive green hiking boots
+Shoes,shoes,Brown Boots,Male,Casual,Casual Outing,Winter,All,All,Regular,Warm,Classic brown lace-up boots
+Outerwear,outerwear,Beige Oversized Blazer,Female,Smart Casual,Office,Sunny,All,All,Oversized,Neutral,Relaxed beige double-breasted blazer
+Outerwear,outerwear,Denim Jacket,Female,Casual,College,Sunny,All,All,Regular,Blue,Classic blue denim jacket
+Outerwear,outerwear,Camel Trench Coat,Female,Minimal,Office,Winter,All,All,Regular,Warm,Elegant camel wool trench coat
+Outerwear,outerwear,Black Leather Jacket,Female,Edgy,Party,Winter,All,All,Regular,Dark,Sleek black faux leather jacket
+Outerwear,outerwear,Cream Knit Cardigan,Female,Casual,College,Winter,All,All,Oversized,Neutral,Soft cream chunky knit cardigan
+Outerwear,outerwear,Olive Puffer Jacket,Female,Casual,College,Winter,All,All,Regular,Earthy,Lightweight olive puffer jacket
+Outerwear,outerwear,Pink Blazer,Female,Trendy,Office,Sunny,All,All,Regular,Pink,Statement pink tailored blazer
+Outerwear,outerwear,Grey Bomber Jacket,Female,Casual,College,Winter,All,All,Regular,Neutral,Classic grey satin bomber jacket
+Outerwear,outerwear,White Denim Jacket,Female,Casual,Vacation,Sunny,All,All,Regular,Neutral,Light white wash denim jacket
+Outerwear,outerwear,Black Blazer,Male,Smart Casual,Interview,Sunny,All,All,Regular,Dark,Tailored black formal blazer
+Outerwear,outerwear,Denim Jacket,Male,Casual,College,Sunny,All,All,Regular,Blue,Classic blue denim jacket
+Outerwear,outerwear,Grey Hoodie Jacket,Male,Casual,College,Winter,All,All,Regular,Neutral,Grey zip-up hoodie jacket
+Outerwear,outerwear,Brown Leather Jacket,Male,Edgy,Date,Winter,All,All,Regular,Warm,Classic brown biker leather jacket
+Outerwear,outerwear,Olive Puffer Jacket,Male,Casual,College,Winter,All,All,Regular,Earthy,Lightweight olive puffer jacket
+Outerwear,outerwear,Navy Blue Blazer,Male,Formal,Interview,Sunny,All,All,Regular,Cool,Sharp navy blue blazer
+Outerwear,outerwear,Black Bomber Jacket,Male,Streetwear,College,Winter,All,All,Regular,Dark,Classic black bomber jacket
+Outerwear,outerwear,Camel Overcoat,Male,Minimal,Office,Winter,All,All,Regular,Warm,Elegant camel wool overcoat
+Accessories,accessory,Silver Watch,Female,All,All,All,All,All,All,Neutral,Classic silver-toned wristwatch
+Accessories,accessory,Gold Hoop Earrings,Female,Feminine,All,All,All,All,All,Warm,Classic gold hoop earrings
+Accessories,accessory,Beige Tote Bag,Female,Casual,All,All,All,All,All,Neutral,Spacious canvas tote bag in beige
+Accessories,accessory,Black Sunglasses,Female,All,All,Sunny,All,All,All,Dark,Classic black frame UV sunglasses
+Accessories,accessory,Dainty Gold Necklace,Female,Feminine,All,All,All,Fair,All,Warm,Delicate layered gold chain necklace
+Accessories,accessory,White Cap,Female,Casual,All,Sunny,All,All,All,Neutral,Clean white baseball cap
+Accessories,accessory,Brown Leather Belt,Female,Smart Casual,All,All,All,All,All,Warm,Classic brown leather belt
+Accessories,accessory,Black Mini Bag,Female,Trendy,All,All,All,All,All,Dark,Small black crossbody mini bag
+Accessories,accessory,Silver Stud Earrings,Female,Minimal,All,All,All,All,All,Neutral,Simple silver stud earrings
+Accessories,accessory,Scrunchie Set,Female,Casual,All,All,All,All,All,Multi,Set of colorful hair scrunchies
+Accessories,accessory,Gold Chain Necklace,Female,Trendy,All,All,All,Dark,All,Warm,Bold gold chain statement necklace
+Accessories,accessory,Pink Satin Headband,Female,Feminine,All,All,All,Fair,All,Pink,Soft pink satin headband
+Accessories,accessory,Black Bucket Hat,Female,Streetwear,All,Sunny,All,All,All,Dark,Classic black bucket hat
+Accessories,accessory,Woven Straw Bag,Female,Casual,All,Sunny,All,All,All,Warm,Handwoven straw tote bag
+Accessories,accessory,Pearl Earrings,Female,Feminine,All,All,All,All,All,Neutral,Classic freshwater pearl drop earrings
+Accessories,accessory,Black Leather Watch,Male,Smart Casual,All,All,All,All,All,Dark,Minimalist black dial leather strap watch
+Accessories,accessory,Silver Chain,Male,Streetwear,All,All,All,All,All,Neutral,Chunky silver chain necklace
+Accessories,accessory,Black Backpack,Male,Casual,All,All,All,All,All,Dark,Sleek black urban backpack
+Accessories,accessory,Black Sunglasses,Male,All,All,Sunny,All,All,All,Dark,Classic wayfarer black sunglasses
+Accessories,accessory,Brown Leather Belt,Male,Smart Casual,All,All,All,All,All,Warm,Classic brown leather waist belt
+Accessories,accessory,Black Cap,Male,Casual,All,Sunny,All,All,All,Dark,Classic black baseball cap
+Accessories,accessory,Olive Bucket Hat,Male,Streetwear,All,Sunny,All,All,All,Earthy,Olive green bucket hat
+Accessories,accessory,Silver Watch,Male,Smart Casual,All,All,All,All,All,Neutral,Stainless steel silver wristwatch
+Accessories,accessory,Leather Wallet,Male,All,All,All,All,All,All,Warm,Slim brown leather bifold wallet
+Accessories,accessory,White Sneaker Socks,Male,Casual,All,All,All,All,All,Neutral,Ankle-length white cotton socks
+Accessories,accessory,Gold Chain,Male,Trendy,All,All,All,Dark,All,Warm,Thin gold chain necklace
+Accessories,accessory,Blue Tote Bag,Male,Casual,All,All,All,All,All,Cool,Canvas navy tote bag
+Traditional,traditional,Red Saree,Female,Traditional,Wedding,Sunny,All,Fair,Regular,Warm,Classic red silk saree with gold border
+Traditional,traditional,Pastel Anarkali,Female,Traditional,Festival,Sunny,All,All,Regular,Pastel,Flowy pastel Anarkali with embroidery
+Traditional,traditional,Navy Sharara Set,Female,Traditional,Wedding,Sunny,All,All,Regular,Cool,Elegant navy sharara with dupatta
+Traditional,traditional,Mint Green Kurti,Female,Traditional,College,Sunny,All,All,Regular,Cool,Cotton mint kurti with block print
+Traditional,traditional,Pink Lehenga,Female,Traditional,Wedding,Sunny,Hourglass,Fair,Regular,Pink,Embroidered pink bridal lehenga
+Traditional,traditional,Ivory Straight Kurti,Female,Traditional,College,Sunny,All,All,Regular,Neutral,Simple ivory cotton straight kurti
+Traditional,traditional,Mustard Yellow Suit,Female,Traditional,Festival,Sunny,All,Wheatish,Regular,Warm,Mustard salwar kameez with dupatta
+Traditional,traditional,White Kurta Pajama,Male,Traditional,Festival,Sunny,All,All,Regular,Neutral,Classic white kurta with pajama
+Traditional,traditional,Navy Blue Sherwani,Male,Traditional,Wedding,Sunny,All,All,Regular,Cool,Elegant navy blue embroidered sherwani
+Traditional,traditional,Cream Pathani Suit,Male,Traditional,Festival,Sunny,All,All,Regular,Neutral,Classic cream cotton pathani set
+Traditional,traditional,Maroon Nehru Jacket,Male,Traditional,Wedding,Sunny,All,All,Regular,Warm,Maroon Nehru jacket with mandarin collar
+Traditional,traditional,Printed Kurta,Male,Traditional,Casual Outing,Sunny,All,All,Regular,Multi,Cotton kurta with block print design
+Dress,dress,Black Slip Dress,Female,Minimal,Date,Sunny,Hourglass,All,Slim,Dark,Elegant black satin slip dress
+Dress,dress,White Sundress,Female,Feminine,Vacation,Sunny,All,All,Regular,Neutral,Flowy white cotton sundress
+Dress,dress,Floral Wrap Dress,Female,Feminine,Date,Sunny,Pear,All,Regular,Multi,Flattering floral wrap dress
+Dress,dress,Brown Bodycon Dress,Female,Trendy,Party,Sunny,Hourglass,Wheatish,Slim,Warm,Brown stretch bodycon mini dress
+Dress,dress,Sage Green Co-ord Set,Female,Trendy,College,Sunny,All,All,Regular,Earthy,Matching sage green top and skirt set
+Dress,dress,Black Blazer Dress,Female,Smart Casual,Interview,Sunny,All,All,Regular,Dark,Structured black blazer-style dress
+Dress,dress,Pastel Yellow Mini Dress,Female,Casual,Casual Outing,Sunny,All,Fair,Regular,Warm,Cute pastel yellow A-line mini dress
+Dress,dress,Navy Maxi Dress,Female,Feminine,Date,Sunny,Pear,All,Regular,Cool,Flowy navy blue maxi dress

@@ -1,223 +1,143 @@
+"""
+DressiFy Recommendation Engine v2
+- Integrates with SQLite wardrobe DB
+- Filters by gender, body type, skin tone, occasion, weather, color
+- Falls back to CSV dataset if wardrobe is empty
+- Returns scored, ranked outfit
+"""
+
 import os
-import random
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
 import database
-
-print("🔥 Upgraded Recommendation Engine Loaded")
-
 
 DATA_FILE = "fashion_items.csv"
 
+OCCASION_VIBE = {
+    "College": "Casual", "Gym": "Casual", "Casual Outing": "Casual",
+    "Vacation": "Casual", "Airport Look": "Casual",
+    "Interview": "Formal", "Office": "Formal",
+    "Wedding": "Formal", "Traditional Function": "Formal",
+    "Party": "Party", "Date": "Romantic", "Festival": "Casual"
+}
 
-# -------------------------
-# ENCODING MAPS
-# -------------------------
-GENDER_MAP = {"Female": 0, "Male": 1, "Other": 2}
-STYLE_MAP = {"Casual": 0, "Trendy": 1, "Formal": 2}
-WEATHER_MAP = {"Sunny": 0, "Rainy": 1, "Cold": 2}
-OCCASION_MAP = {"Casual": 0, "Party": 1, "Formal": 2}
-
+HAIRSTYLES = {
+    "Female": {
+        "Casual":   [("🎀", "Messy Bun", "Effortless & chic"), ("🎗️", "High Ponytail", "Clean & sporty")],
+        "Formal":   [("✨", "Sleek Straight", "Polished & sharp"), ("🌸", "Soft Waves", "Elegant & feminine")],
+        "Party":    [("💫", "Beach Waves", "Glamorous & textured"), ("🌙", "Half Up Half Down", "Playful & stylish")],
+        "Romantic": [("🌹", "Soft Curls", "Romantic & flirty"), ("🎀", "Low Bun", "Effortlessly beautiful")],
+    },
+    "Male": {
+        "Casual":   [("✂️", "Textured Crop", "Modern & low-effort"), ("🌊", "Curtains", "Retro & trendy")],
+        "Formal":   [("💼", "Side Part", "Classic & professional"), ("⚡", "Quiff", "Sharp & confident")],
+        "Party":    [("🐺", "Wolf Cut", "Edgy & trendy"), ("🔥", "Messy Textured", "Cool & effortless")],
+        "Romantic": [("✨", "Slicked Back", "Suave & sophisticated"), ("💫", "Natural Waves", "Relaxed & attractive")],
+    }
+}
 
 class RecommendationEngine:
-
     def __init__(self):
         self.df = pd.DataFrame()
-        self.model = None
+        self._load_dataset()
 
-        self.load_dataset()
-        self.train_model()
-
-    # -------------------------
-    # LOAD DATASET
-    # -------------------------
-    def load_dataset(self):
+    def _load_dataset(self):
         if os.path.exists(DATA_FILE):
             self.df = pd.read_csv(DATA_FILE)
         else:
             print("⚠ fashion_items.csv not found")
 
-    # -------------------------
-    # TRAIN MODEL
-    # -------------------------
-    def train_model(self):
+    # ─── FILTER CSV DATASET ───────────────────────────────
+    def _filter_dataset(self, item_type, gender, body_type, skin_tone,
+                        occasion, weather, fav_colors, preferred_fit):
         if self.df.empty:
-            return
+            return None
 
-        try:
-            X = self.df[["gender", "age", "style", "weather", "occasion"]]
-            y = self.df["category"]
+        pool = self.df[self.df["type"] == item_type].copy()
 
-            self.model = DecisionTreeClassifier(random_state=42)
-            self.model.fit(X, y)
+        g = gender if gender != "Other" else "Female"
+        pool = pool[pool["gender"].isin([g, "All"])]
+        pool = pool[pool["weather"].isin([weather, "All"])]
+        pool = pool[pool["occasion"].isin([occasion, "All"])]
 
-        except Exception as e:
-            print("Training Error:", e)
-            self.model = None
+        if body_type and body_type != "All":
+            pool = pool[pool["body_type"].isin([body_type, "All"])]
+        if skin_tone and skin_tone != "All":
+            pool = pool[pool["skin_tone"].isin([skin_tone, "All"])]
 
-    # -------------------------
-    # PREDICT CATEGORY
-    # -------------------------
-    def predict_category(self, gender, age, style, weather, occasion):
+        if fav_colors:
+            colored = pool[pool["color_family"].isin(fav_colors)]
+            if not colored.empty:
+                pool = colored
 
-        if self.model is None:
-            return occasion.lower()
+        if pool.empty:
+            return None
+        return pool.sample(1).iloc[0].to_dict()
 
-        try:
-            return self.model.predict([[
-                GENDER_MAP.get(gender, 0),
-                int(age),
-                STYLE_MAP.get(style, 0),
-                WEATHER_MAP.get(weather, 0),
-                OCCASION_MAP.get(occasion, 0)
-            ]])[0]
+    # ─── FILTER WARDROBE ──────────────────────────────────
+    def _filter_wardrobe(self, wardrobe, item_type):
+        matches = [w for w in wardrobe if w["item_type"] == item_type]
+        return matches[0] if matches else None
 
-        except:
-            return occasion.lower()
+    # ─── MAIN GENERATE ────────────────────────────────────
+    def generate_outfit(self, user_id, gender, age, body_type, skin_tone,
+                        occasion, weather, preferred_fit, fav_colors,
+                        use_wardrobe=False):
 
-    # -------------------------
-    # SMART SCORE FUNCTION
-    # -------------------------
-    def score_item(self, item, category, style, weather, occasion):
-
-        score = 0
-
-        if item["category"].lower() == category.lower():
-            score += 3
-
-        if item.get("style", "").lower() == style.lower():
-            score += 2
-
-        if weather == "Cold" and item["item_type"] == "top":
-            score += 2
-
-        if weather == "Sunny" and item["item_type"] in ["top", "bottom"]:
-            score += 1
-
-        if occasion.lower() == "formal" and item["category"].lower() == "formal":
-            score += 3
-
-        return score
-
-    # -------------------------
-    # GENERATE OUTFIT (MAIN AI)
-    # -------------------------
-    def generate_outfit(self, user_id, gender, age, style, weather, occasion):
-
-        category = self.predict_category(gender, age, style, weather, occasion)
+        wardrobe = database.get_wardrobe(user_id) if use_wardrobe else []
+        vibe = OCCASION_VIBE.get(occasion, "Casual")
+        g_key = gender if gender in ("Female", "Male") else "Female"
+        hair_options = HAIRSTYLES[g_key].get(vibe, HAIRSTYLES[g_key]["Casual"])
 
         outfit = {}
+        types_needed = ["top", "bottom", "shoes", "accessory"]
+        if weather in ("Winter", "Rainy", "Windy"):
+            types_needed.insert(2, "outerwear")
 
-        # FIX: convert DB rows → dict
-        wardrobe = database.get_wardrobe(user_id)
-        wardrobe = [dict(i) for i in wardrobe]
-
-        type_mapping = {
-            "top": "top",
-            "bottom": "bottom",
-            "shoes": "shoes",
-            "accessory": "accessory"
+        emojis = {
+            "top": "👕", "bottom": "👖", "outerwear": "🧥",
+            "shoes": "👟", "accessory": "👜"
         }
 
-        # -------------------------
-        # BUILD OUTFIT
-        # -------------------------
-        for outfit_type, db_type in type_mapping.items():
+        for t in types_needed:
+            item = None
 
-            # FILTER WARDROBE ITEMS
-            candidates = [
-                item for item in wardrobe
-                if item["item_type"] == db_type
-            ]
-
-            if candidates:
-
-                # 🔥 SORT BY SCORE (AI UPGRADE)
-                ranked = sorted(
-                    candidates,
-                    key=lambda x: self.score_item(x, category, style, weather, occasion),
-                    reverse=True
-                )
-
-                chosen = ranked[0]
-
-                outfit[outfit_type] = {
-                    "item": chosen.get("category", chosen.get("item_type", "item")),
-                    "image": chosen.get("image_path", ""),
-                    "source": "Smart Wardrobe AI"
-                }
-
-            else:
-
-                # -------------------------
-                # DATASET FALLBACK
-                # -------------------------
-                if not self.df.empty:
-
-                    dataset_items = self.df[self.df["category"] == category]
-
-                    if not dataset_items.empty:
-
-                        row = dict(dataset_items.sample(1).iloc[0])
-
-                        outfit[outfit_type] = {
-                            "item": row.get("item", "Item"),
-                            "image": row.get("image", ""),
-                            "source": "AI Dataset Fallback"
-                        }
-
-                    else:
-
-                        outfit[outfit_type] = {
-                            "item": "No recommendation",
-                            "image": "",
-                            "source": "None"
-                        }
-
-                else:
-
-                    outfit[outfit_type] = {
-                        "item": "No recommendation",
-                        "image": "",
-                        "source": "None"
+            # Try wardrobe first
+            if use_wardrobe and wardrobe:
+                w = self._filter_wardrobe(wardrobe, t)
+                if w:
+                    item = {
+                        "type": t,
+                        "item": w["item_name"],
+                        "description": f"{w['color']} — {w.get('notes','')}" if w.get('color') else w.get('notes',''),
+                        "source": "wardrobe",
+                        "emoji": emojis.get(t, "🏷️")
                     }
 
-        # -------------------------
-        # AI EXPLANATION
-        # -------------------------
-        explanation = (
-            f"This AI-generated outfit is optimized for a {weather.lower()} day, "
-            f"suitable for a {occasion.lower()} occasion, "
-            f"and aligned with a {style.lower()} style preference. "
-            f"It prioritizes wardrobe compatibility and smart style matching."
-        )
+            # Fallback to dataset
+            if not item:
+                row = self._filter_dataset(t, gender, body_type, skin_tone,
+                                           occasion, weather, fav_colors, preferred_fit)
+                if row:
+                    item = {
+                        "type": t,
+                        "item": row["item"],
+                        "description": row.get("description", ""),
+                        "source": "catalogue",
+                        "emoji": emojis.get(t, "🏷️")
+                    }
+
+            if item:
+                outfit[t] = item
 
         return {
-            "category": category,
-            "items": outfit,
-            "explanation": explanation
+            "outfit": outfit,
+            "hair_options": hair_options,
+            "vibe": vibe,
+            "occasion": occasion,
+            "weather": weather
         }
 
-
-# -------------------------
-# TEST RUN
-# -------------------------
-if __name__ == "__main__":
-
-    engine = RecommendationEngine()
-
-    result = engine.generate_outfit(
-        user_id=1,
-        gender="Female",
-        age=20,
-        style="Casual",
-        weather="Sunny",
-        occasion="Casual"
-    )
-
-    print("\nCATEGORY:", result["category"])
-    print("\nOUTFIT:")
-    for k, v in result["items"].items():
-        print(k.upper(), ":", v["item"])
-
-    print("\nEXPLANATION:", result["explanation"])
+    def get_hairstyles(self, gender, occasion):
+        vibe = OCCASION_VIBE.get(occasion, "Casual")
+        g_key = gender if gender in ("Female", "Male") else "Female"
+        return HAIRSTYLES[g_key].get(vibe, HAIRSTYLES[g_key]["Casual"])
