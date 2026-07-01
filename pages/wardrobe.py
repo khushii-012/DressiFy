@@ -1,5 +1,5 @@
 import streamlit as st
-from database import add_wardrobe_item, get_wardrobe, get_or_create_default_user
+from database import add_wardrobe_item, get_wardrobe, get_or_create_user
 from services.wardrobe_service import save_uploaded_image
 
 
@@ -11,8 +11,7 @@ def show_wardrobe():
     # ----------------------------
     # Get Current User
     # ----------------------------
-    user = get_or_create_default_user()
-
+    user = get_or_create_user()
     if user is None:
         st.warning("⚠ Please create your profile first.")
         return
