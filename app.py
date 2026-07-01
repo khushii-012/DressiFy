@@ -1,659 +1,281 @@
-import streamlit as st
-import google.generativeai as genai
+"""
+DressiFy Recommendation Engine v3
+- AI outfit scoring (0-100) with confidence label
+- Color harmony analysis
+- Missing item detection
+- Body type + skin tone smart filtering
+- Wardrobe-first with CSV fallback
+"""
+
 import os
-import json
+import random
+import pandas as pd
 import database
-from recommendation_engine import RecommendationEngine
 
-# ─────────────────────────────────────────
-# PAGE CONFIG
-# ─────────────────────────────────────────
-st.set_page_config(
-    page_title="DressiFy AI",
-    page_icon="👗",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+DATA_FILE = "fashion_items.csv"
 
-# ─────────────────────────────────────────
-# THEME CSS
-# ─────────────────────────────────────────
-st.markdown("""
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
+OCCASION_VIBE = {
+    "College": "Casual", "Gym": "Sporty", "Casual Outing": "Casual",
+    "Vacation": "Casual", "Airport Look": "Casual",
+    "Interview": "Formal", "Office": "Formal",
+    "Wedding": "Formal", "Traditional Function": "Formal",
+    "Party": "Party", "Date": "Romantic", "Festival": "Festive"
+}
 
-  :root {
-    --bg: #0a0a0f;
-    --surface: #12121a;
-    --card: #1a1a26;
-    --border: #2a2a3d;
-    --accent: #c9a96e;
-    --accent2: #e8c4a0;
-    --text: #f0ede8;
-    --muted: #8a8a9a;
-    --pink: #d4a0b5;
-    --purple: #9b87b8;
-    --green: #7ab5a0;
-  }
+HAIRSTYLES = {
+    "Female": {
+        "Casual":   [("🎀", "Messy Bun", "Effortless & chic"), ("🎗️", "High Ponytail", "Clean & sporty"), ("✨", "Soft Waves", "Relaxed & pretty")],
+        "Formal":   [("✨", "Sleek Straight", "Polished & sharp"), ("🌸", "Low Chignon", "Elegant & professional"), ("💫", "French Twist", "Classic & refined")],
+        "Party":    [("💫", "Beach Waves", "Glamorous & textured"), ("🌙", "Half Up Half Down", "Playful & stylish"), ("💎", "Hollywood Curls", "Dramatic & glam")],
+        "Romantic": [("🌹", "Soft Curls", "Romantic & flirty"), ("🎀", "Braided Low Bun", "Effortlessly beautiful"), ("🌸", "Side Swept", "Feminine & elegant")],
+        "Sporty":   [("⚡", "Sleek Ponytail", "Athletic & clean"), ("🎀", "Dutch Braid", "Sporty & trendy"), ("✂️", "Top Knot", "Practical & cute")],
+        "Festive":  [("🌺", "Floral Hair", "Festive & vibrant"), ("💐", "Loose Curls", "Traditional & beautiful"), ("✨", "Accessorised Bun", "Ethnic & chic")],
+    },
+    "Male": {
+        "Casual":   [("✂️", "Textured Crop", "Modern & low-effort"), ("🌊", "Curtains", "Retro & trendy"), ("💈", "Natural Tousled", "Effortlessly cool")],
+        "Formal":   [("💼", "Side Part", "Classic & professional"), ("⚡", "Slicked Back", "Sharp & authoritative"), ("💈", "Clean Fade", "Modern & sharp")],
+        "Party":    [("🐺", "Wolf Cut", "Edgy & trendy"), ("🔥", "Messy Textured", "Cool & effortless"), ("✨", "Quiff", "Bold & stylish")],
+        "Romantic": [("✨", "Styled Quiff", "Suave & handsome"), ("💫", "Natural Waves", "Relaxed & charming"), ("💈", "Neat Side Part", "Classic & romantic")],
+        "Sporty":   [("✂️", "Short Buzz", "Clean & athletic"), ("💈", "Crew Cut", "Sporty & neat"), ("🌊", "Textured Pompadour", "Athletic & stylish")],
+        "Festive":  [("💈", "Neat Quiff", "Traditional & smart"), ("✂️", "Side Parted", "Classic & elegant"), ("⚡", "Slicked Back", "Formal & festive")],
+    }
+}
 
-  html, body, [class*="css"] {
-    background-color: var(--bg) !important;
-    color: var(--text) !important;
-    font-family: 'Inter', sans-serif !important;
-  }
-  #MainMenu, footer, header { visibility: hidden; }
-  .block-container { padding-top: 0.5rem !important; max-width: 1300px; }
+# Color harmony rules
+COLOR_HARMONY = {
+    "Neutral":  ["Dark", "Neutral", "Warm", "Cool", "Pastel", "Earthy", "Pink", "Multi"],
+    "Dark":     ["Neutral", "Dark", "Warm", "Cool"],
+    "Warm":     ["Neutral", "Warm", "Earthy", "Dark"],
+    "Cool":     ["Neutral", "Cool", "Dark", "Pastel"],
+    "Pastel":   ["Neutral", "Pastel", "Cool", "Pink"],
+    "Earthy":   ["Neutral", "Earthy", "Warm", "Dark"],
+    "Pink":     ["Neutral", "Pastel", "Dark", "Pink"],
+    "Multi":    ["Neutral", "Dark"],
+}
 
-  /* HERO */
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, #c9a96e, #e8c4a0, #d4a0b5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    margin: 0;
-  }
-  .hero-sub {
-    color: var(--muted);
-    font-size: 0.78rem;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
-  .fancy-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    margin: 16px 0 20px 0;
-    opacity: 0.35;
-  }
+# What makes a complete outfit per occasion
+REQUIRED_ITEMS = {
+    "Interview":  ["top", "bottom", "shoes"],
+    "Office":     ["top", "bottom", "shoes"],
+    "Wedding":    ["top", "bottom", "shoes", "accessory"],
+    "Party":      ["top", "bottom", "shoes", "accessory"],
+    "Date":       ["top", "bottom", "shoes"],
+    "College":    ["top", "bottom", "shoes"],
+    "Gym":        ["top", "bottom", "shoes"],
+    "Vacation":   ["top", "bottom", "shoes", "accessory"],
+    "Casual Outing": ["top", "bottom", "shoes"],
+    "Airport Look":  ["top", "bottom", "shoes", "accessory"],
+    "Festival":   ["top", "bottom", "shoes", "accessory"],
+    "Traditional Function": ["traditional", "shoes", "accessory"],
+}
 
-  /* SIDEBAR */
-  [data-testid="stSidebar"] {
-    background: var(--surface) !important;
-    border-right: 1px solid var(--border) !important;
-  }
-  [data-testid="stSidebar"] label,
-  [data-testid="stSidebar"] p,
-  [data-testid="stSidebar"] span { color: var(--text) !important; }
+MISSING_SUGGESTIONS = {
+    "top":        ["White Oversized Tee", "Linen Shirt", "Polo Shirt", "Knit Sweater"],
+    "bottom":     ["Blue Straight Jeans", "Black Trousers", "Cargo Pants", "Wide-Leg Pants"],
+    "shoes":      ["White Sneakers", "Loafers", "Black Ankle Boots", "Sandals"],
+    "accessory":  ["Silver Watch", "Tote Bag", "Sunglasses", "Gold Chain"],
+    "outerwear":  ["Denim Jacket", "Beige Blazer", "Black Leather Jacket", "Puffer Jacket"],
+    "traditional":["Kurti + Dupatta", "Kurta Pajama", "Saree", "Anarkali Suit"],
+}
 
-  .sb-section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-  }
-  .sb-title {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-family: 'Inter', sans-serif;
-  }
+class RecommendationEngine:
+    def __init__(self):
+        self.df = pd.DataFrame()
+        self._load()
 
-  /* INPUTS */
-  .stSelectbox > div > div,
-  .stMultiSelect > div > div {
-    background: var(--card) !important;
-    border: 1px solid var(--border) !important;
-    color: var(--text) !important;
-    border-radius: 8px !important;
-  }
-  .stTextInput > div > div > input,
-  .stTextArea > div > div > textarea {
-    background: var(--card) !important;
-    border: 1px solid var(--border) !important;
-    color: var(--text) !important;
-    border-radius: 8px !important;
-  }
+    def _load(self):
+        if os.path.exists(DATA_FILE):
+            self.df = pd.read_csv(DATA_FILE)
 
-  /* BUTTONS */
-  .stButton > button {
-    background: linear-gradient(135deg, #c9a96e, #b8935a) !important;
-    color: #0a0a0f !important;
-    border: none !important;
-    border-radius: 10px !important;
-    font-weight: 700 !important;
-    font-family: 'Inter', sans-serif !important;
-    letter-spacing: 0.5px !important;
-    padding: 0.55rem 1.2rem !important;
-    transition: all 0.2s ease !important;
-    width: 100% !important;
-  }
-  .stButton > button:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 24px rgba(201,169,110,0.35) !important;
-  }
-
-  /* CARDS */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 14px;
-    position: relative;
-    overflow: hidden;
-  }
-  .card-accent::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #c9a96e, #d4a0b5, #9b87b8);
-  }
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-bottom: 14px;
-    font-weight: 700;
-  }
-
-  /* OUTFIT ITEMS */
-  .outfit-row {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 11px 14px;
-    background: rgba(255,255,255,0.025);
-    border-radius: 10px;
-    margin-bottom: 8px;
-    border: 1px solid var(--border);
-    transition: border-color 0.2s;
-  }
-  .outfit-row:hover { border-color: rgba(201,169,110,0.4); }
-  .outfit-row.from-wardrobe { border-color: rgba(122,181,160,0.5); }
-  .outfit-emoji { font-size: 1.6rem; min-width: 32px; }
-  .outfit-label { font-size: 0.65rem; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; }
-  .outfit-name { font-size: 0.95rem; color: var(--text); font-weight: 500; margin-top: 1px; }
-  .outfit-desc { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
-  .source-badge {
-    margin-left: auto;
-    font-size: 0.62rem;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .badge-wardrobe { background: rgba(122,181,160,0.15); color: var(--green); border: 1px solid rgba(122,181,160,0.3); }
-  .badge-catalogue { background: rgba(201,169,110,0.1); color: var(--accent); border: 1px solid rgba(201,169,110,0.25); }
-
-  /* WHY CARD */
-  .why-card {
-    background: linear-gradient(135deg, rgba(201,169,110,0.07), rgba(212,160,181,0.07));
-    border: 1px solid rgba(201,169,110,0.25);
-    border-radius: 14px;
-    padding: 18px 20px;
-    margin-top: 12px;
-  }
-  .why-text { color: var(--text); font-size: 0.9rem; line-height: 1.8; }
-
-  /* WARDROBE */
-  .w-group-title {
-    font-size: 0.68rem; color: var(--accent);
-    letter-spacing: 2px; text-transform: uppercase;
-    font-weight: 700; margin: 14px 0 6px 0;
-  }
-  .w-item-row {
-    display: flex; align-items: center; gap: 10px;
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 10px; padding: 9px 12px; margin-bottom: 6px;
-  }
-  .w-item-name { font-size: 0.88rem; color: var(--text); }
-  .w-item-meta { font-size: 0.75rem; color: var(--muted); }
-
-  /* HISTORY */
-  .hist-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
-  }
-  .hist-title { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
-  .hist-items { font-size: 0.8rem; color: var(--muted); line-height: 1.8; }
-
-  /* TAGS */
-  .tag {
-    display: inline-block;
-    background: rgba(201,169,110,0.1);
-    border: 1px solid rgba(201,169,110,0.3);
-    color: var(--accent);
-    border-radius: 20px;
-    padding: 2px 10px;
-    font-size: 0.72rem;
-    margin: 2px;
-    font-weight: 500;
-  }
-
-  /* TABS */
-  .stTabs [data-baseweb="tab-list"] {
-    background: var(--surface) !important;
-    border-bottom: 1px solid var(--border) !important;
-    gap: 0 !important;
-  }
-  .stTabs [data-baseweb="tab"] {
-    background: transparent !important;
-    color: var(--muted) !important;
-    border-bottom: 2px solid transparent !important;
-    font-size: 0.82rem !important;
-    letter-spacing: 0.8px !important;
-    padding: 10px 20px !important;
-  }
-  .stTabs [aria-selected="true"] {
-    color: var(--accent) !important;
-    border-bottom-color: var(--accent) !important;
-  }
-
-  /* RATING STARS */
-  .stars { font-size: 1.3rem; cursor: pointer; }
-
-  /* DATAFRAME */
-  [data-testid="stDataFrame"] { border-radius: 10px; overflow: hidden; }
-
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-</style>
-""", unsafe_allow_html=True)
-
-# ─────────────────────────────────────────
-# INIT DB + ENGINE
-# ─────────────────────────────────────────
-database.initialize_database()
-engine = RecommendationEngine()
-user = database.get_or_create_user()
-user_id = user["user_id"]
-
-# ─────────────────────────────────────────
-# GEMINI
-# ─────────────────────────────────────────
-def gemini_explain(gender, age, body_type, skin_tone, occasion, weather,
-                   preferred_fit, fav_colors, outfit_items):
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        try:
-            api_key = st.secrets.get("GEMINI_API_KEY", "")
-        except:
-            pass
-    if not api_key:
-        return None
-    try:
-        genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        items_text = "\n".join([f"- {v['type'].upper()}: {v['item']}" for v in outfit_items.values()])
-        prompt = f"""You are DressiFy, an AI fashion stylist. The user profile:
-- Gender: {gender}, Age: {age}, Body Type: {body_type}, Skin Tone: {skin_tone}
-- Occasion: {occasion}, Weather: {weather}, Preferred Fit: {preferred_fit}
-- Favorite color families: {', '.join(fav_colors) if fav_colors else 'Any'}
-
-Recommended outfit:
-{items_text}
-
-Write 3-4 confident, warm sentences explaining WHY this outfit works for this exact person.
-Cover: how the colors suit their skin tone, how the fit flatters their body type, why it is perfect for the occasion and weather.
-Be specific, fashion-forward, and encouraging. Plain text only — no asterisks or hashtags."""
-        resp = model.generate_content(prompt)
-        return resp.text.strip()
-    except Exception as e:
-        return None
-
-# ─────────────────────────────────────────
-# SESSION STATE
-# ─────────────────────────────────────────
-if "outfit_result" not in st.session_state:
-    st.session_state.outfit_result = None
-if "saved_outfit_id" not in st.session_state:
-    st.session_state.saved_outfit_id = None
-
-# ─────────────────────────────────────────
-# HEADER
-# ─────────────────────────────────────────
-st.markdown('<div class="hero-title">DressiFy AI</div>', unsafe_allow_html=True)
-st.markdown('<div class="hero-sub">✦ Your Personal AI Fashion Stylist ✦</div>', unsafe_allow_html=True)
-st.markdown('<div class="fancy-divider"></div>', unsafe_allow_html=True)
-
-# ─────────────────────────────────────────
-# SIDEBAR — PROFILE
-# ─────────────────────────────────────────
-with st.sidebar:
-    st.markdown('<div style="font-family:Playfair Display,serif; color:#c9a96e; font-size:1.15rem; font-weight:700; margin-bottom:14px;">👤 Style Profile</div>', unsafe_allow_html=True)
-
-    with st.container():
-        st.markdown('<div class="sb-section">', unsafe_allow_html=True)
-        st.markdown('<div class="sb-title">Personal Info</div>', unsafe_allow_html=True)
-        name = st.text_input("Your Name", value=user.get("name","User"), label_visibility="collapsed",
-                             placeholder="Your Name")
-        gender = st.selectbox("Gender", ["Female", "Male", "Other"])
-        age = st.slider("Age", 13, 60, int(user.get("age", 20)))
-        body_type = st.selectbox("Body Type", ["All", "Hourglass", "Pear", "Apple", "Rectangle", "Inverted Triangle"])
-        skin_tone = st.selectbox("Skin Tone", ["All", "Fair", "Wheatish", "Medium", "Dark"])
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        st.markdown('<div class="sb-section">', unsafe_allow_html=True)
-        st.markdown('<div class="sb-title">Style Preferences</div>', unsafe_allow_html=True)
-        preferred_fit = st.selectbox("Preferred Fit", ["Regular", "Oversized", "Slim"])
-        fav_colors = st.multiselect("Favourite Color Families",
-            ["Neutral", "Dark", "Warm", "Cool", "Pastel", "Earthy", "Pink", "Multi"],
-            default=["Neutral", "Dark"])
-        st.markdown('</div>', unsafe_allow_html=True)
-
-        st.markdown('<div class="sb-section">', unsafe_allow_html=True)
-        st.markdown('<div class="sb-title">Today\'s Context</div>', unsafe_allow_html=True)
-        occasion = st.selectbox("Occasion", [
-            "College", "Office", "Interview", "Wedding", "Party", "Date",
-            "Casual Outing", "Gym", "Airport Look", "Vacation", "Festival", "Traditional Function"
-        ])
-        weather = st.selectbox("Weather", ["Sunny", "Rainy", "Winter", "Humid", "Windy"])
-        st.markdown('</div>', unsafe_allow_html=True)
-
-    if st.button("💾 Save Profile"):
-        database.update_user(user_id, name=name, age=age, gender=gender,
-                             skin_tone=skin_tone, body_type=body_type,
-                             preferred_fit=preferred_fit,
-                             fav_colors=json.dumps(fav_colors),
-                             style_pref="Casual")
-        st.success("Profile saved!")
-
-# ─────────────────────────────────────────
-# TABS
-# ─────────────────────────────────────────
-tab1, tab2, tab3, tab4 = st.tabs([
-    "✨  AI Outfit",
-    "👚  My Wardrobe",
-    "📜  Outfit History",
-    "📊  Catalogue"
-])
-
-# ══════════════════════════════════════════
-# TAB 1 — AI OUTFIT GENERATOR
-# ══════════════════════════════════════════
-with tab1:
-    col_ctrl, col_out = st.columns([1, 1.6], gap="large")
-
-    with col_ctrl:
-        st.markdown("### Generate Your Look")
-
-        use_wardrobe = st.toggle("🧥 Use my wardrobe items", value=False,
-            help="Toggle ON to style outfits from your own clothes in the Wardrobe tab")
-
-        wardrobe_count = len(database.get_wardrobe(user_id))
-        if use_wardrobe and wardrobe_count == 0:
-            st.warning("⚠️ Wardrobe is empty — add items in the Wardrobe tab first.")
-
-        gen_btn = st.button("✨ Generate AI Look", type="primary")
-
-        # Context summary
-        st.markdown('<div class="card card-accent" style="margin-top:14px">', unsafe_allow_html=True)
-        st.markdown('<div class="card-title" style="font-size:0.8rem; margin-bottom:8px;">YOUR CONTEXT</div>', unsafe_allow_html=True)
-        st.markdown(
-            f'<span class="tag">{gender}</span>'
-            f'<span class="tag">Age {age}</span>'
-            f'<span class="tag">{body_type}</span>'
-            f'<span class="tag">{skin_tone} Skin</span>'
-            f'<span class="tag">{occasion}</span>'
-            f'<span class="tag">{weather}</span>'
-            f'<span class="tag">{preferred_fit} Fit</span>',
-            unsafe_allow_html=True
-        )
+    # ── Filter CSV ─────────────────────────────────
+    def _pick(self, item_type, gender, body_type, skin_tone, occasion, weather, fav_colors, exclude_names=None):
+        if self.df.empty:
+            return None
+        pool = self.df[self.df["type"] == item_type].copy()
+        g = gender if gender != "Other" else "Female"
+        pool = pool[pool["gender"].isin([g, "All"])]
+        pool = pool[pool["weather"].isin([weather, "All"])]
+        pool = pool[pool["occasion"].isin([occasion, "All"])]
+        if body_type and body_type != "All":
+            pool = pool[pool["body_type"].isin([body_type, "All"])]
+        if skin_tone and skin_tone != "All":
+            pool = pool[pool["skin_tone"].isin([skin_tone, "All"])]
+        if exclude_names:
+            pool = pool[~pool["item"].isin(exclude_names)]
         if fav_colors:
-            st.markdown(
-                '<div style="margin-top:6px">'
-                + ''.join(f'<span class="tag">{c}</span>' for c in fav_colors)
-                + '</div>',
-                unsafe_allow_html=True
-            )
-        st.markdown('</div>', unsafe_allow_html=True)
+            colored = pool[pool["color_family"].isin(fav_colors)]
+            if not colored.empty:
+                pool = colored
+        if pool.empty:
+            return None
+        return pool.sample(1).iloc[0].to_dict()
 
-        if wardrobe_count > 0:
-            st.markdown(f'<div style="color:#7ab5a0; font-size:0.78rem; margin-top:4px;">🧥 {wardrobe_count} items in your wardrobe</div>', unsafe_allow_html=True)
+    # ── Score Outfit 0-100 ─────────────────────────
+    def _score_outfit(self, outfit_items, occasion, weather, gender, body_type, skin_tone, use_wardrobe):
+        score = 50  # base
+        factors = []
 
-    with col_out:
-        if gen_btn:
-            with st.spinner("Styling your look..."):
-                result = engine.generate_outfit(
-                    user_id=user_id,
-                    gender=gender, age=age, body_type=body_type,
-                    skin_tone=skin_tone, occasion=occasion, weather=weather,
-                    preferred_fit=preferred_fit, fav_colors=fav_colors,
-                    use_wardrobe=use_wardrobe
-                )
+        # Completeness
+        required = REQUIRED_ITEMS.get(occasion, ["top", "bottom", "shoes"])
+        has = set(outfit_items.keys())
+        completeness = len([r for r in required if r in has]) / len(required)
+        score += int(completeness * 20)
+        if completeness == 1.0:
+            factors.append("Complete outfit ✓")
 
-                # Gemini explanation
-                explanation = gemini_explain(
-                    gender, age, body_type, skin_tone, occasion, weather,
-                    preferred_fit, fav_colors, result["outfit"]
-                )
-                if not explanation:
-                    explanation = (
-                        f"This outfit is curated for {occasion.lower()} in {weather.lower()} weather. "
-                        f"The colour palette complements your {skin_tone.lower()} skin tone beautifully, "
-                        f"while the {preferred_fit.lower()} fit enhances your natural silhouette. "
-                        f"Every piece is chosen to keep you stylish and comfortable all day."
-                    )
-                result["explanation"] = explanation
-                st.session_state.outfit_result = result
+        # Color harmony
+        colors = [v.get("color_family", "Neutral") for v in outfit_items.values() if v.get("color_family")]
+        if colors:
+            harmony_hits = 0
+            for i, c1 in enumerate(colors):
+                for c2 in colors[i+1:]:
+                    if c2 in COLOR_HARMONY.get(c1, []):
+                        harmony_hits += 1
+            max_pairs = max(1, len(colors) * (len(colors)-1) // 2)
+            harmony_ratio = harmony_hits / max_pairs
+            score += int(harmony_ratio * 15)
+            if harmony_ratio > 0.7:
+                factors.append("Great colour harmony ✓")
 
-        if st.session_state.outfit_result:
-            res = st.session_state.outfit_result
-            outfit = res["outfit"]
+        # Weather fit
+        weather_types = [v.get("weather", "All") for v in outfit_items.values() if v.get("weather")]
+        weather_fit = all(w in [weather, "All"] for w in weather_types)
+        if weather_fit:
+            score += 8
+            factors.append(f"{weather} weather appropriate ✓")
 
-            st.markdown("### ✨ Today's Complete Look")
-            st.markdown('<div class="card card-accent">', unsafe_allow_html=True)
+        # Wardrobe bonus (personal items)
+        if use_wardrobe:
+            wardrobe_items = [v for v in outfit_items.values() if v.get("source") == "wardrobe"]
+            if wardrobe_items:
+                score += min(7, len(wardrobe_items) * 2)
+                factors.append(f"{len(wardrobe_items)} items from your wardrobe ✓")
 
-            for cat, details in outfit.items():
-                badge_cls = "badge-wardrobe" if details["source"] == "wardrobe" else "badge-catalogue"
-                badge_label = "👚 Wardrobe" if details["source"] == "wardrobe" else "✦ AI Pick"
-                desc_html = f'<div class="outfit-desc">{details["description"]}</div>' if details.get("description") else ""
-                row_cls = "outfit-row from-wardrobe" if details["source"] == "wardrobe" else "outfit-row"
-                st.markdown(f"""
-                <div class="{row_cls}">
-                  <span class="outfit-emoji">{details['emoji']}</span>
-                  <div style="flex:1">
-                    <div class="outfit-label">{cat.upper()}</div>
-                    <div class="outfit-name">{details['item']}</div>
-                    {desc_html}
-                  </div>
-                  <span class="source-badge {badge_cls}">{badge_label}</span>
-                </div>""", unsafe_allow_html=True)
+        score = min(99, max(55, score))
 
-            # Hairstyle
-            hair = res["hair_options"][0]
-            st.markdown(f"""
-            <div class="outfit-row">
-              <span class="outfit-emoji">{hair[0]}</span>
-              <div style="flex:1">
-                <div class="outfit-label">HAIRSTYLE</div>
-                <div class="outfit-name">{hair[1]}</div>
-                <div class="outfit-desc">{hair[2]}</div>
-              </div>
-            </div>""", unsafe_allow_html=True)
-
-            if len(res["hair_options"]) > 1:
-                alt = res["hair_options"][1]
-                st.markdown(f'<div style="color:#8a8a9a; font-size:0.78rem; margin:6px 0 2px 6px;">Alternate: <span style="color:#c9a96e; font-weight:600;">{alt[1]}</span> — {alt[2]}</div>', unsafe_allow_html=True)
-
-            st.markdown('</div>', unsafe_allow_html=True)
-
-            # Why card
-            st.markdown(f"""
-            <div class="why-card">
-              <div style="color:#c9a96e; font-family:Playfair Display,serif; font-size:1rem; margin-bottom:8px;">🎨 Why This Works For You</div>
-              <div class="why-text">{res['explanation']}</div>
-            </div>""", unsafe_allow_html=True)
-
-            # Save outfit
-            st.markdown("")
-            col_s1, col_s2 = st.columns(2)
-            with col_s1:
-                if st.button("💾 Save This Outfit"):
-                    oid = database.save_outfit(
-                        user_id=user_id,
-                        occasion=res["occasion"],
-                        weather=res["weather"],
-                        items_dict={k: v["item"] for k, v in outfit.items()},
-                        explanation=res["explanation"]
-                    )
-                    st.session_state.saved_outfit_id = oid
-                    st.success(f"Outfit saved! ✓")
-            with col_s2:
-                if st.button("🔁 Generate Another"):
-                    st.session_state.outfit_result = None
-                    st.rerun()
-
-
-# ══════════════════════════════════════════
-# TAB 2 — WARDROBE
-# ══════════════════════════════════════════
-with tab2:
-    st.markdown("### 🧥 My Wardrobe")
-    st.markdown('<div style="color:#8a8a9a; font-size:0.83rem; margin-bottom:18px">Add your real clothes. Toggle wardrobe mode in the AI tab to get looks from what you own.</div>', unsafe_allow_html=True)
-
-    col_add, col_view = st.columns([1, 1.5], gap="large")
-
-    with col_add:
-        st.markdown("#### ➕ Add New Item")
-
-        TYPE_OPTIONS = ["top", "bottom", "outerwear", "shoes", "accessory", "dress", "traditional"]
-        w_type = st.selectbox("Category", TYPE_OPTIONS)
-
-        # Show catalogue suggestions for that type
-        from recommendation_engine import RecommendationEngine as RE
-        _e = engine
-        if not _e.df.empty:
-            suggestions = _e.df[_e.df["type"] == w_type]["item"].tolist()
-            w_from_cat = st.selectbox("Pick from catalogue", ["-- Type your own below --"] + suggestions)
+        if score >= 90:
+            confidence = "Excellent Match"
+        elif score >= 80:
+            confidence = "Strong Match"
+        elif score >= 70:
+            confidence = "Good Match"
         else:
-            w_from_cat = "-- Type your own below --"
+            confidence = "Decent Pick"
 
-        w_name = st.text_input("Item Name", placeholder="e.g. White Oversized Graphic Tee")
-        if w_from_cat != "-- Type your own below --" and not w_name:
-            w_name = w_from_cat
+        return score, confidence, factors
 
-        w_color = st.text_input("Color", placeholder="e.g. White, Navy Blue")
-        w_notes = st.text_input("Notes (optional)", placeholder="e.g. Brand new, favourite")
-
-        col_a, col_b = st.columns(2)
-        with col_a:
-            if st.button("➕ Add Item"):
-                final_name = w_name.strip() or w_from_cat
-                if final_name and final_name != "-- Type your own below --":
-                    database.add_wardrobe_item(user_id, w_type, final_name, w_color, "", w_notes)
-                    st.success(f"✓ Added: {final_name}")
-                    st.rerun()
-                else:
-                    st.error("Enter an item name.")
-        with col_b:
-            if st.button("🗑️ Clear All"):
-                conn = database.get_connection()
-                conn.execute("DELETE FROM wardrobe WHERE user_id=?", (user_id,))
-                conn.commit()
-                conn.close()
-                st.rerun()
-
-    with col_view:
-        wardrobe = database.get_wardrobe(user_id)
-        st.markdown(f"#### My Closet ({len(wardrobe)} items)")
-
+    # ── Color Analysis ─────────────────────────────
+    def analyze_colors(self, wardrobe):
         if not wardrobe:
-            st.markdown('<div style="color:#8a8a9a; text-align:center; padding:40px 0">Wardrobe is empty.<br>Add some clothes to get started! 👗</div>', unsafe_allow_html=True)
-        else:
-            type_emojis = {"top":"👕","bottom":"👖","shoes":"👟","accessory":"💍",
-                           "outerwear":"🧥","dress":"👗","traditional":"🥻"}
-            # Group
-            groups = {}
-            for item in wardrobe:
-                t = item["item_type"]
-                groups.setdefault(t, []).append(item)
+            return {}
+        family_counts = {}
+        for item in wardrobe:
+            cf = item.get("color_family", "Neutral")
+            family_counts[cf] = family_counts.get(cf, 0) + 1
+        dominant = max(family_counts, key=family_counts.get) if family_counts else "Neutral"
+        missing = [c for c in ["Neutral", "Dark", "Warm", "Cool"] if c not in family_counts]
+        return {
+            "distribution": family_counts,
+            "dominant": dominant,
+            "missing_colors": missing,
+            "total": len(wardrobe)
+        }
 
-            for t, items in groups.items():
-                emoji = type_emojis.get(t, "🏷️")
-                st.markdown(f'<div class="w-group-title">{emoji} {t.upper()}S ({len(items)})</div>', unsafe_allow_html=True)
-                for item in items:
-                    col_i, col_d = st.columns([6, 1])
-                    with col_i:
-                        meta = f"{item['color']}" if item.get('color') else ""
-                        if item.get('notes'):
-                            meta += f" · {item['notes']}"
-                        st.markdown(f"""
-                        <div class="w-item-row">
-                          <span>✓</span>
-                          <div>
-                            <div class="w-item-name">{item['item_name']}</div>
-                            {f'<div class="w-item-meta">{meta}</div>' if meta else ''}
-                          </div>
-                        </div>""", unsafe_allow_html=True)
-                    with col_d:
-                        if st.button("✕", key=f"del_{item['item_id']}"):
-                            database.delete_wardrobe_item(item["item_id"])
-                            st.rerun()
+    # ── Missing Items ──────────────────────────────
+    def find_missing_items(self, wardrobe, gender):
+        wardrobe_types = set(w["item_type"] for w in wardrobe)
+        all_types = ["top", "bottom", "shoes", "accessory", "outerwear"]
+        missing = []
+        for t in all_types:
+            if t not in wardrobe_types:
+                suggestions = MISSING_SUGGESTIONS.get(t, [])
+                if suggestions:
+                    missing.append({
+                        "type": t,
+                        "suggestion": random.choice(suggestions),
+                        "reason": f"You have no {t}s in your wardrobe"
+                    })
+            elif sum(1 for w in wardrobe if w["item_type"] == t) < 2:
+                suggestions = MISSING_SUGGESTIONS.get(t, [])
+                if suggestions:
+                    missing.append({
+                        "type": t,
+                        "suggestion": random.choice([s for s in suggestions]),
+                        "reason": f"Only {sum(1 for w in wardrobe if w['item_type']==t)} {t}(s) — consider adding more variety"
+                    })
+        return missing[:5]
 
+    # ── MAIN GENERATE ──────────────────────────────
+    def generate_outfit(self, user_id, gender, age, body_type, skin_tone,
+                        occasion, weather, preferred_fit, fav_colors, use_wardrobe=False):
+        wardrobe = database.get_wardrobe(user_id) if use_wardrobe else []
+        vibe = OCCASION_VIBE.get(occasion, "Casual")
+        g_key = gender if gender in ("Female", "Male") else "Female"
+        hair_options = HAIRSTYLES[g_key].get(vibe, HAIRSTYLES[g_key]["Casual"])
 
-# ══════════════════════════════════════════
-# TAB 3 — OUTFIT HISTORY
-# ══════════════════════════════════════════
-with tab3:
-    st.markdown("### 📜 Outfit History")
-    history = database.get_outfit_history(user_id, limit=20)
+        types_needed = ["top", "bottom", "shoes", "accessory"]
+        if occasion == "Traditional Function":
+            types_needed = ["traditional", "shoes", "accessory"]
+        if weather in ("Winter", "Rainy", "Windy"):
+            types_needed.insert(2, "outerwear")
 
-    if not history:
-        st.markdown('<div style="color:#8a8a9a; text-align:center; padding:50px 0">No saved outfits yet.<br>Generate and save your first look! ✨</div>', unsafe_allow_html=True)
-    else:
-        st.markdown(f'<div style="color:#8a8a9a; font-size:0.82rem; margin-bottom:16px">{len(history)} saved outfits</div>', unsafe_allow_html=True)
-        for outfit_rec in history:
-            items = outfit_rec.get("items", {})
-            items_text = " · ".join(f"{k}: {v}" for k, v in items.items()) if items else "—"
-            stars = "⭐" * outfit_rec.get("rating", 0) if outfit_rec.get("rating") else ""
-            st.markdown(f"""
-            <div class="hist-card">
-              <div class="hist-title">{outfit_rec['occasion']} · {outfit_rec['weather']} {stars}</div>
-              <div class="hist-items">{items_text}</div>
-              <div style="color:#8a8a9a; font-size:0.72rem; margin-top:6px;">{outfit_rec.get('created_at','')}</div>
-            </div>""", unsafe_allow_html=True)
+        emojis = {"top":"👕","bottom":"👖","outerwear":"🧥","shoes":"👟",
+                  "accessory":"👜","traditional":"🥻","dress":"👗"}
+        
+        outfit = {}
+        used_names = []
 
-            # Rating
-            col_r = st.columns(5)
-            for i, c in enumerate(col_r):
-                with c:
-                    if st.button(f"{'⭐' * (i+1)}", key=f"rate_{outfit_rec['outfit_id']}_{i}"):
-                        database.rate_outfit(outfit_rec["outfit_id"], i+1)
-                        st.rerun()
+        for t in types_needed:
+            item = None
+            # Wardrobe first
+            if use_wardrobe and wardrobe:
+                candidates = [w for w in wardrobe if w["item_type"] == t and w["item_name"] not in used_names]
+                if candidates:
+                    chosen = random.choice(candidates)
+                    # Try to find color_family from CSV for matching
+                    cf_match = self.df[self.df["item"] == chosen["item_name"]]["color_family"].values
+                    cf = cf_match[0] if len(cf_match) > 0 else chosen.get("color_family", "Neutral")
+                    item = {
+                        "type": t,
+                        "item": chosen["item_name"],
+                        "description": f"{chosen['color']}" if chosen.get("color") else "",
+                        "color_family": cf,
+                        "weather": "All",
+                        "source": "wardrobe",
+                        "emoji": emojis.get(t, "🏷️")
+                    }
+                    used_names.append(chosen["item_name"])
 
+            # CSV fallback
+            if not item:
+                row = self._pick(t, gender, body_type, skin_tone, occasion, weather, fav_colors, used_names)
+                if row:
+                    item = {
+                        "type": t,
+                        "item": row["item"],
+                        "description": row.get("description", ""),
+                        "color_family": row.get("color_family", "Neutral"),
+                        "weather": row.get("weather", "All"),
+                        "source": "catalogue",
+                        "emoji": emojis.get(t, "🏷️")
+                    }
+                    used_names.append(row["item"])
 
-# ══════════════════════════════════════════
-# TAB 4 — CATALOGUE
-# ══════════════════════════════════════════
-with tab4:
-    st.markdown("### 📊 Fashion Catalogue")
+            if item:
+                outfit[t] = item
 
-    if engine.df.empty:
-        st.error("fashion_items.csv not found!")
-    else:
-        st.markdown(f'<div style="color:#8a8a9a; font-size:0.83rem; margin-bottom:14px">{len(engine.df)} items in the DressiFy database</div>', unsafe_allow_html=True)
+        # Score it
+        ai_score, confidence, score_factors = self._score_outfit(
+            outfit, occasion, weather, gender, body_type, skin_tone, use_wardrobe
+        )
 
-        col_f1, col_f2, col_f3 = st.columns(3)
-        with col_f1:
-            cat_f = st.selectbox("Type", ["All"] + sorted(engine.df["type"].unique().tolist()))
-        with col_f2:
-            gen_f = st.selectbox("Gender", ["All", "Female", "Male"])
-        with col_f3:
-            occ_f = st.selectbox("Occasion", ["All"] + sorted(engine.df["occasion"].unique().tolist()))
-
-        filtered = engine.df.copy()
-        if cat_f != "All":
-            filtered = filtered[filtered["type"] == cat_f]
-        if gen_f != "All":
-            filtered = filtered[filtered["gender"] == gen_f]
-        if occ_f != "All":
-            filtered = filtered[filtered["occasion"] == occ_f]
-
-        st.markdown(f'<span class="tag">{len(filtered)} results</span>', unsafe_allow_html=True)
-        st.markdown("")
-
-        display = filtered[["type","item","gender","style","occasion","weather","body_type","description"]].copy()
-        display.columns = ["Type","Item","Gender","Style","Occasion","Weather","Body Type","Description"]
-        st.dataframe(display, use_container_width=True, height=520, hide_index=True)
+        return {
+            "outfit": outfit,
+            "hair_options": hair_options,
+            "vibe": vibe,
+            "occasion": occasion,
+            "weather": weather,
+            "ai_score": ai_score,
+            "confidence": confidence,
+            "score_factors": score_factors,
+        }
