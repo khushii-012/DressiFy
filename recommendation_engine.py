@@ -1,852 +1,281 @@
 """
-=========================================================
 DressiFy Recommendation Engine v3
-=========================================================
-
-Features
---------
-✔ Intelligent outfit scoring
-✔ Wardrobe priority
-✔ Dataset fallback
-✔ Body type matching
-✔ Skin tone matching
-✔ Weather matching
-✔ Occasion matching
-✔ Favourite color matching
-✔ Style Goal support
-✔ Trend-ready architecture
-✔ Avatar-ready architecture
-✔ AI explanation generator
-✔ Hairstyle recommendation
-
+- AI outfit scoring (0-100) with confidence label
+- Color harmony analysis
+- Missing item detection
+- Body type + skin tone smart filtering
+- Wardrobe-first with CSV fallback
 """
 
 import os
 import random
 import pandas as pd
-
 import database
 
 DATA_FILE = "fashion_items.csv"
 
-# -------------------------------------------------------
-# Occasion → Outfit Vibe
-# -------------------------------------------------------
-
 OCCASION_VIBE = {
-
-    "College": "Casual",
-    "Gym": "Sporty",
-    "Casual Outing": "Casual",
-    "Vacation": "Casual",
-    "Airport Look": "Casual",
-
-    "Office": "Formal",
-    "Interview": "Formal",
-
-    "Wedding": "Traditional",
-    "Festival": "Traditional",
-
-    "Party": "Party",
-    "Date": "Romantic"
-
+    "College": "Casual", "Gym": "Sporty", "Casual Outing": "Casual",
+    "Vacation": "Casual", "Airport Look": "Casual",
+    "Interview": "Formal", "Office": "Formal",
+    "Wedding": "Formal", "Traditional Function": "Formal",
+    "Party": "Party", "Date": "Romantic", "Festival": "Festive"
 }
-
-# -------------------------------------------------------
-# Hairstyle Database
-# -------------------------------------------------------
 
 HAIRSTYLES = {
-
     "Female": {
-
-        "Casual": [
-
-            ("🎀", "Messy Bun", "Effortless and comfortable"),
-            ("🌸", "Loose Waves", "Soft everyday hairstyle"),
-            ("✨", "Half Pony", "Cute and practical")
-
-        ],
-
-        "Formal": [
-
-            ("💼", "Low Bun", "Professional appearance"),
-            ("✨", "Straight Hair", "Elegant office look"),
-            ("🌺", "French Twist", "Sophisticated")
-
-        ],
-
-        "Party": [
-
-            ("💫", "Beach Waves", "Stylish and glamorous"),
-            ("🔥", "Hollywood Curls", "Party ready"),
-            ("🌙", "Half Up Half Down", "Trendy")
-
-        ],
-
-        "Romantic": [
-
-            ("🌹", "Soft Curls", "Romantic look"),
-            ("💕", "Side Braid", "Cute"),
-            ("🎀", "Low Bun", "Elegant")
-
-        ],
-
-        "Traditional": [
-
-            ("🌼", "Gajra Bun", "Classic ethnic"),
-            ("✨", "Braided Bun", "Traditional"),
-            ("🌸", "Long Braid", "Graceful")
-
-        ]
-
+        "Casual":   [("🎀", "Messy Bun", "Effortless & chic"), ("🎗️", "High Ponytail", "Clean & sporty"), ("✨", "Soft Waves", "Relaxed & pretty")],
+        "Formal":   [("✨", "Sleek Straight", "Polished & sharp"), ("🌸", "Low Chignon", "Elegant & professional"), ("💫", "French Twist", "Classic & refined")],
+        "Party":    [("💫", "Beach Waves", "Glamorous & textured"), ("🌙", "Half Up Half Down", "Playful & stylish"), ("💎", "Hollywood Curls", "Dramatic & glam")],
+        "Romantic": [("🌹", "Soft Curls", "Romantic & flirty"), ("🎀", "Braided Low Bun", "Effortlessly beautiful"), ("🌸", "Side Swept", "Feminine & elegant")],
+        "Sporty":   [("⚡", "Sleek Ponytail", "Athletic & clean"), ("🎀", "Dutch Braid", "Sporty & trendy"), ("✂️", "Top Knot", "Practical & cute")],
+        "Festive":  [("🌺", "Floral Hair", "Festive & vibrant"), ("💐", "Loose Curls", "Traditional & beautiful"), ("✨", "Accessorised Bun", "Ethnic & chic")],
     },
-
     "Male": {
-
-        "Casual": [
-
-            ("✂", "Textured Crop", "Modern"),
-            ("🌊", "Curtains", "Relaxed"),
-            ("🔥", "Messy Hair", "Effortless")
-
-        ],
-
-        "Formal": [
-
-            ("💼", "Side Part", "Professional"),
-            ("✨", "Comb Over", "Elegant"),
-            ("⚡", "Quiff", "Sharp")
-
-        ],
-
-        "Party": [
-
-            ("🐺", "Wolf Cut", "Trendy"),
-            ("🔥", "Messy Quiff", "Cool"),
-            ("🎉", "Pompadour", "Bold")
-
-        ],
-
-        "Romantic": [
-
-            ("💕", "Natural Waves", "Soft"),
-            ("✨", "Slick Back", "Confident"),
-            ("🌙", "Medium Flow", "Relaxed")
-
-        ],
-
-        "Traditional": [
-
-            ("👑", "Classic Side Part", "Traditional"),
-            ("✨", "Neat Comb", "Elegant"),
-            ("🔥", "Styled Quiff", "Modern Ethnic")
-
-        ]
-
+        "Casual":   [("✂️", "Textured Crop", "Modern & low-effort"), ("🌊", "Curtains", "Retro & trendy"), ("💈", "Natural Tousled", "Effortlessly cool")],
+        "Formal":   [("💼", "Side Part", "Classic & professional"), ("⚡", "Slicked Back", "Sharp & authoritative"), ("💈", "Clean Fade", "Modern & sharp")],
+        "Party":    [("🐺", "Wolf Cut", "Edgy & trendy"), ("🔥", "Messy Textured", "Cool & effortless"), ("✨", "Quiff", "Bold & stylish")],
+        "Romantic": [("✨", "Styled Quiff", "Suave & handsome"), ("💫", "Natural Waves", "Relaxed & charming"), ("💈", "Neat Side Part", "Classic & romantic")],
+        "Sporty":   [("✂️", "Short Buzz", "Clean & athletic"), ("💈", "Crew Cut", "Sporty & neat"), ("🌊", "Textured Pompadour", "Athletic & stylish")],
+        "Festive":  [("💈", "Neat Quiff", "Traditional & smart"), ("✂️", "Side Parted", "Classic & elegant"), ("⚡", "Slicked Back", "Formal & festive")],
     }
-
 }
 
-# -------------------------------------------------------
-# Color Harmony
-# -------------------------------------------------------
-
-COLOR_MATCH = {
-
-    "Neutral": [
-        "Neutral",
-        "Dark",
-        "Blue",
-        "Earthy",
-        "Warm",
-        "Cool"
-    ],
-
-    "Blue": [
-        "Neutral",
-        "White",
-        "Cool",
-        "Dark"
-    ],
-
-    "Dark": [
-        "Neutral",
-        "Warm",
-        "Cool"
-    ],
-
-    "Earthy": [
-        "Neutral",
-        "Warm",
-        "Earthy"
-    ],
-
-    "Pink": [
-        "Neutral",
-        "Pastel"
-    ],
-
-    "Pastel": [
-        "Neutral",
-        "Pink"
-    ],
-
-    "Warm": [
-        "Neutral",
-        "Earthy",
-        "Dark"
-    ],
-
-    "Cool": [
-        "Neutral",
-        "Blue",
-        "Dark"
-    ]
-
+# Color harmony rules
+COLOR_HARMONY = {
+    "Neutral":  ["Dark", "Neutral", "Warm", "Cool", "Pastel", "Earthy", "Pink", "Multi"],
+    "Dark":     ["Neutral", "Dark", "Warm", "Cool"],
+    "Warm":     ["Neutral", "Warm", "Earthy", "Dark"],
+    "Cool":     ["Neutral", "Cool", "Dark", "Pastel"],
+    "Pastel":   ["Neutral", "Pastel", "Cool", "Pink"],
+    "Earthy":   ["Neutral", "Earthy", "Warm", "Dark"],
+    "Pink":     ["Neutral", "Pastel", "Dark", "Pink"],
+    "Multi":    ["Neutral", "Dark"],
 }
 
-# -------------------------------------------------------
-# Style Goal Bonus
-# -------------------------------------------------------
-
-STYLE_GOAL_BONUS = {
-
-    "Look More Professional": {
-
-        "Formal": 30,
-        "Smart Casual": 20,
-        "Minimal": 15
-
-    },
-
-    "Experiment with Colours": {
-
-        "Pastel": 20,
-        "Pink": 20,
-        "Warm": 20,
-        "Cool": 20,
-        "Multi": 20
-
-    },
-
-    "Use My Ethnic Wear More": {
-
-        "Traditional": 35
-
-    }
-
+# What makes a complete outfit per occasion
+REQUIRED_ITEMS = {
+    "Interview":  ["top", "bottom", "shoes"],
+    "Office":     ["top", "bottom", "shoes"],
+    "Wedding":    ["top", "bottom", "shoes", "accessory"],
+    "Party":      ["top", "bottom", "shoes", "accessory"],
+    "Date":       ["top", "bottom", "shoes"],
+    "College":    ["top", "bottom", "shoes"],
+    "Gym":        ["top", "bottom", "shoes"],
+    "Vacation":   ["top", "bottom", "shoes", "accessory"],
+    "Casual Outing": ["top", "bottom", "shoes"],
+    "Airport Look":  ["top", "bottom", "shoes", "accessory"],
+    "Festival":   ["top", "bottom", "shoes", "accessory"],
+    "Traditional Function": ["traditional", "shoes", "accessory"],
 }
 
-# =======================================================
-# Recommendation Engine
-# =======================================================
+MISSING_SUGGESTIONS = {
+    "top":        ["White Oversized Tee", "Linen Shirt", "Polo Shirt", "Knit Sweater"],
+    "bottom":     ["Blue Straight Jeans", "Black Trousers", "Cargo Pants", "Wide-Leg Pants"],
+    "shoes":      ["White Sneakers", "Loafers", "Black Ankle Boots", "Sandals"],
+    "accessory":  ["Silver Watch", "Tote Bag", "Sunglasses", "Gold Chain"],
+    "outerwear":  ["Denim Jacket", "Beige Blazer", "Black Leather Jacket", "Puffer Jacket"],
+    "traditional":["Kurti + Dupatta", "Kurta Pajama", "Saree", "Anarkali Suit"],
+}
 
 class RecommendationEngine:
-
     def __init__(self):
-
         self.df = pd.DataFrame()
+        self._load()
 
-        self.load_dataset()
-
-    # ---------------------------------------------------
-
-    def load_dataset(self):
-
+    def _load(self):
         if os.path.exists(DATA_FILE):
-
             self.df = pd.read_csv(DATA_FILE)
 
-            self.df.columns = [
-                c.strip().lower()
-                for c in self.df.columns
-            ]
-
-        else:
-
-            print("fashion_items.csv not found")
-
-    # ---------------------------------------------------
-
-    def get_style_goal(self, user_id):
-
-        goals = database.get_style_goals(user_id)
-
-        if not goals:
-            return None
-
-        return goals[0]["goal_name"]
-
-    # ---------------------------------------------------
-
-    def get_candidates(self, item_type):
-
+    # ── Filter CSV ─────────────────────────────────
+    def _pick(self, item_type, gender, body_type, skin_tone, occasion, weather, fav_colors, exclude_names=None):
         if self.df.empty:
-            return pd.DataFrame()
-
-        return self.df[
-            self.df["type"].str.lower() == item_type.lower()
-        ].copy()
-    
-        # ---------------------------------------------------
-    # AI Scoring Function
-    # ---------------------------------------------------
-
-    def calculate_score(
-        self,
-        row,
-        gender,
-        body_type,
-        skin_tone,
-        occasion,
-        weather,
-        preferred_fit,
-        fav_colors,
-        style_goal
-    ):
-
-        score = 0
-
-        # ---------------- Gender ----------------
-
-        if str(row.get("gender", "All")) in [gender, "All"]:
-            score += 25
-
-        # ---------------- Occasion ----------------
-
-        if str(row.get("occasion", "All")) in [occasion, "All"]:
-            score += 30
-
-        # ---------------- Weather ----------------
-
-        if str(row.get("weather", "All")) in [weather, "All"]:
-            score += 20
-
-        # ---------------- Body Type ----------------
-
-        if str(row.get("body_type", "All")) in [body_type, "All"]:
-            score += 12
-
-        # ---------------- Skin Tone ----------------
-
-        if str(row.get("skin_tone", "All")) in [skin_tone, "All"]:
-            score += 8
-
-        # ---------------- Preferred Fit ----------------
-
-        if str(row.get("style", "All")) in [preferred_fit, "All"]:
-            score += 10
-
-        # ---------------- Favourite Colors ----------------
-
-        color = str(row.get("color_family", ""))
-
+            return None
+        pool = self.df[self.df["type"] == item_type].copy()
+        g = gender if gender != "Other" else "Female"
+        pool = pool[pool["gender"].isin([g, "All"])]
+        pool = pool[pool["weather"].isin([weather, "All"])]
+        pool = pool[pool["occasion"].isin([occasion, "All"])]
+        if body_type and body_type != "All":
+            pool = pool[pool["body_type"].isin([body_type, "All"])]
+        if skin_tone and skin_tone != "All":
+            pool = pool[pool["skin_tone"].isin([skin_tone, "All"])]
+        if exclude_names:
+            pool = pool[~pool["item"].isin(exclude_names)]
         if fav_colors:
-
-            if isinstance(fav_colors, str):
-                fav_colors = [fav_colors]
-
-            if color in fav_colors:
-                score += 18
-
-        # ---------------- Style Goal ----------------
-
-        if style_goal:
-
-            bonus = STYLE_GOAL_BONUS.get(style_goal, {})
-
-            if color in bonus:
-                score += bonus[color]
-
-            style = str(row.get("style", ""))
-
-            if style in bonus:
-                score += bonus[style]
-
-            category = str(row.get("category", ""))
-
-            if category in bonus:
-                score += bonus[category]
-
-        # ---------------- Randomness ----------------
-        # Prevents recommending the exact same outfit every time
-
-        score += random.randint(0, 5)
-
-        return score
-
-    # ---------------------------------------------------
-    # Choose Best Item
-    # ---------------------------------------------------
-
-    def choose_best_item(
-        self,
-        item_type,
-        gender,
-        body_type,
-        skin_tone,
-        occasion,
-        weather,
-        preferred_fit,
-        fav_colors,
-        style_goal
-    ):
-
-        candidates = self.get_candidates(item_type)
-
-        if candidates.empty:
+            colored = pool[pool["color_family"].isin(fav_colors)]
+            if not colored.empty:
+                pool = colored
+        if pool.empty:
             return None
+        return pool.sample(1).iloc[0].to_dict()
 
-        candidates["score"] = candidates.apply(
+    # ── Score Outfit 0-100 ─────────────────────────
+    def _score_outfit(self, outfit_items, occasion, weather, gender, body_type, skin_tone, use_wardrobe):
+        score = 50  # base
+        factors = []
 
-            lambda row:
+        # Completeness
+        required = REQUIRED_ITEMS.get(occasion, ["top", "bottom", "shoes"])
+        has = set(outfit_items.keys())
+        completeness = len([r for r in required if r in has]) / len(required)
+        score += int(completeness * 20)
+        if completeness == 1.0:
+            factors.append("Complete outfit ✓")
 
-            self.calculate_score(
+        # Color harmony
+        colors = [v.get("color_family", "Neutral") for v in outfit_items.values() if v.get("color_family")]
+        if colors:
+            harmony_hits = 0
+            for i, c1 in enumerate(colors):
+                for c2 in colors[i+1:]:
+                    if c2 in COLOR_HARMONY.get(c1, []):
+                        harmony_hits += 1
+            max_pairs = max(1, len(colors) * (len(colors)-1) // 2)
+            harmony_ratio = harmony_hits / max_pairs
+            score += int(harmony_ratio * 15)
+            if harmony_ratio > 0.7:
+                factors.append("Great colour harmony ✓")
 
-                row,
+        # Weather fit
+        weather_types = [v.get("weather", "All") for v in outfit_items.values() if v.get("weather")]
+        weather_fit = all(w in [weather, "All"] for w in weather_types)
+        if weather_fit:
+            score += 8
+            factors.append(f"{weather} weather appropriate ✓")
 
-                gender,
+        # Wardrobe bonus (personal items)
+        if use_wardrobe:
+            wardrobe_items = [v for v in outfit_items.values() if v.get("source") == "wardrobe"]
+            if wardrobe_items:
+                score += min(7, len(wardrobe_items) * 2)
+                factors.append(f"{len(wardrobe_items)} items from your wardrobe ✓")
 
-                body_type,
+        score = min(99, max(55, score))
 
-                skin_tone,
+        if score >= 90:
+            confidence = "Excellent Match"
+        elif score >= 80:
+            confidence = "Strong Match"
+        elif score >= 70:
+            confidence = "Good Match"
+        else:
+            confidence = "Decent Pick"
 
-                occasion,
+        return score, confidence, factors
 
-                weather,
-
-                preferred_fit,
-
-                fav_colors,
-
-                style_goal
-
-            ),
-
-            axis=1
-
-        )
-
-        candidates = candidates.sort_values(
-
-            by="score",
-
-            ascending=False
-
-        )
-
-        top = candidates.head(5)
-
-        if top.empty:
-            return None
-
-        chosen = top.sample(1).iloc[0]
-
-        return {
-
-            "type": item_type,
-
-            "item": chosen["item"],
-
-            "description": chosen.get(
-
-                "description",
-
-                ""
-
-            ),
-
-            "image": chosen.get(
-
-                "image",
-
-                ""
-
-            ),
-
-            "color": chosen.get(
-
-                "color_family",
-
-                ""
-
-            ),
-
-            "score": int(chosen["score"]),
-
-            "source": "catalogue"
-
-        }
-
-    # ---------------------------------------------------
-    # Wardrobe Item
-    # ---------------------------------------------------
-
-    def get_wardrobe_item(
-
-        self,
-
-        wardrobe,
-
-        item_type
-
-    ):
-
+    # ── Color Analysis ─────────────────────────────
+    def analyze_colors(self, wardrobe):
+        if not wardrobe:
+            return {}
+        family_counts = {}
         for item in wardrobe:
-
-            if item["item_type"].lower() == item_type.lower():
-
-                return {
-
-                    "type": item_type,
-
-                    "item": item["item_name"],
-
-                    "description": item.get(
-
-                        "notes",
-
-                        ""
-
-                    ),
-
-                    "image": "",
-
-                    "color": item.get(
-
-                        "color",
-
-                        ""
-
-                    ),
-
-                    "score": 999,
-
-                    "source": "wardrobe"
-
-                }
-
-        return None
-
-    # ---------------------------------------------------
-    # Explanation Generator
-    # ---------------------------------------------------
-
-    def generate_explanation(
-
-        self,
-
-        outfit,
-
-        occasion,
-
-        weather,
-
-        style_goal
-
-    ):
-
-        text = (
-
-            f"This outfit was selected for "
-
-            f"your {occasion.lower()} "
-
-            f"during {weather.lower()} weather. "
-
-        )
-
-        if style_goal:
-
-            text += (
-
-                f"It also supports your style goal "
-
-                f"of '{style_goal}'. "
-
-            )
-
-        text += (
-
-            "The items have been chosen "
-
-            "based on colour harmony, "
-
-            "occasion suitability, "
-
-            "weather comfort "
-
-            "and overall fashion balance."
-
-        )
-
-        return text 
-    
-        # ---------------------------------------------------
-    # Main Recommendation Function
-    # ---------------------------------------------------
-
-    def generate_outfit(
-        self,
-        user_id,
-        gender,
-        age,
-        body_type,
-        skin_tone,
-        occasion,
-        weather,
-        preferred_fit,
-        fav_colors,
-        use_wardrobe=False
-    ):
-
-        wardrobe = database.get_wardrobe(user_id) if use_wardrobe else []
-
-        style_goal = self.get_style_goal(user_id)
-
-        vibe = OCCASION_VIBE.get(
-            occasion,
-            "Casual"
-        )
-
-        # ---------------------------------------------------
-        # Decide Outfit Type
-        # ---------------------------------------------------
-
-        if occasion in ["Wedding", "Festival"]:
-
-            types_needed = [
-                "traditional",
-                "shoes",
-                "accessory"
-            ]
-
-        elif occasion in ["Party", "Date"]:
-
-            if gender == "Female":
-
-                types_needed = [
-                    "dress",
-                    "shoes",
-                    "accessory"
-                ]
-
-            else:
-
-                types_needed = [
-                    "top",
-                    "bottom",
-                    "shoes",
-                    "accessory"
-                ]
-
-        else:
-
-            types_needed = [
-                "top",
-                "bottom",
-                "shoes",
-                "accessory"
-            ]
-
-        if weather in [
-
-            "Winter",
-
-            "Rainy",
-
-            "Windy"
-
-        ]:
-
-            if "outerwear" not in types_needed:
-
-                types_needed.insert(
-                    2,
-                    "outerwear"
-                )
-
-        # ---------------------------------------------------
-        # Outfit Building
-        # ---------------------------------------------------
-
-        outfit = {}
-
-        for item_type in types_needed:
-
-            selected = None
-
-            # ---------- Wardrobe Priority ----------
-
-            if use_wardrobe:
-
-                selected = self.get_wardrobe_item(
-
-                    wardrobe,
-
-                    item_type
-
-                )
-
-            # ---------- Dataset ----------
-
-            if selected is None:
-
-                selected = self.choose_best_item(
-
-                    item_type,
-
-                    gender,
-
-                    body_type,
-
-                    skin_tone,
-
-                    occasion,
-
-                    weather,
-
-                    preferred_fit,
-
-                    fav_colors,
-
-                    style_goal
-
-                )
-
-            if selected:
-
-                outfit[item_type] = selected
-
-        # ---------------------------------------------------
-        # Hairstyles
-        # ---------------------------------------------------
-
-        hairstyles = self.get_hairstyles(
-
-            gender,
-
-            occasion
-
-        )
-
-        # ---------------------------------------------------
-        # AI Explanation
-        # ---------------------------------------------------
-
-        explanation = self.generate_explanation(
-
-            outfit,
-
-            occasion,
-
-            weather,
-
-            style_goal
-
-        )
-
-        # ---------------------------------------------------
-        # Total Outfit Score
-        # ---------------------------------------------------
-
-        total_score = 0
-
-        for item in outfit.values():
-
-            total_score += item.get(
-
-                "score",
-
-                0
-
-            )
-
-        if outfit:
-
-            outfit_score = round(
-
-                total_score /
-
-                len(outfit)
-
-            )
-
-        else:
-
-            outfit_score = 0
-
-        # ---------------------------------------------------
-        # Final Output
-        # ---------------------------------------------------
-
+            cf = item.get("color_family", "Neutral")
+            family_counts[cf] = family_counts.get(cf, 0) + 1
+        dominant = max(family_counts, key=family_counts.get) if family_counts else "Neutral"
+        missing = [c for c in ["Neutral", "Dark", "Warm", "Cool"] if c not in family_counts]
         return {
-
-            "outfit": outfit,
-
-            "hairstyles": hairstyles,
-
-            "score": outfit_score,
-
-            "style_goal": style_goal,
-
-            "occasion": occasion,
-
-            "weather": weather,
-
-            "vibe": vibe,
-
-            "explanation": explanation
-
+            "distribution": family_counts,
+            "dominant": dominant,
+            "missing_colors": missing,
+            "total": len(wardrobe)
         }
 
-    # ---------------------------------------------------
-    # Hairstyle Getter
-    # ---------------------------------------------------
+    # ── Missing Items ──────────────────────────────
+    def find_missing_items(self, wardrobe, gender):
+        wardrobe_types = set(w["item_type"] for w in wardrobe)
+        all_types = ["top", "bottom", "shoes", "accessory", "outerwear"]
+        missing = []
+        for t in all_types:
+            if t not in wardrobe_types:
+                suggestions = MISSING_SUGGESTIONS.get(t, [])
+                if suggestions:
+                    missing.append({
+                        "type": t,
+                        "suggestion": random.choice(suggestions),
+                        "reason": f"You have no {t}s in your wardrobe"
+                    })
+            elif sum(1 for w in wardrobe if w["item_type"] == t) < 2:
+                suggestions = MISSING_SUGGESTIONS.get(t, [])
+                if suggestions:
+                    missing.append({
+                        "type": t,
+                        "suggestion": random.choice([s for s in suggestions]),
+                        "reason": f"Only {sum(1 for w in wardrobe if w['item_type']==t)} {t}(s) — consider adding more variety"
+                    })
+        return missing[:5]
 
-    def get_hairstyles(
+    # ── MAIN GENERATE ──────────────────────────────
+    def generate_outfit(self, user_id, gender, age, body_type, skin_tone,
+                        occasion, weather, preferred_fit, fav_colors, use_wardrobe=False):
+        wardrobe = database.get_wardrobe(user_id) if use_wardrobe else []
+        vibe = OCCASION_VIBE.get(occasion, "Casual")
+        g_key = gender if gender in ("Female", "Male") else "Female"
+        hair_options = HAIRSTYLES[g_key].get(vibe, HAIRSTYLES[g_key]["Casual"])
 
-        self,
+        types_needed = ["top", "bottom", "shoes", "accessory"]
+        if occasion == "Traditional Function":
+            types_needed = ["traditional", "shoes", "accessory"]
+        if weather in ("Winter", "Rainy", "Windy"):
+            types_needed.insert(2, "outerwear")
 
-        gender,
+        emojis = {"top":"👕","bottom":"👖","outerwear":"🧥","shoes":"👟",
+                  "accessory":"👜","traditional":"🥻","dress":"👗"}
+        
+        outfit = {}
+        used_names = []
 
-        occasion
+        for t in types_needed:
+            item = None
+            # Wardrobe first
+            if use_wardrobe and wardrobe:
+                candidates = [w for w in wardrobe if w["item_type"] == t and w["item_name"] not in used_names]
+                if candidates:
+                    chosen = random.choice(candidates)
+                    # Try to find color_family from CSV for matching
+                    cf_match = self.df[self.df["item"] == chosen["item_name"]]["color_family"].values
+                    cf = cf_match[0] if len(cf_match) > 0 else chosen.get("color_family", "Neutral")
+                    item = {
+                        "type": t,
+                        "item": chosen["item_name"],
+                        "description": f"{chosen['color']}" if chosen.get("color") else "",
+                        "color_family": cf,
+                        "weather": "All",
+                        "source": "wardrobe",
+                        "emoji": emojis.get(t, "🏷️")
+                    }
+                    used_names.append(chosen["item_name"])
 
-    ):
+            # CSV fallback
+            if not item:
+                row = self._pick(t, gender, body_type, skin_tone, occasion, weather, fav_colors, used_names)
+                if row:
+                    item = {
+                        "type": t,
+                        "item": row["item"],
+                        "description": row.get("description", ""),
+                        "color_family": row.get("color_family", "Neutral"),
+                        "weather": row.get("weather", "All"),
+                        "source": "catalogue",
+                        "emoji": emojis.get(t, "🏷️")
+                    }
+                    used_names.append(row["item"])
 
-        vibe = OCCASION_VIBE.get(
+            if item:
+                outfit[t] = item
 
-            occasion,
-
-            "Casual"
-
+        # Score it
+        ai_score, confidence, score_factors = self._score_outfit(
+            outfit, occasion, weather, gender, body_type, skin_tone, use_wardrobe
         )
 
-        gender = (
-
-            "Female"
-
-            if gender not in
-
-            HAIRSTYLES
-
-            else gender
-
-        )
-
-        styles = HAIRSTYLES[
-
-            gender
-
-        ].get(
-
-            vibe,
-
-            HAIRSTYLES[gender]["Casual"]
-
-        )
-
-        random.shuffle(styles)
-
-        return styles[:2]
+        return {
+            "outfit": outfit,
+            "hair_options": hair_options,
+            "vibe": vibe,
+            "occasion": occasion,
+            "weather": weather,
+            "ai_score": ai_score,
+            "confidence": confidence,
+            "score_factors": score_factors,
+        }
