@@ -203,3 +203,29 @@ def log_worn(user_id, outfit_id, occasion):
     c.execute("INSERT INTO worn_log (user_id,outfit_id,occasion) VALUES (?,?,?)", (user_id, outfit_id, occasion))
     conn.commit()
     conn.close()
+
+# ── ALIASES (compatibility) ────────────────────────────
+# Some app versions call these names — all point to same functions
+def get_user(user_id=None):
+    return get_or_create_user()
+
+def get_or_create_default_user():
+    return get_or_create_user()
+
+def create_user(**kwargs):
+    return get_or_create_user()
+
+def get_all_wardrobe_items(user_id):
+    return get_wardrobe(user_id)
+
+def add_to_wardrobe(user_id, item_type, item_name, color="", color_family="Neutral", style="", notes=""):
+    return add_wardrobe_item(user_id, item_type, item_name, color, color_family, style, notes)
+
+def remove_wardrobe_item(item_id):
+    return delete_wardrobe_item(item_id)
+
+def get_saved_outfits(user_id, limit=20):
+    return get_outfit_history(user_id, limit)
+
+def save_look(user_id, occasion, weather, items_dict, explanation, ai_score=0, confidence=""):
+    return save_outfit(user_id, occasion, weather, items_dict, explanation, ai_score, confidence)
